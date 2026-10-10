@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A fejlődés gazdaságtörténete – ZH-gyakorló</title>
   <meta name="description" content="Feleletválasztós gyakorló feladatsor A fejlődés gazdaságtörténete (GTGVÖ120BL) zárthelyihez.">
+  <script>
+    // Villanásmentes témaválasztás: mentett érték, különben a rendszer beállítása.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -15,6 +24,7 @@
       <a href="#/temak">Témakörök</a>
       <a href="#/minta">Mintazh</a>
       <a href="#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
     </nav>
   </header>
 

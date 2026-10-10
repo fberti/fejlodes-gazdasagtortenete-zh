@@ -1,10 +1,14 @@
+/* Téma: a <html data-theme="light|dark"> attribútumot a fejlécben futó szkript állítja be
+   (mentett választás, különben a rendszer beállítása). */
 :root {
+  color-scheme: light;
   --bg: #f7f5f0;
   --card: #ffffff;
   --ink: #1f2328;
   --muted: #5b6370;
   --line: #ddd8cc;
   --accent: #8a3b12;
+  --on-accent: #ffffff;
   --accent-soft: #f6e7dc;
   --ok: #1d6b3a;
   --ok-soft: #e1f2e6;
@@ -14,22 +18,22 @@
   --tip-soft: #fff4cc;
   --radius: 10px;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #17181b;
-    --card: #212327;
-    --ink: #e8e6e1;
-    --muted: #a3a8b1;
-    --line: #363941;
-    --accent: #e08a5a;
-    --accent-soft: #3a2a20;
-    --ok: #6fcf8f;
-    --ok-soft: #1e3326;
-    --bad: #f08a80;
-    --bad-soft: #3b2220;
-    --tip: #f0d36a;
-    --tip-soft: #36301a;
-  }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #17181b;
+  --card: #212327;
+  --ink: #e8e6e1;
+  --muted: #a3a8b1;
+  --line: #363941;
+  --accent: #e08a5a;
+  --on-accent: #1b1206;
+  --accent-soft: #3a2a20;
+  --ok: #6fcf8f;
+  --ok-soft: #1e3326;
+  --bad: #f08a80;
+  --bad-soft: #3b2220;
+  --tip: #f0d36a;
+  --tip-soft: #36301a;
 }
 
 * { box-sizing: border-box; }
@@ -55,7 +59,13 @@ p.lead { color: var(--muted); margin-top: 0; }
 }
 .brand { font-weight: 700; color: var(--ink); text-decoration: none; }
 .brand span { font-weight: 400; color: var(--muted); }
-.site-header nav { display: flex; flex-wrap: wrap; gap: .2rem .9rem; }
+.site-header nav { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .9rem; }
+.theme-toggle {
+  cursor: pointer; padding: .2rem .6rem; border-radius: 99px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+  font: inherit; font-size: .9rem;
+}
+.theme-toggle:hover { border-color: var(--accent); }
 .site-header nav a { text-decoration: none; font-weight: 500; }
 .site-header nav a.active { text-decoration: underline; text-underline-offset: 4px; }
 .badge {
@@ -76,7 +86,7 @@ p.lead { color: var(--muted); margin-top: 0; }
 .btn {
   display: inline-block; cursor: pointer;
   padding: .55rem 1rem; border-radius: 8px;
-  border: 1px solid var(--accent); background: var(--accent); color: #fff;
+  border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent);
   font: inherit; font-weight: 600; text-decoration: none;
 }
 .btn.secondary { background: transparent; color: var(--accent); }
@@ -174,6 +184,13 @@ p.lead { color: var(--muted); margin-top: 0; }
 }
 
 @media print {
+  /* Nyomtatásban mindig világos színek, a választott témától függetlenül. */
+  :root[data-theme] {
+    color-scheme: light;
+    --bg: #fff; --card: #fff; --ink: #000; --muted: #444; --line: #ccc;
+    --accent: #8a3b12; --accent-soft: #f6e7dc;
+    --ok: #1d6b3a; --ok-soft: #e1f2e6; --bad: #a1261d; --bad-soft: #fbe3e0;
+  }
   .site-header, .site-footer, .toolbar, .sticky-bar, .hint-btn, .no-print { display: none !important; }
   body { background: #fff; color: #000; font-size: 11pt; }
   main { max-width: none; padding: 0; }

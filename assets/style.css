@@ -160,7 +160,7 @@ p.lead { color: var(--muted); margin-top: 0; }
 
 /* Ábrák és táblázatok */
 figure.dia { margin: 1.2rem 0; text-align: center; }
-figure.dia img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); background: #fff; padding: .3rem; }
+figure.dia img { max-width: 100%; max-height: 70vh; width: auto; height: auto; border-radius: 6px; border: 1px solid var(--line); background: #fff; padding: .3rem; }
 figure.dia figcaption { color: var(--muted); font-size: .85rem; margin-top: .3rem; }
 .table-wrap { overflow-x: auto; margin: 1rem 0; }
 table.data { border-collapse: collapse; font-size: .92rem; font-variant-numeric: tabular-nums; }

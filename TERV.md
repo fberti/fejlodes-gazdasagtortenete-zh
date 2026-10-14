@@ -284,7 +284,7 @@ utána M1–M8 tetszőleges sorrendben (de ajánlott sorban), M9 a végén.
 - [x] **M2 – 2. Kereskedelem + 3. Népesség** (36–72)
 - [x] **M3 – 4. Intézmények + 5. Tudomány és tudás** (73–104)
 - [x] **M4 – 6. Pénz + 7. Ciklusok, buborékok, válságok** (105–133)
-- [ ] **M5 – 8. Európa felemelkedése + 9. Fogyasztói társadalom** (134–165)
+- [x] **M5 – 8. Európa felemelkedése + 9. Fogyasztói társadalom** (134–165)
 - [ ] **M6 – 10. Értékrend + 11. Kereskedelempolitika** (166–185)
 - [ ] **M7 – 12. Monetáris rend + 13. Állam + 14. Jóléti állam** (186–209)
 - [ ] **M8 – 15. Szintézis + esszéfelkészítő + kapcsolódások**
@@ -316,6 +316,8 @@ utána M1–M8 tetszőleges sorrendben (de ajánlott sorban), M9 a végén.
   (`details.quiz[data-section]`, `details.quiz[data-topic]`) összefoglaló sora üresen hagyva automatikusan töltődik.
 - Ábra: `tools/dia-kep.sh 55` (teljes dia) vagy `tools/dia-kep.sh 55 x y w h -n utotag` (kivágás, 150 dpi-s képpontban;
   egy dia 2000×1125 px).
+- Fotószerű képeknél (festmény, fénykép, kézirat) a 256 színes PNG nagy marad: ezeket max. 1000 px szélesre kicsinyítve
+  JPEG-be (`dia-NNN.jpg`, minőség 80) érdemes menteni; a térképeket és sűrű ábrákat elég 1000 px szélesre kicsinyíteni.
 - Böngészős szemléhez: `python3 -m http.server` a projekt gyökerében (a leckeoldalak `file://`-ról is működnek).
 
 ### Ellenőrzés (`tools/check.mjs`) – mit néz?

@@ -475,3 +475,34 @@ details.box.quiz .question { margin: .7rem 0; }
   details.box.quiz { display: none; }
   .box { break-inside: avoid; }
 }
+
+/* „Extra” gomb és modál – opcionális, a diasoron túli magyarázat */
+.extra-btn {
+  display: inline-block; margin-left: .35rem; padding: .05rem .55rem; vertical-align: .08em;
+  font: inherit; font-size: .78rem; font-weight: 700; letter-spacing: .03em;
+  color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent);
+  border-radius: 999px; cursor: pointer;
+}
+.extra-btn:hover { background: var(--accent); color: var(--on-accent); }
+.extra-btn:focus-visible, .extra-close:focus-visible { outline: 3px solid var(--accent-glow); outline-offset: 2px; }
+.extra-modal {
+  width: min(720px, calc(100vw - 2rem)); max-height: calc(100vh - 3rem); padding: 0;
+  color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+.extra-modal[open] { display: flex; flex-direction: column; }
+.extra-modal::backdrop { background: rgba(10, 10, 12, .55); }
+.extra-modal-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .8rem 1.1rem; border-bottom: 1px solid var(--line);
+}
+.extra-modal-head h4 { margin: 0; font-size: 1.1rem; }
+.extra-close {
+  flex: none; width: 2rem; height: 2rem; font-size: 1rem; line-height: 1; cursor: pointer;
+  color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 50%;
+}
+.extra-close:hover { color: var(--ink); border-color: var(--line-strong); }
+.extra-modal-body { padding: .4rem 1.1rem 1.1rem; overflow-y: auto; }
+.extra-modal-body h5 { margin: 1.1rem 0 .4rem; font-size: 1rem; }
+.extra-note { margin: .6rem 0 0; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.extra-summary { padding: .7rem .9rem; background: var(--tip-soft); border-radius: var(--radius-sm); }

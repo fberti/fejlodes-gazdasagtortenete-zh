@@ -282,7 +282,7 @@ utána M1–M8 tetszőleges sorrendben (de ajánlott sorban), M9 a végén.
   szakaszba, a meglévő oldal változatlanul működik böngészőben (világos/sötét téma).
 - [x] **M1 – 1. fejezet: Fejlődés, növekedés és a nyugati recept** (1–35; a leghosszabb, ezért önálló)
 - [x] **M2 – 2. Kereskedelem + 3. Népesség** (36–72)
-- [ ] **M3 – 4. Intézmények + 5. Tudomány és tudás** (73–104)
+- [x] **M3 – 4. Intézmények + 5. Tudomány és tudás** (73–104)
 - [ ] **M4 – 6. Pénz + 7. Ciklusok, buborékok, válságok** (105–133)
 - [ ] **M5 – 8. Európa felemelkedése + 9. Fogyasztói társadalom** (134–165)
 - [ ] **M6 – 10. Értékrend + 11. Kereskedelempolitika** (166–185)

@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5. Tudomány, tudás és technológiatranszfer – A fejlődés gazdaságtörténete</title>
+  <meta name="description" content="Gyakorlati és tudományos megismerés, tudományos felvilágosodás, általános célú technológiák, az innovációs modell, tudástranszfer és konvergencia, emberi tőke.">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html#/">A fejlődés gazdaságtörténete <span>Tananyag</span></a>
+    <nav>
+      <a href="./" class="active">Tananyag</a>
+      <a href="../index.html#/zh">Gyakorló ZH</a>
+      <a href="../index.html#/temak">Témakörök</a>
+      <a href="../index.html#/minta">Mintazh</a>
+      <a href="../index.html#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
+    </nav>
+  </header>
+
+  <main class="lesson">
+    <p class="kicker">5. fejezet · diák: 85–104</p>
+    <h1>Tudomány, tudás és technológiatranszfer</h1>
+    <blockquote data-dia="85">
+      <p>„Ha az elejétől akarod kezdeni az almás pite elkészítését, előbb fel kell találnod a világegyetemet.”</p>
+      <p class="dia-ref">Carl Sagan</p>
+    </blockquote>
+    <p class="lead" data-dia="85">Az 1. fejezetben a hatékonyság két forrását neveztük meg. Az intézményekről már volt szó;
+      most a másikról, a technológiáról lesz: honnan jön az új tudás, mitől gyorsult fel a 19. században, és hogyan jut el
+      azokhoz, akik nem maguk találták fel.</p>
+
+    <!-- ───────────────────────── 1. Nyitó eset ───────────────────────── -->
+    <section id="tud-gpu">
+      <h2>Nyitó eset: a videókártyától a mesterséges intelligenciáig <span class="dia-ref">85–86. dia</span></h2>
+
+      <div class="box eset" data-dia="86">
+        <p>Az 1990-es években a játékfejlesztők háromdimenziós világokat tártak a játékosok elé. A 3D-s tartalmak
+          megjelenítése elképesztő mennyiségű, ismétlődő számítást igényel. Ezért a hagyományos, sokféle feladatra alkalmas
+          chipek helyett <b>specializált chipeket</b> terveztek: ezernyi maggal, amelyek egyszerre, párhuzamosan végeznek
+          néhány típusú számítást. Így született a videókártya – az NVIDIA vezette be a <b>GPU</b> elnevezést.</p>
+        <p>Később kiderült, hogy ezek a chipek különösen hasznosak a kriptovaluták alapját képező hashműveletekhez, és
+          a gépi tanuláshoz szükséges párhuzamos mátrixműveletekhez is. Ma ezért működik a gépi tanulás, és ezért válnak
+          egyre okosabbá a mesterségesintelligencia-alapú társalgó programok. A <i>Quake</i> (1996) vagy az <i>Unreal
+          Tournament</i> (1999) nélkül talán nem létezne sem Bitcoin, sem ChatGPT.</p>
+        <p>Az NVIDIA éves bevétele a 2000-es években, amikor a gamerek voltak a fő vásárlók, 1–2 milliárd dollár volt.
+          Ma, amikor az adatközpontok tonnaszám veszik a chipjeit, a bevétele ennek legalább százszorosa, a cég értéke
+          pedig ennek ezerszerese.</p>
+      </div>
+      <p data-dia="86">Az eset két dolgot mutat. Egyrészt az új tudás gyakran váratlan helyen születik, és egészen más
+        területen válik igazán hasznossá. Másrészt egy technológia értéke azon múlik, hány területen lehet alkalmazni –
+        erre a fejezetben az „általános célú technológia” fogalmával térünk vissza.</p>
+      <p><strong>A fejezet kérdése:</strong> mitől gyorsult fel a technikai haladás az utolsó két évszázadban, és miért nem
+        jut el az új tudás automatikusan mindenkihez?</p>
+
+      <h3 id="tud-utiterv">Útiterv</h3>
+      <ol class="roadmap" data-roadmap="tud"></ol>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A GPU</summary>
+        <ol>
+          <li>Mit tanít a GPU története az innováció kiszámíthatóságáról?
+            <details><summary>Mintaválasz</summary><p>Hogy az innováció nehezen tervezhető: egy szórakoztatóipari igényre
+              (3D-s játékok) fejlesztett eszköz évtizedekkel később a kriptovaluták és a mesterséges intelligencia kulcsa lett.
+              Ezért fontos, hogy sokan, sokféle irányban próbálkozhassanak.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="tud-gpu"></details>
+    </section>
+
+    <!-- ───────────────────────── 2. Gyakorlati és tudományos megismerés ───────────────────────── -->
+    <section id="tud-megismeres">
+      <h2>Gyakorlati és tudományos megismerés <span class="dia-ref">87–88. dia</span></h2>
+
+      <p data-dia="87">Kétféleképpen jöhet létre új technológia: kitapasztaljuk, mi működik, vagy megértjük, miért működik.</p>
+      <div class="two-col" data-dia="87">
+        <div class="box def">
+          <p><b>Gyakorlati tanulás:</b> hosszú évek tapasztalatai, próbálkozásai alapján kitapasztalják, mi az, ami működik –
+            anélkül, hogy értenék, miért.</p>
+        </div>
+        <div class="box def">
+          <p><b>Tudományos megismerés:</b> szisztematikus törekvés az ok-okozati összefüggések megértésére, és az eredmények
+            empirikus (kísérleti) tesztelése.</p>
+        </div>
+      </div>
+      <p data-dia="87">A 19. századig az új technológiai megoldások zöme <b>nem tudományos eredményeken</b> alapult. Két példa:</p>
+      <div class="box eset" data-dia="87">
+        <ul>
+          <li><b>Hőkezelés és pasztőrözés:</b> Nicolas Appert már a 19. század elején kidolgozta a hőkezeléses tartósítás alapjait.
+            Louis Pasteur csak az 1850–1860-as években mutatta ki, hogy a romlást mikroorganizmusok okozzák, amelyeket hővel
+            el lehet pusztítani.</li>
+          <li><b>Vakcina</b> (a név a tehénhimlő latin nevéből, a <i>variolae vaccinae</i>-ból ered): Edward Jenner 1798-ban
+            egy évezredek óta létező gyakorlatot tökéletesítve létrehozta az első dokumentált vírus elleni védőoltást –
+            a vírusokat azonban csak kb. 100 évvel később fedezték fel.</li>
+        </ul>
+      </div>
+      <div class="box mech" data-dia="87">
+        <p>Mivel a gyakorlati tanulás próbálkozásokon alapul, a technológia <b>lassan, fokozatosan</b> változik: lépésről lépésre
+          egyre jobban működő megoldásokat találnak. A tudományos eredmények a 19. század végétől és a 20. században gyakorolnak
+          nagy hatást az innovációra – <b>ettől kezdve érezhetően gyorsul a technikai haladás.</b></p>
+        <p class="chain">ok-okozati megértés → nem kell vakon próbálkozni → célzott fejlesztés → gyorsabb technikai haladás</p>
+      </div>
+
+      <h3 id="tud-fourier">A Fourier-sortól a Netflixig</h3>
+      <p data-dia="88">A tudomány hatása azonban nem mindig azonnali – néha több száz év kell, mire egy elméleti eredményből
+        gyakorlati haszon lesz.</p>
+      <div class="box eset" data-dia="88">
+        <ul>
+          <li>A 18–19. század kérdése: hogyan írható le matematikailag egy rezgő húr mozgása vagy a hő terjedése?</li>
+          <li><b>Joseph Fourier (1822)</b> megoldotta a hővezetés differenciálegyenletét. Eredménye a <b>Fourier-sor</b>:
+            egy változó bármely függvénye felírható szinusz- és koszinuszfüggvények (végtelen) összegeként.</li>
+          <li>Továbbfejlesztették: Dirichlet (1829), Hilbert (1899), Kolmogorov (1926).</li>
+          <li>Egyszerűen: a <b>Fourier-analízis</b> egy összetett jelet egyszerű, különböző frekvenciájú összetevőkre bont,
+            a <b>Fourier-szintézis</b> ezekből újra összerakja a jelet.</li>
+          <li>Ez teszi lehetővé, hogy a hang- és képhullámokat sokkal kevesebb adattal írjuk le. Ebből született a <b>jpeg</b>
+            (1986) és az <b>mp3</b> (Fraunhofer Intézet, 1987) – és ez a <b>streaming</b> alapja.</li>
+        </ul>
+      </div>
+      <figure class="dia" data-dia="88">
+        <img src="img/dia-088.png" alt="Három különböző frekvenciájú szinuszhullám, amelyek összeadva egy összetett hullámformát adnak." loading="lazy">
+        <figcaption>A Fourier-szintézis lényege: egyszerű hullámok összege összetett jelet ad – és fordítva, egy összetett jel
+          egyszerű hullámokra bontható. (Diasor, 88. dia.)</figcaption>
+      </figure>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Gyakorlati és tudományos megismerés</summary>
+        <ol>
+          <li>Miért gyorsult fel a technikai haladás, amikor a tudomány az innováció forrásává vált?
+            <details><summary>Mintaválasz</summary><p>Mert aki érti az ok-okozati összefüggéseket, annak nem kell vakon próbálkoznia:
+              célzottan tervezhet új megoldásokat, és egy elméleti eredmény sok különböző alkalmazást szülhet. A gyakorlati tanulás
+              ezzel szemben lassú, fokozatos javulást hoz.</p></details></li>
+          <li>Mit mutat Jenner és Appert példája?
+            <details><summary>Mintaválasz</summary><p>Hogy működő technológia tudományos magyarázat nélkül is születhet: a vakcina és
+              a hőkezelés gyakorlati tapasztalatból jött létre, a magyarázat (vírusok, mikroorganizmusok) csak évtizedekkel később.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="tud-megismeres"></details>
+    </section>
+
+    <!-- ───────────────────────── 3. Tudományos felvilágosodás ───────────────────────── -->
+    <section id="tud-felvilagosodas">
+      <h2>A tudományos felvilágosodás: miért a Nyugat? <span class="dia-ref">89–91. dia</span></h2>
+
+      <p data-dia="89">A tudományos módszer nem a Nyugaton kezdődött. A Római Birodalom bukása után Európában szinte megszűnt
+        az írásbeliség – ez volt a „sötét kor”. Eközben máshol virágzott a tudomány:</p>
+      <div class="two-col" data-dia="89">
+        <div class="box eset">
+          <p><b>Arab reneszánsz</b></p>
+          <ul>
+            <li>707, Damaszkusz: <i>bimaristan</i> – a világ első kórháza;</li>
+            <li>859, Fez: az Al-Karaouine – a világ első egyeteme;</li>
+            <li>9. század, Bagdad: a Bölcsesség Háza – az ókori művek arab fordítása.</li>
+          </ul>
+        </div>
+        <div class="box eset">
+          <p><b>Kínai eredmények</b></p>
+          <ul>
+            <li>Cseng Ho felfedezőútjai Arábiától Ausztráliáig (1405–1433): 300 hajós flotta, 28 ezres személyzet,
+              a legnagyobb hajó 120 méter hosszú.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="box vita" data-dia="89">
+        <p><b>Hanyatlás Keleten:</b> a gazdaság, a politika és a vallás egysége megmaradt, így a vallás és a központi hatalom
+          elég erős volt ahhoz, hogy elnyomja a kísérletezést.</p>
+        <ul>
+          <li>1500-tól Kínában halálbüntetés várt arra, aki kétárbocosnál nagyobb hajót épített.</li>
+          <li>1515-ben I. Szelim szultán halálbüntetéssel sújtotta, akit nyomdai tevékenységen kaptak.</li>
+        </ul>
+        <p><b>Felemelkedés Nyugaton:</b> a fő ok a <b>politikai megosztottság</b> – mindig voltak toleráns és befogadó államok,
+          ahová az üldözött gondolkodók elmenekülhettek. A reformáció is ezért terjedhetett el, ebben a nyomdának döntő
+          szerepe volt.</p>
+      </div>
+      <div class="box warn" data-dia="89">
+        <p>Ne mondd, hogy Keleten „nem volt tudomány”! Voltak kiemelkedő eredmények; a különbség az, hogy a központosított
+          hatalom ott <i>meg tudta állítani</i> a kísérletezést, a megosztott Európában viszont senki sem tudta mindenhol
+          betiltani. Ez a gondolat a <a href="index.html#eur">8. fejezetben</a> tér vissza.</p>
+      </div>
+
+      <p data-dia="90">A 16–17. században Nyugaton kialakult a <b>tudományos empiricizmus</b>:</p>
+      <ul data-dia="90">
+        <li><b>Francis Bacon, Galileo Galilei:</b> a tudományos kísérlet szerepe;</li>
+        <li><b>Newton, Leibniz, Descartes:</b> a matematikai gondolkodás;</li>
+        <li>széles földrajzi spektrum: Itália, a német és francia nyelvterület, Németalföld, Skandinávia és Nagy-Britannia.</li>
+      </ul>
+      <p data-dia="90">A tudós társadalmi rangja is megváltozott. Voltaire így írt Newton 1727-es temetéséről: „Láttam egy
+        matematikaprofesszort, akit csak azért, mert nagyot alkotott a mestersége terén, úgy temettek el, mint egy, az
+        alattvalóival jóságos királyt.”</p>
+      <figure class="dia" data-dia="91">
+        <img src="img/dia-091.png" alt="Idővonal 1525 és 1725 között a tudományos forradalom főbb eredményeivel: Kopernikusz, Vesalius, Galilei, Kepler, Harvey, Descartes, Boyle, Newton és mások." loading="lazy">
+        <figcaption>A tudományos forradalom legfontosabb eredményei Európában, 1500–1700. (Diasor, 91. dia; forrás: World History Encyclopedia.)</figcaption>
+      </figure>
+      <div class="box kieg">
+        <p>Néhány mérföldkő az idővonalról: Kopernikusz napközéppontú világképe és Vesalius anatómiája (1543), Kepler bolygómozgási
+          törvényei (1609), Galilei távcsöves megfigyelései (1610), Harvey a vérkeringésről (1628), Descartes <i>Értekezés
+          a módszerről</i> (1637), a londoni Royal Society megalapítása (1660), Newton <i>Principiája</i> (1687).</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Tudományos felvilágosodás</summary>
+        <ol>
+          <li>Miért hanyatlott a tudomány Keleten, és miért emelkedett fel Nyugaton a diasor szerint?
+            <details><summary>Mintaválasz</summary><p>Keleten a gazdaság, a politika és a vallás egysége megmaradt, így a központi
+              hatalom el tudta nyomni a kísérletezést (hajóépítési tilalom Kínában, nyomdatilalom az Oszmán Birodalomban).
+              Nyugaton a politikai megosztottság miatt mindig volt toleráns állam, ahol az új gondolatok túlélhettek, és
+              a nyomda segítette a terjedésüket.</p></details></li>
+          <li>Mit mutat Newton temetése a tudomány társadalmi megítéléséről?
+            <details><summary>Mintaválasz</summary><p>Hogy a tudós a 18. századi Angliában királynak kijáró tiszteletet kapott:
+              a tudományos teljesítmény társadalmi presztízst adott. Ez ösztönzőt jelentett a tudományos pályára.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="tud-felvilagosodas"></details>
+    </section>
+
+    <!-- ───────────────────────── 4. Fokozatváltás ───────────────────────── -->
+    <section id="tud-fokozatvaltas">
+      <h2>Fokozatváltás: az 1. és a 2. ipari forradalom <span class="dia-ref">92–95. dia</span></h2>
+
+      <p data-dia="92">Meglepő, de az ipari forradalom első nagy feltalálói nem tudósok voltak:</p>
+      <div class="box eset" data-dia="92">
+        <ul>
+          <li><b>Gutenberg</b> kovács és aranyműves volt; <b>Hargreaves</b> asztalos;</li>
+          <li><b>Stephenson</b> gépkezelő, aki 18 évesen tanult meg írni; <b>Fulton</b> portréfestő és ékszerészinas;</li>
+          <li><b>Arkwright</b> parókakészítő; <b>Edison</b> három hónapot járt iskolába.</li>
+        </ul>
+      </div>
+      <div class="box def" data-dia="92">
+        <p><b>Általános célú technológia:</b> olyan találmány, amely sok iparágban hasznosítható, ezért sok területen javítja
+          a hatékonyságot. Ezek a legnagyobb hatású találmányok. Mögöttük már tudósok sora áll:</p>
+        <ul>
+          <li><b>gőzerő:</b> Galilei, Torricelli, Huygens, von Guericke;</li>
+          <li><b>elektromosság:</b> Galvani, Volta, Davy, Faraday, Ampère, Ohm;</li>
+          <li><b>számítástechnika:</b> Leibniz, Pascal, Babbage, Turing, Neumann.</li>
+        </ul>
+      </div>
+      <p data-dia="92">A fokozatváltás a jövedelem növekedési ütemén is látszik. Angliában:</p>
+      <div class="table-wrap" data-dia="92">
+        <table class="data num">
+          <caption>Az egy főre jutó jövedelem évi átlagos növekedése Angliában. (Diasor, 92. dia)</caption>
+          <thead><tr><th>Időszak</th><th>Növekedés (%/év)</th><th>Duplázódási idő</th></tr></thead>
+          <tbody>
+            <tr><td>1760–1800</td><td>0,20</td><td>347 év</td></tr>
+            <tr><td>1800–1830</td><td>0,52</td><td>134 év</td></tr>
+            <tr><td>1830–1870</td><td>1,98</td><td>35 év</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="92">Egy évszázad alatt a jövedelem duplázódási ideje egy emberöltőnyire rövidült: a nagyszülők és az unokák
+        már egészen más világban éltek.</p>
+
+      <h3 id="tud-ket-forradalom">A két ipari forradalom tudásbázisa</h3>
+      <div class="two-col" data-dia="93">
+        <div class="box eset">
+          <p><b>1. ipari forradalom (Anglia)</b></p>
+          <p>A <b>gyakorlati tanuláson</b> alapul: mesteremberek, gépkezelők próbálkozásain.</p>
+        </div>
+        <div class="box eset">
+          <p><b>2. ipari forradalom (USA, Németország)</b></p>
+          <p>Már inkább a <b>tudományos megismerésen</b> alapul: ipari kutatólaborok, egyetemek.</p>
+        </div>
+      </div>
+      <ul data-dia="93">
+        <li><b>Az USA titka: szabványosítás és tömegtermelés.</b> Előfutára Jacquard lyukkártyás vezérlésű szövőgépe (1804).
+          Henry Ford mondása szerint: „Vevőink bármilyen színben megrendelhetik az autójukat, feltéve, hogy a szín fekete.”
+          Az ipari kutatás is itt intézményesült: Thomas Edison Menlo Park-i laborja (1876), a General Electric kutatólaboratóriuma (1900).</li>
+        <li><b>Németország: kartellek és nagyon erős vegyipar.</b> A német egyetemek a 19. század végétől Hitler hatalomra
+          kerüléséig az elméleti és alkalmazott kutatás centrumai voltak. Az 1880-as évektől főleg a festékgyárak (BASF, Bayer,
+          Hoechst) hoztak létre kutatólaborokat.</li>
+      </ul>
+
+      <h3 id="tud-hatasok">Mit adott a gyakorlati és a tudományos tudás?</h3>
+      <div class="box mech" data-dia="94">
+        <ol>
+          <li><b>Erőforrások megtakarítása, hatékonyabb kihasználása.</b> 1700 és 1875 között a gőzgépek egy lóerőre jutó
+            szénigénye a töredékére csökkent. A gépek munkaerőt váltottak ki: 1870-re Nagy-Britannia gőzgépei együtt 4 millió
+            lóerőt adtak – ez negyvenmillió ember munkája, akiknek az élelmezéséhez az ország élelmiszertermelésének
+            háromszorosa kellett volna. Gabona helyett szénnel, majd olajjal hajtják a munkát: <b>izom helyett az agy</b>.</li>
+          <li><b>A természeti erőforrások korlátainak enyhítése.</b></li>
+          <li><b>Minőségjavulás.</b> Bár a szabványosítás és a tömegtermelés sokak szemében minőségromlást jelent, a legtöbb termék
+            minősége jelentősen javult. A reálbér-számítások (napi bér / termékár) ezt nem veszik figyelembe – <b>az életszínvonal
+            így még látványosabban emelkedett</b>, mint a statisztikák mutatják.</li>
+          <li><b>Új termékek és eljárások:</b> vasbeton, dinamit, robbanómotor, műtrágya.</li>
+          <li><b>Új természeti erőforrások bevonása</b> (pl. kőolaj, alumínium).</li>
+        </ol>
+      </div>
+      <p class="dia-ref" data-dia="94">A diasor szövege szerint egy lóerő szénigénye 1700 és 1875 között „45-ször feleződött”.
+        Ez valószínűleg a 45-ödére csökkenést jelenti – a pontos számot úgysem kell megtanulni, a nagyságrendi javulás a lényeg.</p>
+
+      <p data-dia="95">A minőségjavulás legszebb példája William Nordhaus számítása a <b>világítás</b> áráról. Mennyibe került
+        1000 lumen fény egy órán át?</p>
+      <div class="table-wrap" data-dia="95">
+        <table class="data num">
+          <caption>Nordhaus: 1000 lumen fény egy órára – ára és előállítási költsége. (Diasor, 95. dia)</caption>
+          <thead><tr><th>Időszak</th><th>Ár (2018-as USD)</th><th>Költség munkaórában</th></tr></thead>
+          <tbody>
+            <tr><td>Neolitikum</td><td></td><td>50</td></tr>
+            <tr><td>1800</td><td>785</td><td>5,4</td></tr>
+            <tr><td>1900</td><td></td><td>0,22</td></tr>
+            <tr><td>1992</td><td>0,23</td><td>0,00012</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="95">A neolitikumban egy órányi jó világításért 50 órát kellett dolgozni (fát gyűjteni, mécsest készíteni), 1992-ben
+        egy másodpercnél is kevesebbet. A fény munkaórában mért ára négyszázezred részére esett – miközben a villanykörte fénye
+        jobb, biztonságosabb és kényelmesebb, mint a gyertyáé.</p>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Fokozatváltás</summary>
+        <ol>
+          <li>Miért van nagyobb hatása az általános célú technológiáknak, mint egy-egy iparági találmánynak?
+            <details><summary>Mintaválasz</summary><p>Mert sok iparágban felhasználhatók (a gőzerő a bányában, a textiliparban és
+              a közlekedésben is), ezért egyszerre sok helyen javítják a hatékonyságot, és újabb találmányokat is lehetővé tesznek.</p></details></li>
+          <li>Mi a különbség az 1. és a 2. ipari forradalom tudásbázisa között?
+            <details><summary>Mintaválasz</summary><p>Az 1. (Anglia) a gyakorlati tanuláson alapult – a feltalálók mesteremberek voltak.
+              A 2. (USA, Németország) már a tudományos megismerésen: ipari kutatólaborok (Edison, GE, BASF, Bayer), egyetemi
+              kutatás, szabványosítás és tömegtermelés.</p></details></li>
+          <li>Miért becsülik alá a reálbér-statisztikák az életszínvonal javulását?
+            <details><summary>Mintaválasz</summary><p>Mert a bér és a termékár hányadosa nem veszi figyelembe, hogy a termék közben jobb
+              lett, és hogy teljesen új termékek is megjelentek. Nordhaus fényár-számítása szerint a valódi javulás nagyságrendekkel
+              nagyobb, mint amit a hagyományos árindexek mutatnak.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="tud-fokozatvaltas"></details>
+    </section>
+
+    <!-- ───────────────────────── 5. Innovációs modell ───────────────────────── -->
+    <section id="tud-innovacio">
+      <h2>Az innovációra épülő fejlődés modellje <span class="dia-ref">96. dia</span></h2>
+
+      <p data-dia="96">Ma az innováció már nem magányos feltalálók műve, hanem egy egész rendszeré. A modell lépései:</p>
+      <div class="box mech" data-dia="96">
+        <p class="chain">alapkutatás → kutatás-fejlesztés (K+F) → szabadalom → vállalkozás → termék</p>
+        <ul>
+          <li><b>Alapkutatás</b> (főleg egyetemeken): elméletek és publikációk.</li>
+          <li><b>K+F</b> egyetemeken és kutatóintézetekben. Az USA pl. a GDP 2%-át fordítja rá, 1,5 millió kutatóval;
+            Kínában 2 millió kutató dolgozik (Guile és Wagner, 2023).</li>
+          <li>Az eredményes K+F kimenete a <b>szabadalom</b>. Az USA-ban bejegyzett szabadalmak 90%-ából nem lesz termék.</li>
+          <li>A szabadalomból <b>vállalkozások</b> révén lesz termék. A startupok kb. 90%-a elbukik (közelítő népi bölcsesség).</li>
+        </ul>
+      </div>
+      <div class="box vita" data-dia="96">
+        <p><b>Hány szabadalom kell egy sikeres termékhez?</b> Ha a szabadalmak 10%-ából lesz termék, és ezek 10%-ából sikeres
+          termék, akkor 0,1 · 0,1 = 0,01: <b>100 szabadalomból 1</b>.</p>
+        <p>A hazai eredetű szabadalmi bejelentések száma 2021-ben (OECD): Magyarország 433, USA 262 ezer, Kína 1,427 millió.</p>
+      </div>
+      <div class="box tip" data-dia="96"><strong>Mi kell tehát a modell sikeréhez?</strong>
+        <ul>
+          <li>nagyon sok szabadalom;</li>
+          <li>piaci igény – akár az állam által generált igény – új termékekre;</li>
+          <li>nagyon sok tőke, tudás és szolgáltatás az új vállalatok létrehozásához.</li>
+        </ul>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Az innovációs modell</summary>
+        <ol>
+          <li>Miért nehéz egy kis országnak az innovációra épülő fejlődési modellt követnie?
+            <details><summary>Mintaválasz</summary><p>Mert a modellhez nagyon sok szabadalom kell (100-ból kb. 1 lesz sikeres termék),
+              és sok tőke, tudás, szolgáltatás a vállalkozásokhoz. Egy kis ország kevés szabadalmat ad be (Magyarország 2021-ben
+              433-at, az USA 262 ezret), így kicsi az esélye a sikeres termékekre – hacsak nem kapcsolódik be nemzetközi
+              innovációs hálózatokba.</p></details></li>
+          <li>Milyen szerepe lehet az államnak az innovációs modellben?
+            <details><summary>Mintaválasz</summary><p>Finanszírozhatja az alapkutatást és a K+F-et (egyetemek), és piaci igényt
+              teremthet új termékekre (pl. hadiipari, űrkutatási vagy egészségügyi megrendelések).</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="tud-innovacio"></details>
+    </section>
+
+    <!-- ───────────────────────── 6. Transzfer ───────────────────────── -->
+    <section id="tud-transzfer">
+      <h2>Tudástranszfer és felzárkózás <span class="dia-ref">97–100. dia</span></h2>
+
+      <p data-dia="97">Ha a tudás ilyen nehezen születik, jó hír, hogy nem kell mindenkinek újra feltalálnia. A tudás
+        átadható – erről szól a transzfer.</p>
+      <div class="box def" data-dia="97">
+        <p><b>Tudástranszfer:</b> az a folyamat, amely során a tudás, az ötletek és a tapasztalatok a forrástól a befogadóhoz
+          áramlanak úgy, hogy a befogadó alkalmazni is tudja őket.</p>
+      </div>
+      <div class="box def" data-dia="97">
+        <p><b>A tudás nem versengő jószág:</b> attól, hogy mi felhasználjuk, más is használhatja – sőt, használat közben
+          a tapasztalatok révén gyarapodik. (Egy almát csak egyvalaki ehet meg; a Pitagorasz-tételt mindenki használhatja.)</p>
+      </div>
+      <p data-dia="97">Nyugaton a tudományos ismeretek <b>nyílt hozzáférésének kultúrája</b> alakult ki: a tudósok publikálnak,
+        nem titkolóznak. A <b>szabadalom</b> és a szellemi tulajdon védelme ezzel szemben kettős hatású:</p>
+      <div class="two-col" data-dia="97">
+        <div class="box mech"><p><b>Ösztönöz:</b> ideiglenesen (ma 20 + 5 évig) kizárólagos profitot, monopoljáradékot biztosít
+          a feltalálónak – így megéri feltalálni.</p></div>
+        <div class="box mech"><p><b>Lassít:</b> amíg a szabadalom érvényes, mások nem használhatják szabadon a tudást – így lassul
+          a transzfer.</p></div>
+      </div>
+
+      <h3 id="tud-konvergencia">A visszamaradottság előnye</h3>
+      <div class="box def" data-dia="97">
+        <p><b>A visszamaradottság előnye (Gerschenkron, Veblen):</b> a kevésbé fejlett országok a tudás- és technológiatranszfer
+          miatt gyorsabban fejlődhetnek, mert már kész, működő technológiát vehetnek át – nem kell kifizetniük a próbálkozások
+          költségét.</p>
+        <p><b>Béta-konvergencia:</b> a fejlődő országok közelítenek a fejlettekhez – a szegényebbek gyorsabban nőnek. Okai:</p>
+        <ul>
+          <li><b>transzfer;</b></li>
+          <li><b>strukturális konvergencia:</b> a munkaerő átáramlik a hatékonyabb szektorokba (pl. a mezőgazdaságból az iparba);</li>
+          <li><b>Solow-hatás:</b> ha <b>alacsonyabb</b> az egy főre eső tőkeállomány, gyorsabb a növekedési ütem (minden új gép
+            sokat hoz).</li>
+        </ul>
+      </div>
+      <div class="box mech" data-dia="97">
+        <p><b>De a transzfer sikerének intézményi feltételei vannak:</b></p>
+        <ul>
+          <li>olyan <b>nemzetközi rend</b>, amelyben lehetséges az országok közötti áramlás;</li>
+          <li>az <b>oktatási küszöb</b> átlépése a befogadónál – legyen, aki érti az új tudást;</li>
+          <li><b>pénzügyi rendszer</b>, amely biztosítja a vállalkozásindítás tőkeigényét;</li>
+          <li>a modern gazdaságok egyéb <b>intézményi feltételei</b> (<a href="04-int.html#int-fogalom">4. fejezet</a>).</li>
+        </ul>
+      </div>
+      <div class="box warn" data-dia="97">
+        <p>A transzfer <b>nem automatikus</b>. A mintazh egyik kérdése épp az, miért nem vezet automatikusan felzárkózáshoz
+          a külföldi technológia átvétele: képzettség, finanszírozás és befogadó intézmények nélkül az alkalmazás gyenge marad.
+          És figyelj: a Solow-hatás szerint az <i>alacsonyabb</i> tőkeállomány jár gyorsabb növekedéssel, nem a magasabb.</p>
+      </div>
+
+      <p data-dia="98">Valóban felzárkóztak-e a szegényebb országok? Az alábbi három ábra vízszintes tengelyén az egy főre jutó
+        GDP szintje (az időszak elején), a függőlegesen az éves növekedési üteme van. Ha a pontok jobbra lefelé lejtenek,
+        a szegényebbek nőttek gyorsabban – ez a konvergencia.</p>
+      <figure class="dia" data-dia="98">
+        <img src="img/dia-098.png" alt="Pontdiagram európai országokról 1870 és 1914 között: a vízszintes tengelyen az egy főre jutó GDP, a függőlegesen az éves növekedés; a trendvonal enyhén lefelé lejt." loading="lazy">
+        <figcaption>1870–1914: enyhe konvergencia – a trendvonal enyhén lejt, a szegényebbek kicsit gyorsabban nőttek.
+          (Diasor, 98. dia.)</figcaption>
+      </figure>
+      <figure class="dia" data-dia="99">
+        <img src="img/dia-099.png" alt="Pontdiagram 1914 és 1950 között: a trendvonal emelkedik, a gazdagabb országok nőttek gyorsabban; Románia növekedése negatív." loading="lazy">
+        <figcaption>1914–1950: divergencia – a trendvonal emelkedik: a világháborúk, a világválság és a nemzetközi rend
+          szétesése megakasztotta a felzárkózást. (Diasor, 99. dia.)</figcaption>
+      </figure>
+      <figure class="dia" data-dia="100">
+        <img src="img/dia-100.png" alt="Pontdiagram 1950 és 1975 között: a trendvonal meredeken lejt; Görögország, Spanyolország, Bulgária gyorsan, az Egyesült Királyság lassan nőtt." loading="lazy">
+        <figcaption>1950–1975: erős konvergencia – a trendvonal meredeken lejt: Görögország, Spanyolország, Olaszország gyorsan
+          zárkózott fel, az Egyesült Királyság lassan nőtt. (Diasor, 100. dia.)</figcaption>
+      </figure>
+      <p data-dia="98-100">A három korszak összevetése a fejezet egyik legfontosabb tanulsága: <b>a konvergencia nem
+        természeti törvény</b>. Nyitott, működő nemzetközi rendben (1870–1914, 1950–1975) a szegényebbek felzárkóznak,
+        a világrend szétesésekor (1914–1950) a különbségek nőnek.</p>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Tudástranszfer</summary>
+        <ol>
+          <li>Miért nőhet gyorsabban egy szegényebb ország, mint egy gazdag?
+            <details><summary>Mintaválasz</summary><p>A visszamaradottság előnye miatt: kész technológiát vehet át (transzfer),
+              a munkaerőt átcsoportosíthatja a mezőgazdaságból a termelékenyebb iparba (strukturális konvergencia), és mivel
+              kevés a tőkéje, minden új befektetés sokat hoz (Solow-hatás).</p></details></li>
+          <li>Egy ország külföldi gyárakat telepít, mégsem zárkózik fel. Mi hiányozhat?
+            <details><summary>Mintaválasz</summary><p>A transzfer intézményi feltételei: képzett munkaerő és mérnökök, akik értik
+              és továbbfejlesztik a technológiát (oktatási küszöb); hazai vállalkozásokat finanszírozó pénzügyi rendszer; befogadó
+              intézmények; nyitott nemzetközi rend. Ezek nélkül a technológia „sziget” marad.</p></details></li>
+          <li>Miért nem volt konvergencia 1914 és 1950 között?
+            <details><summary>Mintaválasz</summary><p>Mert a transzfer első feltétele, a nyitott nemzetközi rend szétesett: két
+              világháború, a nagy válság, a protekcionizmus és az aranystandard összeomlása megszakította a kereskedelmet és
+              a tudás áramlását.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="tud-transzfer"></details>
+    </section>
+
+    <!-- ───────────────────────── 7. Emberi tőke ───────────────────────── -->
+    <section id="tud-humantoke">
+      <h2>Emberitőke-elmélet <span class="dia-ref">101–104. dia</span></h2>
+
+      <p data-dia="101">A transzfer egyik feltétele, hogy legyen, aki érti az új tudást. Ezzel elérkeztünk a tudás harmadik
+        formájához: ahhoz, ami az emberekben van.</p>
+      <div class="box def" data-dia="101">
+        <p><b>Emberi tőke:</b> a munkaerőben rejlő készségek és termelékeny tudás. Az emberi tőke <b>fejleszthető</b> – oktatással,
+          képzéssel, egészséggel –, és ennek eredményeként nő az emberekben rejlő erőforrás (Gary Becker).</p>
+      </div>
+      <div class="box mech" data-dia="101">
+        <p><b>Endogén növekedéselmélet (Romer, Lucas):</b> a tudásszint emelkedése a saját mértékét <b>meghaladó</b>
+          kibocsátásnövekedést eredményez.</p>
+        <p class="chain">befektetés oktatásba és kutatásba → több tudás → a tudás nem versengő, mindenki hasznosíthatja → a kibocsátás jobban nő, mint a tudás</p>
+      </div>
+      <div class="box kieg">
+        <p>Az „endogén” azt jelenti, hogy a technikai haladás nem kívülről, „az égből” hull a gazdaságba (mint Solow eredeti
+          modelljében), hanem a gazdaság szereplőinek döntéseiből – oktatási és kutatási befektetéseiből – jön létre.
+          Paul Romer ezért 2018-ban Nobel-díjat kapott.</p>
+      </div>
+
+      <p data-dia="102">Az emberi tőke felhalmozása évszázados folyamat. Az oktatásban töltött évek átlagos száma:</p>
+      <div class="table-wrap" data-dia="102">
+        <table class="data num">
+          <caption>Oktatásban töltött évek átlagos száma. (Diasor, 102. dia)</caption>
+          <thead><tr><th>Év</th><th>Kína</th><th>Franciaország</th><th>Németország</th><th>Magyarország</th><th>Hollandia</th><th>Nagy-Britannia</th><th>USA</th></tr></thead>
+          <tbody>
+            <tr><td>1850</td><td>0,8</td><td></td><td></td><td></td><td>3,0</td><td>2,6</td><td></td></tr>
+            <tr><td>1870</td><td>1,0</td><td>4,1</td><td>5,4</td><td>2,6</td><td>5,0</td><td>3,6</td><td>5,6</td></tr>
+            <tr><td>1880</td><td>1,0</td><td>4,9</td><td>5,7</td><td>3,0</td><td>5,3</td><td>4,4</td><td>6,0</td></tr>
+            <tr><td>1890</td><td>1,1</td><td>5,8</td><td>6,1</td><td>3,6</td><td>5,4</td><td>4,8</td><td>6,6</td></tr>
+            <tr><td>1900</td><td>1,2</td><td>7,0</td><td>7,0</td><td>4,6</td><td>5,8</td><td>5,9</td><td>7,5</td></tr>
+            <tr><td>1910</td><td>1,3</td><td>7,5</td><td>7,5</td><td>4,8</td><td>6,1</td><td>6,3</td><td>7,8</td></tr>
+            <tr><td>1930</td><td>1,3</td><td>7,7</td><td>7,7</td><td>5,1</td><td>6,4</td><td>6,7</td><td>8,5</td></tr>
+            <tr><td>1950</td><td>1,7</td><td>8,1</td><td>8,5</td><td>6,1</td><td>7,1</td><td>7,8</td><td>9,6</td></tr>
+            <tr><td>1970</td><td>3,5</td><td>10,0</td><td>11,1</td><td>7,9</td><td>9,0</td><td>10,1</td><td>11,1</td></tr>
+            <tr><td>1990</td><td>5,6</td><td>11,5</td><td>13,1</td><td>9,87</td><td>10,7</td><td>12,2</td><td>12,7</td></tr>
+            <tr><td>2010</td><td>7,7</td><td>12,5</td><td>13,0</td><td>11,2</td><td>11,5</td><td>13,3</td><td>13,6</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="102">Figyeld meg: Németország és az USA már 1870-ben 5–6 évet töltött iskolában – épp azok az országok, amelyek
+        a tudásigényes 2. ipari forradalmat vezették. Magyarország végig 2–3 évvel lemaradva követte őket.</p>
+      <p data-dia="103">A felsőfokú végzettségűek aránya is ezt mutatja: Magyarországon 1970 és 2010 között kb. 4%-ról 15%-ra nőtt
+        a 15 év felettiek körében, az USA-ban kb. 11%-ról 27%-ra – a különbség nem csökkent.</p>
+      <figure class="dia" data-dia="103">
+        <img src="img/dia-103.png" alt="Vonaldiagram 1970 és 2010 között: a felsőfokú végzettségűek aránya a 15 év feletti népességben az USA-ban 11-ről 27 százalékra, Magyarországon 4-ről 15 százalékra nő." loading="lazy">
+        <figcaption>Felsőfokú végzettségűek aránya a 15 év feletti népességben, Magyarország és az USA, 1970–2010 (%).
+          (Diasor, 103. dia; forrás: Our World in Data.)</figcaption>
+      </figure>
+
+      <h3 id="tud-tanulsagok">Tudás és növekedés – tanulságok</h3>
+      <div class="box tip" data-dia="104">
+        <ul>
+          <li>A növekedés fakadhat az emberi és a fizikai tőkébe való befektetésből, illetve a technikai haladásból.</li>
+          <li>A tudás nem versengő, de a terjedése <b>nem automatikus</b>: a transzferhez befogadóképesség, oktatás, finanszírozás
+            és megfelelő intézmények kellenek.</li>
+          <li>A <b>nyitottság</b> gyorsíthatja a felzárkózást, a <b>háború és a világrend szétesése</b> megszakíthatja.</li>
+          <li>A gazdasági válságok a <b>fejlődő, nyitott</b> országokat sújtják leginkább.</li>
+          <li><b>Politikai hibák</b> (pl. Argentína) és <b>kizsákmányoló intézmények</b> (keleti blokk) lemaradáshoz vezetnek.</li>
+          <li><b>Romer és Lucas</b> (endogén növekedéselmélet): a tartós növekedés fő forrása az emberi tőkébe, az oktatásba
+            és a kutatásba való befektetés.</li>
+        </ul>
+      </div>
+      <div class="box kieg">
+        <p>Argentína a 20. század elején a világ tíz leggazdagabb országa közé tartozott, majd a sorozatos politikai válságok,
+          a protekcionizmus és a gazdaságpolitikai hibák miatt fokozatosan lemaradt. A keleti blokk országai pedig hiába
+          fektettek sokat az oktatásba, a kizsákmányoló intézmények miatt a tudás nem vált versenyképes innovációvá.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Emberi tőke</summary>
+        <ol>
+          <li>Miért hozhat a tudásba való befektetés a saját mértékét meghaladó növekedést?
+            <details><summary>Mintaválasz</summary><p>Mert a tudás nem versengő jószág: ha valaki rájön valamire, azt sokan használhatják
+              egyszerre, és használat közben még gyarapodik is. Így egy egységnyi új tudás sok helyen növeli a kibocsátást –
+              ez az endogén növekedéselmélet állítása (Romer, Lucas).</p></details></li>
+          <li>Miért nem elég a magas iskolázottság a felzárkózáshoz? Hozz példát!
+            <details><summary>Mintaválasz</summary><p>Mert a tudásnak hasznosulnia is kell: befogadó intézmények, működő pénzügyi
+              rendszer és nyitott nemzetközi környezet kell hozzá. A keleti blokk országai sokat fektettek az oktatásba, de
+              a kizsákmányoló intézmények és a zárt gazdaság miatt nem zárkóztak fel.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="tud-humantoke"></details>
+    </section>
+
+    <!-- ───────────────────────── Összefoglalás ───────────────────────── -->
+    <section id="tud-osszegzes">
+      <h2>Összefoglalás</h2>
+      <ul data-dia="104">
+        <li>A 19. századig a technológia <b>gyakorlati tanulással</b>, lassan javult; a 19. század végétől a <b>tudományos megismerés</b>
+          gyorsította fel.</li>
+        <li>A tudomány Nyugaton azért emelkedhetett fel, mert a <b>politikai megosztottság</b> miatt nem lehetett mindenhol elnyomni.</li>
+        <li>A legnagyobb hatásúak az <b>általános célú technológiák</b>; a reálbér-statisztikák a minőségjavulást nem mérik.</li>
+        <li>Az <b>innovációs modell</b>hez sok szabadalom, piaci igény és sok tőke kell (100 szabadalomból 1 sikeres termék).</li>
+        <li>A tudás <b>nem versengő</b>, a lemaradók átvehetik (<b>visszamaradottság előnye, béta-konvergencia</b>) – de a transzfernek
+          <b>intézményi feltételei</b> vannak, és a világrend szétesése megszakíthatja.</li>
+        <li>Az <b>emberi tőke</b> fejleszthető; az endogén növekedéselmélet szerint a tudásba való befektetés a tartós növekedés fő forrása.</li>
+      </ul>
+      <p data-dia="104"><strong>Válasz a fejezet kérdésére:</strong> a technikai haladás azért gyorsult fel, mert a gyakorlati tanulást
+        kiegészítette a tudományos megismerés, és az általános célú technológiák egész iparágakat alakítottak át. Az új tudás
+        pedig azért nem jut el automatikusan mindenkihez, mert a transzferhez nyitott nemzetközi rend, iskolázott befogadók,
+        finanszírozás és befogadó intézmények kellenek.</p>
+
+      <h3 id="tud-esszetabla">Esszéhez: ha ezt látod → ezt használd</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Ha az esetben ez áll…</th><th>…akkor ezt a fogalmat / mechanizmust használd</th></tr></thead>
+          <tbody>
+            <tr><td>Egy ország gyorsan iparosodik, kész külföldi technológiát átvéve</td><td>visszamaradottság előnye, béta-konvergencia,
+              tudástranszfer (<a href="#tud-konvergencia">→</a>)</td></tr>
+            <tr><td>Technológiaátvétel, de nincs felzárkózás</td><td>a transzfer intézményi feltételei: oktatási küszöb, pénzügyi
+              rendszer, intézmények, nemzetközi rend (<a href="#tud-transzfer">→</a>)</td></tr>
+            <tr><td>Erős oktatási rendszer, sok egyetem, kutatás</td><td>emberi tőke, endogén növekedéselmélet (<a href="#tud-humantoke">→</a>)</td></tr>
+            <tr><td>Sok szabadalom, startupok, kockázati tőke (pl. Dél-Korea, USA)</td><td>az innovációra épülő fejlődés modellje
+              (<a href="#tud-innovacio">→</a>)</td></tr>
+            <tr><td>A hatalom betilt egy új technológiát vagy gondolatot</td><td>a Kelet hanyatlása: a hatalom egysége elnyomja
+              a kísérletezést (<a href="#tud-felvilagosodas">→</a>)</td></tr>
+            <tr><td>Egy találmány sok iparágat átalakít</td><td>általános célú technológia (<a href="#tud-fokozatvaltas">→</a>)</td></tr>
+            <tr><td>Háború, a világkereskedelem összeomlása után lemaradás</td><td>a konvergencia megszakadása, 1914–1950
+              (<a href="#tud-konvergencia">→</a>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="tud-kapcsolodasok">Kapcsolódások</h3>
+      <ul>
+        <li><b>A hatékonyság két forrása, Solow</b> (<a href="01-bev.html#bev-eroforras">1. fejezet</a>).</li>
+        <li><b>Szakosodás és tanulás; az intézmények közelítő hatása a transzferre</b> (<a href="02-ker.html#ker-szakosodas">2. fejezet</a>).</li>
+        <li><b>Pepys és Kremer: több ember, több innovátor</b>; a gyerekek „minősége” (<a href="03-nep.html#nep-pepys">3. fejezet</a>).</li>
+        <li><b>Befogadó intézmények és innováció</b> (<a href="04-int.html#int-rendek">4. fejezet</a>).</li>
+        <li><b>A pénzügyi rendszer mint a transzfer feltétele</b> (<a href="index.html#penz">6. fejezet</a>).</li>
+        <li><b>Európa megosztottsága és versenye</b>; a nyomda (<a href="index.html#eur">8. fejezet</a>).</li>
+        <li><b>A nemzetközi rend</b> mint a transzfer feltétele (<a href="index.html#kerpol">11.</a>, <a href="index.html#monet">12. fejezet</a>).</li>
+      </ul>
+
+      <details class="box quiz" data-topic="tud"></details>
+    </section>
+
+    <nav class="lesson-nav" data-chapter="tud"></nav>
+  </main>
+
+  <footer class="site-footer">
+    A tananyag a kurzus diasora (Fegatt.pdf) alapján készült, nem hivatalos anyag. Az eredmények csak a böngésződben tárolódnak.
+  </footer>
+
+  <script src="../data/questions.js"></script>
+  <script src="../data/sections.js"></script>
+  <script src="../assets/theme.js"></script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>

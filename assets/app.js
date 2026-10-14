@@ -114,38 +114,81 @@
   let cleanup = null; // aktuális nézet takarítója (időzítő, billentyűfigyelő)
 
   // ── Nézetek ──
+  // Utoljára olvasott fejezet – a lesson.js menti el (fegatt-last-lesson).
+  function lastLesson() {
+    try { return JSON.parse(localStorage.getItem("fegatt-last-lesson")) || null; } catch (e) { return null; }
+  }
+
   function viewHome() {
     const seen = QUESTIONS.filter(q => store.stats[q.id]).length;
+    const sections = (window.SECTIONS || []).filter(s => s.dia).length;
+    const last = lastLesson();
+    const lastTopic = last && TOPICS.find(t => t.id === last.t);
+    const chapters = TOPICS.map((t, i) => {
+      const qs = QUESTIONS.filter(q => q.t === t.id);
+      const known = qs.filter(q => store.stats[q.id] && store.stats[q.id].last).length;
+      const p = qs.length ? Math.round(100 * known / qs.length) : 0;
+      return `<li><a href="${window.Lessons.chapterHref(t.id, "")}" title="${esc(t.title)} – diák: ${esc(t.dia)}">
+        <span class="n">${i + 1}</span><span>${esc(t.title)}</span>
+        <span class="bar" data-p="${p}" aria-hidden="true"><i style="width:${p}%"></i></span></a></li>`;
+    }).join("");
     app.innerHTML = `
-      <h1>Gyakorló feladatsor a zárthelyihez</h1>
-      <p class="lead">${QUESTIONS.length} feleletválasztós kérdés a teljes diasor anyagából, a mintazárthelyi stílusában:
-        „Miért…?”, „Hogyan…?” típusú, mechanizmusokra kérdező feladatok, négy válaszlehetőséggel.</p>
+      <p class="eyebrow">GTGVÖ120BL · tananyag és ZH-gyakorló</p>
+      <h1>A fejlődés gazdaságtörténete</h1>
+      <p class="lead">A kurzus teljes diasora olvasmányos tananyaggá dolgozva, a hozzá kapcsolt
+        ${QUESTIONS.length} feleletválasztós kérdéssel. Olvass, majd ellenőrizd magad szakaszonként vagy egy teljes gyakorló ZH-val.</p>
+
+      <section class="feature" aria-labelledby="feature-title">
+        <div class="feature-main">
+          <p class="eyebrow">📖 Tananyag</p>
+          <h2 id="feature-title">A teljes diasor, fejezetről fejezetre</h2>
+          <p>15 fejezet a diasor sorrendjében: minden fejezet egy nyitó esettel indul, majd fogalmak, ok-okozati
+            mechanizmusok, történeti példák és vitatott állítások következnek színes dobozokban, ábrákkal.
+            Minden szakasz végén ott a hozzá tartozó kvíz.</p>
+          ${lastTopic ? `<div class="continue">↩︎ Ott tartottál:
+            <a href="${esc(last.href)}">${TOPICS.indexOf(lastTopic) + 1}. ${esc(lastTopic.title)}</a></div>` : ""}
+          <div class="feature-actions">
+            <a class="btn lg" href="tananyag/">${lastTopic ? "Tartalomjegyzék" : "Olvasás"}</a>
+            <a class="btn secondary" href="tananyag/fogalomtar.html">📚 Fogalomtár</a>
+            <a class="btn secondary" href="tananyag/15-szint.html#szint-essze">✍️ Esszéírás</a>
+          </div>
+          <ul class="stats" aria-label="A tananyag terjedelme">
+            <li><b>${TOPICS.length}</b> fejezet</li>
+            <li><b>${sections}</b> szakasz</li>
+            <li><b>213</b> dia feldolgozva</li>
+            <li><b>${QUESTIONS.length}</b> kvízkérdés</li>
+          </ul>
+        </div>
+        <ol class="chapter-grid" aria-label="Fejezetek">${chapters}</ol>
+      </section>
+
+      <h2 class="section-title">Gyakorlás <small>kvíz a tananyaghoz</small></h2>
       <div class="cards">
-        <div class="card"><h3>📖 Tananyag</h3>
-          <p>A teljes diasor feldolgozva, olvasmányosan, ábrákkal. Minden szakasz végén a hozzá tartozó kvízkérdések.</p>
-          <a class="btn" href="tananyag/">Olvasás</a></div>
-        <div class="card"><h3>📝 Gyakorló ZH</h3>
+        <div class="card"><div class="icon">📝</div><h3>Gyakorló ZH</h3>
           <p>15 kérdés, témakörönként egy – mint az igazi ZH-n. 30 perces időzítő, beadás után kiértékelés.</p>
           <a class="btn" href="#/zh">Indítás</a></div>
-        <div class="card"><h3>📚 Témakörök szerint</h3>
+        <div class="card"><div class="icon">📚</div><h3>Témakörök szerint</h3>
           <p>Egyesével, azonnali visszajelzéssel, tippel és magyarázattal. ${TOPICS.length} témakör.</p>
-          <a class="btn" href="#/temak">Témák</a></div>
-        <div class="card"><h3>📄 Az eredeti mintazh</h3>
+          <a class="btn secondary" href="#/temak">Témák</a></div>
+        <div class="card"><div class="icon">📄</div><h3>Az eredeti mintazh</h3>
           <p>A kiadott mintazárthelyi 15 kérdése, eredeti sorrendben és betűjelekkel.</p>
-          <a class="btn" href="#/minta">Megnyitás</a></div>
-        <div class="card"><h3>🔁 Hibáim</h3>
+          <a class="btn secondary" href="#/minta">Megnyitás</a></div>
+        <div class="card"><div class="icon">🔁</div><h3>Hibáim</h3>
           <p>Azok a kérdések, amiket legutóbb elrontottál. Ha jól válaszolsz, kikerülnek a listából.</p>
-          <a class="btn" href="#/hibak">Gyakorlás</a></div>
+          <a class="btn secondary" href="#/hibak">Gyakorlás${store.wrong.length ? ` (${store.wrong.length})` : ""}</a></div>
       </div>
-      <div class="box tip"><strong>Hogyan működik a ZH?</strong>
-        15 kérdés, kérdésenként 4 válaszlehetőség, ebből egy helyes; minden helyes válasz 1 pont, 30 perc.
-        Az aláíráshoz legalább ${PASS_MIN} pont kell. A félév végi jegy a ZH (max. 15) és az esszé (max. 15) összegéből adódik:
-        15–18 elégséges, 19–22 közepes, 23–26 jó, 27–30 jeles.</div>
-      <div class="box tip"><strong>Tanulási tipp a diasor alapján.</strong>
-        A pontos számadatokat nem kell megtanulni – a kulcsfogalmakra ([D]), az ok-okozati mechanizmusokra ([M])
-        és a történeti példák összefüggéseire ([E]) koncentrálj. A rossz válaszok gyakran túlzó, abszolút állítások
-        („kizárólag”, „mindig”, „automatikusan”, „teljesen megszünteti”) – de ne erre a mintázatra hagyatkozz, hanem a mechanizmusra.</div>
-      <p class="t-meta">Eddig ${seen} / ${QUESTIONS.length} kérdést láttál.
+
+      <div class="home-info">
+        <div class="box tip"><strong>Hogyan működik a ZH?</strong>
+          15 kérdés, kérdésenként 4 válaszlehetőség, ebből egy helyes; minden helyes válasz 1 pont, 30 perc.
+          Az aláíráshoz legalább ${PASS_MIN} pont kell. A félév végi jegy a ZH (max. 15) és az esszé (max. 15) összegéből adódik:
+          15–18 elégséges, 19–22 közepes, 23–26 jó, 27–30 jeles.</div>
+        <div class="box tip"><strong>Tanulási tipp.</strong>
+          A pontos számadatokat nem kell megtanulni – a kulcsfogalmakra ([D]), az ok-okozati mechanizmusokra ([M])
+          és a történeti példák összefüggéseire ([E]) koncentrálj. A rossz válaszok gyakran túlzó, abszolút állítások
+          („kizárólag”, „mindig”, „automatikusan”) – de ne erre a mintázatra hagyatkozz, hanem a mechanizmusra.</div>
+      </div>
+      <p class="home-meta">Eddig ${seen} / ${QUESTIONS.length} kérdést láttál.
         ${seen ? `<button type="button" class="btn secondary" id="reset">Statisztika törlése</button>` : ""}</p>`;
     const reset = document.getElementById("reset");
     if (reset) reset.onclick = () => {

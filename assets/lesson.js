@@ -145,12 +145,13 @@
         return `<li>${title} <span class="dia-ref">${diaText(s.dia)}</span></li>`;
       };
       return `<section class="toc-chapter" id="${t.id}">
-        <h2>${i + 1}. ${ready ? `<a href="${L.lessonFile(t.id)}">${esc(t.title)}</a>` : esc(t.title)}</h2>
+        <span class="num" aria-hidden="true">${i + 1}</span>
+        <h2>${ready ? `<a href="${L.lessonFile(t.id)}">${esc(t.title)}</a>` : esc(t.title)}</h2>
         <div class="t-meta">Diák: ${esc(t.dia)} · ${n} kvízkérdés${ready ? "" : ` · <span class="soon">a fejezet szövege hamarosan elkészül</span>`}</div>
         <ol>${secs.map(item).join("")}</ol>
         <div class="t-actions">
-          ${ready ? `<a class="btn secondary" href="${L.lessonFile(t.id)}">📖 Olvasás</a>` : ""}
-          <a class="btn" href="../index.html#/tema/${t.id}">Gyakorlás</a></div>
+          ${ready ? `<a class="btn" href="${L.lessonFile(t.id)}">📖 Olvasás</a>` : ""}
+          <a class="btn secondary" href="../index.html#/tema/${t.id}">🎯 Gyakorlás</a></div>
       </section>`;
     }).join("");
     // A dinamikusan létrejött horgonyra (pl. a kvíz „Olvasd el” linkjéből) görgessünk oda.
@@ -158,6 +159,14 @@
       const target = document.getElementById(location.hash.slice(1));
       if (target) target.scrollIntoView();
     }
+  }
+
+  // Utoljára olvasott fejezet – a főoldal „Ott tartottál” linkjéhez.
+  const chapterNav = document.querySelector("nav.lesson-nav[data-chapter]");
+  if (chapterNav) {
+    const t = chapterNav.dataset.chapter;
+    try { localStorage.setItem("fegatt-last-lesson", JSON.stringify({ t, href: "tananyag/" + L.lessonFile(t), ts: Date.now() })); }
+    catch (e) { /* privát mód */ }
   }
 
   document.querySelectorAll("ol.roadmap[data-roadmap]").forEach(fillRoadmap);

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6. Pénz és pénzügyi piacok – A fejlődés gazdaságtörténete</title>
+  <meta name="description" content="A pénz születése és funkciói, a pénzevolúció (váltó, részleges tartalék, jegybank, fiat pénz), a bankok és a tőzsdék szerepe, Harari a hitelről.">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html#/">A fejlődés gazdaságtörténete <span>Tananyag</span></a>
+    <nav>
+      <a href="./" class="active">Tananyag</a>
+      <a href="../index.html#/zh">Gyakorló ZH</a>
+      <a href="../index.html#/temak">Témakörök</a>
+      <a href="../index.html#/minta">Mintazh</a>
+      <a href="../index.html#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
+    </nav>
+  </header>
+
+  <main class="lesson">
+    <p class="kicker">6. fejezet · diák: 105–115</p>
+    <h1>Pénz és pénzügyi piacok</h1>
+    <blockquote data-dia="105">
+      <p>„Engedjétek át nekem egy nemzet pénzét, és nem érdekel, ki írja a törvényeket.”</p>
+      <p class="dia-ref">Mayer Amschel Rothschild</p>
+    </blockquote>
+    <p class="lead">Az eddigi fejezetekben a hatékonyság forrásait kerestük: kereskedelem, népesség, intézmények, tudás.
+      Mindegyikhez kell valami, amiről eddig keveset beszéltünk: pénz, amivel cserélünk, és hitel, amivel a jövő
+      ötleteit ma finanszírozzuk.</p>
+
+    <!-- ───────────────────────── 1. Nyitó eset ───────────────────────── -->
+    <section id="penz-mpesa">
+      <h2>Nyitó eset: M-PESA, Kenya <span class="dia-ref">105–106. dia</span></h2>
+
+      <div class="box eset" data-dia="106">
+        <p>Kenyában több mint egy évtizeddel hamarabb lehetett mobillal fizetni a taxiban, mint New Yorkban, a pénzügyi világ
+          központjában. Hogyan lehetséges ez?</p>
+        <p>A hitelkártya kényelmes, de nem olcsó: a nagy közvetítők (Visa, Mastercard, American Express) leveszik belőle a részüket.
+          Ráadásul bankszámla kell hozzá, a kenyaiak többsége pedig olyan szegény volt, hogy a bankok szóba sem álltak velük.
+          A pénzátutalás távolsági buszokkal történt: a készpénzt odaadták a buszon utazó pénzszállítónak, aki eljuttatta
+          a célállomásra – drágán, lassan és kockázatosan.</p>
+        <p>2005-ben, még az okostelefonok előtt, a brit Vodafone kísérleti programot indított <b>M-PESA</b> néven: az ügyfelek
+          a feltöltőkártyákhoz hasonlóan pénzt tölthettek a telefonjukra, és ebből törlesztették a hiteleiket. 2007-től bárki
+          utalhatott bárkinek, és néhány év alatt szinte minden kenyai a mobiljával fizetett.</p>
+        <p>Egy tanulmány szerint az M-PESA felhasználóinak jövedelme <b>5–30%-kal</b> nőtt a rendszernek köszönhetően: olcsóbban,
+          gyorsabban fizethettek egymásnak, és a rendszerben lévő pénzük után még kamatot is kaptak. A mobilpénz különböző formái
+          a fintech cégekkel Magyarországra is beszivárognak.</p>
+      </div>
+      <p data-dia="106">Az eset rámutat a fejezet lényegére: a pénz és a pénzügyi rendszer nem „csak” a gazdagok ügye.
+        Ha a fizetés olcsóbb és biztonságosabb lesz, a szegények is többet kereskedhetnek, takaríthatnak meg és fektethetnek be.
+        A pénzügyi innováció tehát ugyanúgy növeli a hatékonyságot, mint egy új gép.</p>
+      <p><strong>A fejezet kérdése:</strong> hogyan segíti a pénz, a bank és a tőzsde a gazdasági fejlődést – és miért teszi
+        egyúttal sérülékenyebbé a gazdaságot?</p>
+
+      <h3 id="penz-utiterv">Útiterv</h3>
+      <ol class="roadmap" data-roadmap="penz"></ol>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – M-PESA</summary>
+        <ol>
+          <li>Miért terjedt el a mobilfizetés hamarabb Kenyában, mint New Yorkban?
+            <details><summary>Mintaválasz</summary><p>Mert Kenyában nem volt jó alternatíva: a többségnek nem volt bankszámlája,
+              a készpénz buszos szállítása drága és kockázatos volt. New Yorkban a bankkártya kényelmes megoldást adott, így ott
+              kisebb volt az igény az újításra. (Ez a „visszamaradottság előnyének” egy formája is: a lemaradó átugorhat egy fejlődési
+              lépcsőt.)</p></details></li>
+          <li>Hogyan növelhette egy fizetési rendszer a felhasználók jövedelmét?
+            <details><summary>Mintaválasz</summary><p>Csökkentette a tranzakciós költségeket és a kockázatot: olcsóbb és gyorsabb lett
+              a csere, több üzlet érte meg, a családok könnyebben küldhettek egymásnak pénzt, és a megtakarítás biztonságban volt
+              (még kamatot is hozott).</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="penz-mpesa"></details>
+    </section>
+
+    <!-- ───────────────────────── 2. A pénz születése ───────────────────────── -->
+    <section id="penz-szuletes">
+      <h2>A pénz születése és fejlődése <span class="dia-ref">107–109. dia</span></h2>
+
+      <p data-dia="107">Kezdjük az elején: pénz nélkül <b>barterrel</b>, áru áruért cserélnénk. Ennek két nagy hátránya van:
+        kell hozzá az <b>igények találkozása</b> (olyan partner, akinek épp az kell, amit én adok, és épp az van neki, ami nekem
+        kell), és az <b>árak nem követhetők világosan</b> (mennyi kenyér egy eke? és mennyi sör?).</p>
+      <div class="box def" data-dia="107">
+        <p><b>Tranzakciós költség:</b> egy gazdasági ügylet lebonyolításának járulékos költsége – a partner felkutatása,
+          az alku, az ellenőrzés, a szállítás. A barterkereskedelemnek nagyon magas a tranzakciós költsége.</p>
+      </div>
+      <p data-dia="107">A pénz vélhetően <b>spontán született innováció, gazdasági intézmény</b>, amely úgy javította
+        a hatékonyságot, hogy <b>csökkentette a piaci ügyletek tranzakciós költségét</b>.</p>
+
+      <h3 id="penz-buza">Hogyan lesz a búzából pénz?</h3>
+      <p data-dia="108">Nézzünk egy kis falut négy mesteremberrel. Barterrel nem jönne létre minden csere: a kovácsnak
+        sör és kenyér kell, de a pék és a serfőző nem kér ekét. Ekét csak a paraszt akar – neki viszont csak búzája van.</p>
+      <div class="table-wrap" data-dia="108">
+        <table class="data">
+          <caption>Hogyan lesz a búzából pénz? (Diasor, 108. dia)</caption>
+          <thead><tr><th>Szereplő</th><th>Elad</th><th>Mire van szüksége?</th><th>Mit kap?</th></tr></thead>
+          <tbody>
+            <tr><td>Pék úr</td><td>kenyér</td><td>búza</td><td>búza</td></tr>
+            <tr><td>Paraszt úr</td><td>búza</td><td>eke</td><td>eke</td></tr>
+            <tr><td>Kovács úr</td><td>eke</td><td>sör és kenyér</td><td><b>búza (pénz)</b></td></tr>
+            <tr><td>Serfőző úr</td><td>sör</td><td>kenyér</td><td><b>búza (pénz)</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="108">A megoldás: a kovács elfogadja a paraszttól a búzát az ekéért, pedig neki nem búza kell – tudja, hogy
+        a búzát mindenki elfogadja. A búzával kenyeret vesz a péktől és sört a serfőzőtől; a serfőző a kapott búzával kenyeret
+        vesz. A búza <b>pénzzé vált</b>: nem azért fogadják el, mert megeszik, hanem mert továbbadhatják.</p>
+      <div class="box def" data-dia="108">
+        <p>A hagyományos pénznek <b>belső értéke</b> van (a búzát meg lehet enni, az aranyat fel lehet használni). A pénz
+          három funkciót tölt be:</p>
+        <ul>
+          <li><b>forgalmi eszköz</b> – a kovács arra használja, hogy megszerezze a szükséges árut;</li>
+          <li><b>felhalmozási eszköz</b> – megőrzi az értékét, amíg nem akarjuk árura váltani;</li>
+          <li><b>értékmérő, elszámolási eszköz</b> – a piac rögzíti, hogy egy egység búza mennyi sörre, kenyérre, ekére
+            váltható.</li>
+        </ul>
+      </div>
+
+      <h3 id="penz-evolucio">Pénzevolúció</h3>
+      <p data-dia="109">A pénz azóta folyamatosan fejlődik. Minden lépés egy-egy problémára adott válasz volt – és mindegyik
+        lépéssel nőtt a bizalom szerepe.</p>
+      <div class="box mech" data-dia="109">
+        <ol>
+          <li><b>Pénzhelyettesítők – a váltó.</b> A nemesfém pénz a távolsági kereskedelemben kényelmetlen (nehéz, lopható).
+            <b>Váltó:</b> az adós ígérete, hogy egy jövőbeli időpontban meghatározott összeget kifizet. Itáliából indult,
+            a 13. századtól terjedt el, és a 20. századig domináns volt. A váltó maga is <b>pénzhelyettesítővé</b> vált:
+            forgalmi eszközként adták tovább, akár az érméket. A 15. századtól kialakult szabályok szerint mindenki, akinek a
+            kezén átment, felelősséget vállalt azért, hogy az adós végül fizet – így csökkent a kockázata.</li>
+          <li><b>Részleges tartalékkal működő bank.</b> A bank összegyűjti a betétesek pénzét és váltóit, de nagyobb részét
+            nem tartalékolja, hanem hitelként kiadja, befekteti. A 14. századi Itáliában jelent meg (a <i>bank</i> szó
+            a <i>banca</i>, pad szóból ered). Hatása kettős: <b>növeli a pénzkínálatot</b>, de gyakoriak a <b>bankrohamok
+            és csődök</b>.</li>
+          <li><b>Váltóleszámítolás (diszkontálás):</b> a váltót lejárat előtt megveszik, a névértéknél alacsonyabb (diszkontált)
+            áron. A 16. századi Antwerpenben alakult ki, a vallásüldözés elől menekülő antwerpeniek honosították meg Londonban.
+            Így kialakult a <b>váltók piaca</b>, a tőzsde előfutára, amely biztosította a pénzügyi szereplők likviditását.</li>
+          <li><b>Klíringbank:</b> olyan bank, amelynél a többi bank vezeti a számláját, és amely lebonyolítja a közöttük lévő
+            átutalásokat. Az első: az Amsterdamsche Wisselbank (1609).</li>
+          <li><b>Jegybankok – a végső hitelező.</b> 1657-ben a Stockholms Banco ezüstöt és érméket fogadott betétként, és bankjegyeket
+            nyomtatott – de túl sokat, amit a betétek nem fedeztek. A bukásából született 1668-ban a Riksbank. 1694-ben megalakult
+            a Bank of England; Sir Robert Peel 1844-es jegybanktörvénye szerint az Angol Bank az aranytartalékán felül csak az
+            államadósság (11 millió font) + 3 millió font értékben bocsáthatott ki bankjegyet.</li>
+          <li><b>Papírpénz (fiat pénz):</b> belső értékkel nem rendelkező, a <b>bizalmon</b> alapuló pénz. A fejlett országokban
+            az 1930-as évektől jelent meg.</li>
+        </ol>
+      </div>
+      <div class="box kieg">
+        <p>A <b>végső hitelező</b> (lender of last resort) azt jelenti, hogy bankroham idején a jegybank kölcsönt ad a bankoknak,
+          hogy ki tudják fizetni a betéteseket. Ha a betétesek tudják, hogy erre van mód, nincs okuk pánikszerűen kivenni a pénzüket –
+          így a roham meg sem indul. A fiat pénz pedig csak addig működik, amíg bízunk benne, hogy holnap is elfogadják: értékét
+          nem az anyaga, hanem a kibocsátó (az állam és a jegybank) hitelessége adja.</p>
+      </div>
+      <div class="box warn" data-dia="109">
+        <p>A részleges tartalékolás nem „csalás”: ez teszi lehetővé, hogy a megtakarítás hitellé váljon. Kockázata viszont
+          a bankroham – ha egyszerre mindenki kéri vissza a pénzét, egyetlen bank sem tudja kifizetni. Ez a 7. fejezet egyik
+          kiindulópontja (<a href="07-ciklus.html#ciklus-palmstruch">Palmstruch</a>).</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A pénz születése</summary>
+        <ol>
+          <li>Miért mondjuk, hogy a pénz intézmény?
+            <details><summary>Mintaválasz</summary><p>Mert szabály és norma: azért működik, mert mindenki elfogadja, és tudja, hogy
+              mások is elfogadják. Spontán alakult ki, mert csökkentette a barter magas tranzakciós költségét (az igények
+              találkozásának szükségességét és az árak áttekinthetetlenségét).</p></details></li>
+          <li>Egy börtönben a cigaretta lesz a fizetőeszköz. Melyik három pénzfunkciót tölti be?
+            <details><summary>Mintaválasz</summary><p>Forgalmi eszköz (cigarettáért lehet szolgáltatást, ételt cserélni), felhalmozási
+              eszköz (el lehet tenni későbbre), értékmérő (mindent „hány szál cigarettában” árazunk). Belső értéke is van – akár
+              a búzának a példában.</p></details></li>
+          <li>Milyen előnnyel és milyen kockázattal jár a részleges tartalékkal működő bank?
+            <details><summary>Mintaválasz</summary><p>Előny: a betétek nagyobb részét hitelként kiadja, így bővül a pénzkínálat és
+              a beruházás. Kockázat: ha a betétesek egyszerre kérik vissza a pénzüket (bankroham), a bank nem tud fizetni, és csődbe
+              mehet. Erre a kockázatra válasz a jegybank mint végső hitelező.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="penz-szuletes"></details>
+    </section>
+
+    <!-- ───────────────────────── 3. Bankok ───────────────────────── -->
+    <section id="penz-bankok">
+      <h2>A bankok közvetítő szerepe és hatása a növekedésre <span class="dia-ref">110–111. dia</span></h2>
+
+      <p data-dia="110">Képzeld el, hogy van megtakarított pénzed, és a szomszéd városban valaki gyárat akar építeni. Miért nem
+        adod neki közvetlenül kölcsön? Mert nem ismered, nem tudod, megbízható-e, és lehet, hogy jövő hónapban kell a pénzed.
+        A vállalkozónak pedig nem egy, hanem száz ilyen megtakarítót kellene felkutatnia. A bank mindkét problémát megoldja:</p>
+      <div class="table-wrap" data-dia="110">
+        <table class="data">
+          <caption>A bankok közvetítenek a megtakarító és a befektető között. (Diasor, 110. dia)</caption>
+          <thead><tr><th>A megtakarító problémája</th><th>A bank közvetítése</th><th>A befektető problémája</th></tr></thead>
+          <tbody>
+            <tr><td>Költséges a lehetséges hitelfelvevők értékelése</td><td>Méretgazdaságossági előnyökkel hatékonyan felméri
+              az ügyfelek fizetőképességét</td><td>Költséges a lehetséges hitelezők felkutatása</td></tr>
+            <tr><td>Kevésbé kockázatos, ha több adós között oszlik meg a kockázat</td><td>Széles portfóliót képez</td>
+              <td>Kevésbé költséges, ha nem sok hitelezőtől kell összeszedni a pénzt</td></tr>
+            <tr><td>Likvid formában jobb megtakarítani</td><td>Tartalékot tart, amivel kielégíti a betétesek likviditási igényét</td>
+              <td>Hosszú távú hitel kell a tőkebefektetéshez</td></tr>
+            <tr><td>Aszimmetrikus információ az adós fizetőképességéről</td><td>Profin ellenőrzi a cégeket, kapcsolatot épít ki,
+              átalakítja a hitelek időtávját</td><td>Aszimmetrikus információ az adós fizetőképességéről</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="box kieg">
+        <p><b>Aszimmetrikus információ:</b> az ügylet egyik fele többet tud, mint a másik – az adós jobban ismeri
+          a saját fizetőképességét, mint a hitelező. A bank szakértelemmel és tartós kapcsolattal csökkenti ezt az információs
+          hátrányt. A <b>lejárati transzformáció</b> pedig azt jelenti, hogy a bank rövid lejáratú (bármikor felvehető)
+          betétekből hosszú lejáratú hiteleket ad.</p>
+      </div>
+
+      <h3 id="penz-novekedes">Hogyan hatnak a bankok a növekedésre?</h3>
+      <div class="box mech" data-dia="111">
+        <ol>
+          <li><b>Növelik a megtakarítási rátát:</b> ha a bank kamatot fizet, a készpénz tartásának alternatív költsége megnő –
+            megéri betenni a pénzt. A megtakarítási ráta korábban 5% alatt volt, a 19. század második felében 10–20%-ra emelkedett.</li>
+          <li><b>Bővítik a pénzkínálatot</b> a részleges tartalékolással.
+            <span class="dia-ref">[V]</span> Rousseau szerint 1730 és 1850 között a pénzkínálat 1%-os emelkedése 5 éven belül
+            2%-kal növelte az ipari kibocsátást.</li>
+          <li><b>Enyhítik a fizetőképesség és az adóskockázat felmérésének tranzakciós költségét.</b></li>
+        </ol>
+      </div>
+      <p data-dia="111">A bankoknak két típusa van: a <b>kereskedelmi bankok</b> a megtakarításokat gyűjtik, a <b>befektetési
+        bankok</b> a részvényesek pénzét kockázatosabb hitelekbe helyezik. A 19. században két banki modell alakult ki:</p>
+      <div class="two-col" data-dia="111">
+        <div class="box eset">
+          <p><b>Tranzakciós bankok (Anglia)</b></p>
+          <p>A 19. század második felében rövidebb távú, biztonságosabb befektetésekre törekedtek.</p>
+        </div>
+        <div class="box eset">
+          <p><b>Kapcsolati bankok (Franciaország, főleg Németország)</b></p>
+          <p>Szívesen hitelezték a nagyvállalatok kockázatos fejlesztési ötleteit; tartós kapcsolatban álltak velük, a bank
+            képviselői részt vettek az igazgatótanácsban. Lehet, hogy ezért nőtt gyorsabban Németország ebben az időszakban.</p>
+        </div>
+      </div>
+      <div class="box kieg">
+        <p>Ez összecseng a 2. ipari forradalommal (<a href="05-tud.html#tud-ket-forradalom">5. fejezet</a>): a német vegyipar
+          és nehézipar óriási, hosszú távú beruházásokat igényelt, amelyeket a kapcsolati bankok finanszíroztak. Gerschenkron
+          szerint a „visszamaradott” országok épp az ilyen intézményekkel pótolták a hiányzó tőkét.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A bankok szerepe</summary>
+        <ol>
+          <li>Miért gyorsíthatta a bankrendszer fejlődése a 19. századi iparosodást? (Mintazh 6.)
+            <details><summary>Mintaválasz</summary><p>Mert összegyűjtötte a megtakarításokat (nőtt a megtakarítási ráta), felmérte
+              a kockázatot és a fizetőképességet (csökkentette a tranzakciós költséget és az információs aszimmetriát), és hosszú
+              távú hitelt adott a beruházásokhoz – a rövid távú betétekből. A részleges tartalékolással a pénzkínálat is bővült.</p></details></li>
+          <li>Miért nőhetett gyorsabban Németország, mint Anglia a 19. század végén – a bankrendszer szemszögéből?
+            <details><summary>Mintaválasz</summary><p>A német kapcsolati bankok hosszú távon és kockázatvállalóan finanszírozták
+              a nagyvállalatok fejlesztéseit, ott ültek az igazgatótanácsokban, így jól ismerték a cégeket. Az angol tranzakciós bankok
+              rövid távú, biztonságos befektetéseket kerestek, és kevésbé támogatták a nagy, kockázatos innovációkat.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="penz-bankok"></details>
+    </section>
+
+    <!-- ───────────────────────── 4. Tőzsdék ───────────────────────── -->
+    <section id="penz-tozsde">
+      <h2>A tőzsdék szerepe <span class="dia-ref">112–113. dia</span></h2>
+
+      <div class="box mech" data-dia="112">
+        <ul>
+          <li>A 19. század második feléig a tőzsdéken főleg <b>államkötvényekkel</b> (európai találmány) és nagy, állami
+            monopóliummal bíró kereskedőcégek részvényeivel kereskedtek.</li>
+          <li>Az első, mai értelemben vett <b>részvénytársaságok</b> a vasút, a pénzügyek és a bányaipar területén működtek –
+            ott, ahol óriási tőke kellett (vö. korlátolt felelősség, <a href="04-int.html#int-felelosseg">4. fejezet</a>).</li>
+          <li><span class="dia-ref">[V]</span> Az <b>információs aszimmetriák</b> miatt a tőzsde mindig is inkább a gazdagabbak pénzét
+            vonzotta – nekik volt pénzük tájékozódni és kockáztatni.</li>
+          <li>Bár mindkét intézmény közvetít a megtakarító és a befektető között, a bank és a tőzsde <b>inkább kiegészíti egymást</b>,
+            semmint rivális intézmények lennének.</li>
+        </ul>
+      </div>
+
+      <p data-dia="113">A pénzügyi rendszer egész fejlődését egyetlen ábra foglalja össze. A vízszintes tengelyen a kockázat,
+        a függőlegesen a tranzakciós költség van. Minden új pénzügyi intézmény – a teljes értékű érmétől a váltón és a bankbetéten
+        át az elektronikus átutalásig – <b>lefelé és balra</b> tolta a rendszert: a csere egyszerre lett olcsóbb és biztonságosabb.</p>
+      <figure class="dia" data-dia="113">
+        <img src="img/dia-113.png" alt="Ábra: a vízszintes tengelyen a kockázat, a függőlegesen a költség; három görbe (kb. 1600, 1850 és 2000) egyre lejjebb és balrább; nyilak mutatják, hogyan csökkentette a teljes értékű érméktől a váltókon, a bankbetéteken és a bankszabályozáson át a betétbiztosításig és a végső hitelezőig minden újítás a tranzakciók költségét és kockázatát." loading="lazy">
+        <figcaption>A pénzügyi rendszer csökkenti a tranzakciók költségét és kockázatát (c. 1600 → c. 1850 → c. 2000):
+          teljes értékű érmék, váltók, bankbetétek, bankjegyek, bankszabályozás, elektronikus átutalás, betétbiztosítás,
+          a jegybank mint végső hitelező. (Diasor, 113. dia.)</figcaption>
+      </figure>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A tőzsdék</summary>
+        <ol>
+          <li>Miért egészíti ki egymást a bank és a tőzsde?
+            <details><summary>Mintaválasz</summary><p>A bank a kisebb, ismert ügyfeleknek és a biztonságosabb, hitelalapú finanszírozásnak
+              kedvez, és a betéteseknek likviditást ad. A tőzsde a nagy, kockázatos vállalkozásoknak (vasút, bányák) szerez sok
+              befektetőtől tulajdonosi tőkét. Más-más igényt szolgálnak ki, ezért együtt mélyítik a pénzügyi rendszert.</p></details></li>
+          <li>Mit mutat a 113. dia ábrája a pénzügyi innovációkról?
+            <details><summary>Mintaválasz</summary><p>Hogy minden új intézmény (váltó, bankbetét, bankjegy, szabályozás, betétbiztosítás,
+              végső hitelező) egyszerre csökkentette a csere költségét és kockázatát. A pénzügyi fejlődés tehát a tranzakciós
+              költségek csökkentésének története.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="penz-tozsde"></details>
+    </section>
+
+    <!-- ───────────────────────── 5. Harari ───────────────────────── -->
+    <section id="penz-harari">
+      <h2>Harari: a hitel mint a jövőbe vetett bizalom <span class="dia-ref">114–115. dia</span></h2>
+
+      <p data-dia="114">Miért csak az utolsó 500 évben robbant be a hitel? Yuval Noah Harari <i>Sapiens</i> (2015) című
+        könyvében egy vitatott, de elgondolkodtató választ ad.</p>
+      <div class="box vita" data-dia="114">
+        <ul>
+          <li>„Az újkor előtt… a legtöbb esetben a pénz csak olyan dolgokat volt képes képviselni, és egymásba átalakítani,
+            amelyek valóban léteztek a jelenben.”</li>
+          <li>„Az elmúlt 500 évben a haladás eszméje diadalmaskodott, az emberek több és több bizalmat fektettek a jövőbe.”</li>
+          <li>„Ez a bizalom hozta létre a hitelt.”</li>
+          <li>„A hitel lehetővé teszi, hogy a jövő számlájára építsük a jelent.”</li>
+          <li>„A hitel gazdasági növekedést hozott, a növekedés pedig tovább erősítette a jövőbe vetett bizalmat, és még
+            több hitel előtt nyitott utat.”</li>
+        </ul>
+      </div>
+      <div class="box mech" data-dia="114">
+        <p class="chain">bizalom a jövőben → hitel → beruházás ma → növekedés → még nagyobb bizalom → még több hitel</p>
+        <p>Ez is pozitív visszacsatolás – de figyeld meg, hogy visszafelé is működhet: ha a bizalom megrendül, a hitel elapad,
+          és a növekedés is megtorpan. Erről szól a következő fejezet.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Harari</summary>
+        <ol>
+          <li>Miért kapcsolódik a hitel a haladás eszméjéhez Harari szerint?
+            <details><summary>Mintaválasz</summary><p>Hitelt csak az ad, aki hisz abban, hogy a jövő jobb lesz, és az adós vissza tudja
+              fizetni a tartozást. Amíg az emberek nem hittek a növekedésben (a gazdaság „tortája” nem nő), a hitel zéró összegű
+              játszmának tűnt. A haladásba vetett hit tette lehetővé, hogy a jövő számlájára építsük a jelent.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="penz-harari"></details>
+    </section>
+
+    <!-- ───────────────────────── Összefoglalás ───────────────────────── -->
+    <section id="penz-osszegzes">
+      <h2>Összefoglalás: a fejlettségi szint és a sérülékenység együtt nő <span class="dia-ref">115. dia</span></h2>
+      <ul data-dia="115">
+        <li>A <b>pénz csökkenti a csere költségét</b>; a <b>bankok és tőzsdék</b> összekötik a megtakarítást a beruházással.</li>
+        <li>A <b>hitel</b> lehetővé teszi, hogy jövőbeli hozamokra építve ma ruházzunk be.</li>
+        <li>Az <b>információs aszimmetria</b>, a <b>tőkeáttétel</b> és a <b>lejárati különbség</b> törékennyé teszi a rendszert.</li>
+        <li>A pénzügyi mélyülés segítheti a növekedést, de <b>nem garantálja</b>, hogy a tőkét termelékeny célra fordítják.</li>
+      </ul>
+      <div class="box kieg">
+        <p><b>Tőkeáttétel:</b> amikor valaki nagyrészt kölcsönpénzből vásárol – ez a nyereséget és a veszteséget is felnagyítja.
+          <b>Lejárati különbség:</b> a bank rövid lejáratú betétekből hosszú lejáratú hitelt ad – ha a betétesek egyszerre jönnek,
+          nem tud fizetni.</p>
+      </div>
+      <p data-dia="115"><strong>Válasz a fejezet kérdésére:</strong> a pénz és a pénzügyi rendszer csökkenti a tranzakciós költségeket
+        és a kockázatot, összegyűjti a megtakarítást, és a jövőbe vetett bizalom révén hitelt ad a beruházásokhoz – ezért gyorsítja
+        a fejlődést. Ugyanezek a mechanizmusok (részleges tartalék, tőkeáttétel, lejárati különbség, bizalom) teszik azonban
+        sérülékennyé: minél fejlettebb a pénzügyi rendszer, annál nagyobbat lehet esni.</p>
+
+      <h3 id="penz-esszetabla">Esszéhez: ha ezt látod → ezt használd</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Ha az esetben ez áll…</th><th>…akkor ezt a fogalmat / mechanizmust használd</th></tr></thead>
+          <tbody>
+            <tr><td>Új fizetési mód olcsóbbá teszi a cserét (pl. mobilpénz)</td><td>tranzakciós költség csökkentése; a pénz mint intézmény
+              (<a href="#penz-mpesa">→</a>, <a href="#penz-szuletes">→</a>)</td></tr>
+            <tr><td>Bankrendszer épül ki, nő a beruházás</td><td>a bank közvetít a megtakarító és a befektető között; nő a megtakarítási ráta
+              (<a href="#penz-bankok">→</a>)</td></tr>
+            <tr><td>Gyorsan iparosodó, „későn jövő” ország nagy bankokkal</td><td>kapcsolati bankok (német modell) (<a href="#penz-novekedes">→</a>)</td></tr>
+            <tr><td>Nagy, tőkeigényes vállalkozások (vasút, bánya)</td><td>tőzsde, részvénytársaság, korlátolt felelősség
+              (<a href="#penz-tozsde">→</a>)</td></tr>
+            <tr><td>A bizalom megrendül, a betétesek pánikba esnek</td><td>részleges tartalék kockázata, bankroham; végső hitelező
+              (<a href="#penz-evolucio">→</a>)</td></tr>
+            <tr><td>Hitelből finanszírozott gyors növekedés</td><td>Harari: a hitel mint bizalom; tőkeáttétel és törékenység
+              (<a href="#penz-harari">→</a>)</td></tr>
+            <tr><td>Hiányzik a vállalkozásindítás finanszírozása</td><td>a pénzügyi rendszer mint a technológiatranszfer feltétele
+              (<a href="05-tud.html#tud-transzfer">→</a>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="penz-kapcsolodasok">Kapcsolódások</h3>
+      <ul>
+        <li><b>Intézmények, tranzakciós költség, korlátolt felelősség</b> (<a href="04-int.html#int-hatekony">4. fejezet</a>).</li>
+        <li><b>A transzfer és az innováció finanszírozása</b> (<a href="05-tud.html#tud-innovacio">5. fejezet</a>).</li>
+        <li><b>Válságok, buborékok, Palmstruch</b> (<a href="07-ciklus.html">7. fejezet</a>) – a sérülékenység másik oldala.</li>
+        <li><b>A nemzetközi monetáris rend, aranystandard</b> (<a href="index.html#monet">12. fejezet</a>).</li>
+      </ul>
+
+      <details class="box quiz" data-topic="penz"></details>
+    </section>
+
+    <nav class="lesson-nav" data-chapter="penz"></nav>
+  </main>
+
+  <footer class="site-footer">
+    A tananyag a kurzus diasora (Fegatt.pdf) alapján készült, nem hivatalos anyag. Az eredmények csak a böngésződben tárolódnak.
+  </footer>
+
+  <script src="../data/questions.js"></script>
+  <script src="../data/sections.js"></script>
+  <script src="../assets/theme.js"></script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>

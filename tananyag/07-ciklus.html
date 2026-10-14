@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7. Ciklikus ingadozás, buborékok, válságok – A fejlődés gazdaságtörténete</title>
+  <meta name="description" content="Likviditási és fizetésképtelenségi válság, pénzügyi buborékok a tulipánmániától a kriptovalutákig, a Minsky-modell, Ponzi-sémák, keresleti sokk és a nagy világválság.">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html#/">A fejlődés gazdaságtörténete <span>Tananyag</span></a>
+    <nav>
+      <a href="./" class="active">Tananyag</a>
+      <a href="../index.html#/zh">Gyakorló ZH</a>
+      <a href="../index.html#/temak">Témakörök</a>
+      <a href="../index.html#/minta">Mintazh</a>
+      <a href="../index.html#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
+    </nav>
+  </header>
+
+  <main class="lesson">
+    <p class="kicker">7. fejezet · diák: 116–133</p>
+    <h1>Ciklikus ingadozás, buborékok, válságok</h1>
+    <p class="lead" data-dia="116">Egyszer fent, máskor lent. Az előző fejezet végén láttuk, hogy a pénzügyi rendszer fejlettsége
+      és sérülékenysége együtt nő. Most a sérülékenységről lesz szó: hogyan fújódnak fel a buborékok, miért pukkannak ki, és
+      miért érzi meg a válságot az is, akinek egy fillér megtakarítása sincs.</p>
+
+    <!-- ───────────────────────── 1. Palmstruch; jó és rossz ───────────────────────── -->
+    <section id="ciklus-palmstruch">
+      <h2>Nyitó eset: az első bankjegy és a pénzügyi rendszer két arca <span class="dia-ref">116–118. dia</span></h2>
+
+      <div class="box eset" data-dia="117">
+        <p>A holland Johan Palmstruch Svédországba költözött, és 1657-ben megalapította a <b>Stockholms Bancót</b>. Ez a bank
+          bocsátotta ki Európa egyik első igazi papíralapú bankjegyét – bukása pedig a világ első, ma is létező központi
+          bankjának, a mai nevén <b>Sveriges Riksbanknak</b> a megalapításához vezetett.</p>
+        <p>A bankjegy komoly innováció volt: a bank összegyűjtötte ügyfelei aranyát, és cserébe bankjegyet adott, amely bármikor
+          beváltható volt a rajta szereplő mennyiségű aranyra. Palmstruch igazi trükkje az volt, hogy a bankja <b>részleges
+          tartalékkal</b> működött: sokkal több bankjegyet adott ki, mint amennyi érméje volt. Ez rövid távon pénzbőséget hozott,
+          aminek a háborúskodó svéd birodalom kezdetben örült – hosszabb távon viszont a bank fizetésképtelenségéhez vezetett.</p>
+        <p>Az ilyen helyzetek elkerülésére hozták létre a <b>központi bankokat</b>, amelyek máig a pénzügyi stabilitás őrei:
+          vigyáznak arra is, hogy az emberek ne veszítsék el a megtakarításaikat a bankok felelőtlensége miatt.</p>
+      </div>
+      <div class="box kieg">
+        <p>A Riksbank 1968-ban, fennállásának 300. évfordulóján alapította a „közgazdasági Nobel-díjat” – hivatalos nevén
+          a Sveriges Riksbank Alfred Nobel emlékére alapított közgazdaság-tudományi díját.</p>
+      </div>
+      <p><strong>A fejezet kérdése:</strong> miért ismétlődnek újra és újra a pénzügyi buborékok és válságok, és hogyan lesz
+        egy tőzsdei pánikból mindenkit érintő gazdasági válság?</p>
+
+      <h3 id="ciklus-utiterv">Útiterv</h3>
+      <ol class="roadmap" data-roadmap="ciklus"></ol>
+
+      <h3 id="ciklus-jo-rossz">A jó és a rossz</h3>
+      <p data-dia="118">A pénzügyi rendszer előnyeit az előző fejezetben láttuk. A bonyolultabb pénzügyi rendszerek azonban
+        <b>rontják a gazdaságok stabilitását</b>. Kétféle bankválságot különböztetünk meg – mindkettő bankrohammal jár, de más
+        az oka:</p>
+      <div class="two-col" data-dia="118">
+        <div class="box def">
+          <p><b>Likviditási válság:</b> a bank nem tart elég likvid (azonnal elérhető) eszközt, és bankroham idején nem tudja
+            azonnal kifizetni a betéteseit. A bank vagyona megvan, csak nem pénzben.</p>
+        </div>
+        <div class="box def">
+          <p><b>Fizetésképtelenségi válság:</b> a bank rossz eszközökbe fektette a pénzt, ezért elvesztette a vagyona
+            (és a betétesei pénzének) egy részét vagy egészét. Itt nem csak a készpénz hiányzik – a vagyon is.</p>
+        </div>
+      </div>
+      <div class="box def" data-dia="118">
+        <p><b>Pénzügyi buborék (Joseph Stiglitz):</b> ha egy eszköz jelenlegi ára azért magas, mert a befektetők arra számítanak,
+          hogy a jövőbeli ára még magasabb lesz.</p>
+        <p><b>Fundamentális érték:</b> egy pénzügyi eszköz jövőben várható hozamainak jelenértéke.</p>
+      </div>
+      <p data-dia="118">A probléma az, hogy senki sem ismeri a jövőt, így senki sem tudja biztosan, mekkorák lesznek a várható hozamok.
+        Bizonyos eszközök hozama jobban kiszámítható – például egy <b>kötvényé</b>, amely előre rögzített kamatot fizet. Más eszközök
+        ára nagyon bizonytalan, ezért az aktuális ár jelentősen eltérhet a fundamentális értéktől: például egy <b>részvényé</b>
+        (főleg egy új iparágban működő cégé) vagy egy <b>ingatlané</b>.</p>
+      <div class="box kieg">
+        <p>A jelenérték azt fejezi ki, hogy a jövőbeli pénz ma kevesebbet ér: ha a kamat 5%, egy év múlva kapott 105 forint ma
+          100 forintot ér. Egy részvény fundamentális értéke tehát a jövőbeli osztalékok ilyen módon „visszaszámolt” összege.
+          Ha egy új iparágban senki sem tudja, lesz-e egyáltalán nyereség, a becslések óriási sávban szóródhatnak.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A jó és a rossz</summary>
+        <ol>
+          <li>Miért bukott meg Palmstruch bankja, és mi lett a következménye?
+            <details><summary>Mintaválasz</summary><p>Részleges tartalékkal működött: sokkal több bankjegyet adott ki, mint amennyi
+              aranya volt. Amikor a bankjegyek tulajdonosai be akarták váltani őket, a bank nem tudott fizetni. A bukás
+              tanulságaként jött létre a Riksbank, a világ első ma is működő központi bankja.</p></details></li>
+          <li>Egy bankból hirtelen sokan kivennék a pénzüket, de a bank minden hitele rendben törlesztődik. Milyen válságról van szó?
+            <details><summary>Mintaválasz</summary><p>Likviditási válságról: a bank vagyona megvan (a hitelek jók), csak nincs elég
+              azonnal elérhető készpénze. Ezt a jegybank mint végső hitelező kezelheti. Ha a hitelek is rosszak lennének,
+              fizetésképtelenségi válságról beszélnénk.</p></details></li>
+          <li>Miért könnyebb buborékot fújni egy új technológiai cég részvényére, mint egy államkötvényre?
+            <details><summary>Mintaválasz</summary><p>Mert a kötvény hozama előre rögzített, így a fundamentális értéke jól kiszámítható.
+              Egy új iparágban működő cég jövőbeli nyeresége nagyon bizonytalan, ezért az ár messze elszakadhat a fundamentális
+              értéktől – és ha mindenki további áremelkedést vár, buborék alakul ki.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="ciklus-palmstruch"></details>
+    </section>
+
+    <!-- ───────────────────────── 2. Buborékok ───────────────────────── -->
+    <section id="ciklus-buborekok">
+      <h2>Buborékok a történelemben <span class="dia-ref">119–123. dia</span></h2>
+
+      <p data-dia="119">A buborékok legalább négyszáz éve kísérik a pénzügyi rendszert. Nézzünk öt híres példát!</p>
+
+      <h3 id="ciklus-tulipan">Tulipánmánia – Németalföld, 1634–37</h3>
+      <div class="box eset" data-dia="119">
+        <p>A 17. századi Hollandiában a tulipán luxuscikk volt. A legritkább fajta, a <i>Semper Augustus</i> egyetlen hagymája
+          1620-ban 1000, 1637-ben 5500 guldenbe került. Egyetlen tulipánhagymáért 12 hold földet ígértek; egy másik tulipánért
+          4600 guldent, egy új lovaskocsit, két szürke lovat és egy nyerget adtak. 1637 februárjában a piac egyik napról a másikra
+          összeomlott.</p>
+      </div>
+      <figure class="dia" data-dia="119">
+        <img src="img/dia-119.png" alt="Logaritmikus vonaldiagram 1634 decemberétől 1637 februárjáig: a goudai tulipánhagyma ára néhány guldenről 60 fölé emelkedik, majd szinte nullára zuhan." loading="lazy">
+        <figcaption>A goudai tulipánhagymák ára, 1634. december – 1637. február (gulden, logaritmikus skála).
+          (Diasor, 119. dia; forrás: Elliott Wave International.)</figcaption>
+      </figure>
+
+      <h3 id="ciklus-southsea">A South Sea Company – 1720</h3>
+      <div class="box eset" data-dia="120">
+        <p>Az 1711-ben alapított angol részvénytársaság monopoljogot kapott a dél-amerikai kereskedelemre. 1720-ban a részvényei
+          néhány hónap alatt a sokszorosukra drágultak, majd összeomlottak. A buborék a kor legnagyobb tudósát is megégette.
+          Isaac Newton így kesergett: „Ki tudom számítani a mennyei testek mozgását, de képtelen vagyok kiszámítani az emberi
+          őrültséget.”</p>
+      </div>
+      <figure class="dia" data-dia="120">
+        <img src="img/dia-120.png" alt="Vonaldiagram 1719 decemberétől 1720 decemberéig: a South Sea Company részvényára kb. 130 fontról 1720 nyarán közel 1000 fontra ugrik, majd őszre 200 alá zuhan." loading="lazy">
+        <figcaption>A South Sea Company részvényeinek ára, 1719. december – 1720. december (font/részvény). (Diasor, 120. dia.)</figcaption>
+      </figure>
+      <div class="box kieg">
+        <p>A South Sea Company monopóliuma papíron értékes volt, de a spanyol gyarmatokkal folytatott kereskedelem a valóságban
+          alig hozott hasznot – a fundamentális érték töredéke volt a piaci árnak. Newton a hírek szerint kb. 20 ezer fontot veszített.</p>
+      </div>
+
+      <h3 id="ciklus-dotcom">A dot-com buborék – 1990-es évek vége</h3>
+      <p data-dia="121">Az internet megjelenése utáni első nagy buborék az 1990-es évek végén tetőzött. A befektetők minden „.com”
+        végű cég részvényét vették, sokszor függetlenül attól, hogy volt-e bevételük. A technológiai részvények indexe 2000 márciusában
+        érte el a csúcsát, utána összeomlott, és csak mintegy másfél évtized múlva tért vissza a korábbi szintre.</p>
+      <figure class="dia" data-dia="121">
+        <img src="img/dia-121.png" alt="Logaritmikus vonaldiagram 1971 és 2020 között: a technológiai részvényindex 2000 márciusában csúcsot ér, utána meredeken esik, majd az évek során lassan túlnövi a korábbi csúcsot." loading="lazy">
+        <figcaption>A dot-com buborék: technológiai részvényindex, logaritmikus skála; a 2000. márciusi csúcs. (Diasor, 121. dia;
+          forrás: macrotrends.net.)</figcaption>
+      </figure>
+
+      <h3 id="ciklus-ingatlan">Az amerikai ingatlanbuborék – 2005–2008</h3>
+      <p data-dia="122">A lakásárak százhúsz éven át nagyjából az építési költségekkel együtt mozogtak – aztán a 2000-es években
+        elszakadtak tőlük, és soha nem látott magasságba emelkedtek, miközben a népesség és a kamatlábak nem indokoltak ilyen
+        emelkedést. A buborék 2006–2008-ban pukkant ki.</p>
+      <figure class="dia" data-dia="122">
+        <img src="img/dia-122.png" alt="Diagram 1890 és 2015 között: a lakásárindex (kék) 100 körül ingadozik, majd a 2000-es években 200 közelébe ugrik és visszaesik; mellette az építési költségek, a népesség és a kamatlábak alakulása." loading="lazy">
+        <figcaption>Az amerikai ingatlanbuborék: reál lakásárindex (Home), építési költségek, népesség és kamatlábak,
+          1890–2015. (Diasor, 122. dia.)</figcaption>
+      </figure>
+      <div class="box kieg">
+        <p>Az ábra Robert Shiller lakásárindexén alapul. A buborék kipukkanása a 2008-as pénzügyi világválsághoz vezetett:
+          a lakáshitelekre épülő értékpapírok értéke összeomlott, és a Lehman Brothers befektetési bank csődbe ment.</p>
+      </div>
+
+      <h3 id="ciklus-kripto">Kriptovaluták</h3>
+      <p data-dia="123">A Bitcoin felemelkedése és zuhanása és felemelkedése és zuhanása és felemelkedése és… A kriptovaluták árában
+        a buborékszerű emelkedések és zuhanások szinte ciklikusan követik egymást – ami jól mutatja, mennyire nehéz meghatározni egy
+        ilyen eszköz fundamentális értékét.</p>
+      <figure class="dia" data-dia="123">
+        <img src="img/dia-123.png" alt="Vonaldiagram 2010 és 2025 között: a Bitcoin ára dollárban többször meredeken emelkedik és zuhan, a legutóbbi csúcs 100 ezer dollár fölött." loading="lazy">
+        <figcaption>A Bitcoin árfolyama dollárban, 2010–2025. (Diasor, 123. dia; forrás: charts.bitbo.io.)</figcaption>
+      </figure>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Buborékok</summary>
+        <ol>
+          <li>Mi a közös a tulipánmániában és a dot-com buborékban?
+            <details><summary>Mintaválasz</summary><p>Mindkettőben egy valódi újdonság (ritka tulipánfajta, internet) indította el
+              a lelkesedést, az ár messze a fundamentális érték fölé emelkedett, mert a vevők további áremelkedésre számítottak,
+              majd hirtelen összeomlott. A buborék tehát nem a semmiből jön, hanem egy valódi érték túlértékeléséből.</p></details></li>
+          <li>Mit akart kifejezni Newton a mennyei testekről szóló mondatával?
+            <details><summary>Mintaválasz</summary><p>Hogy a buborékot nem a racionális számítás, hanem a tömegpszichológia hajtja.
+              A bolygók mozgása törvényeket követ, a befektetők várakozásai viszont önmagukat erősítik, ezért a buborék csúcspontját
+              a legokosabbak sem tudják kiszámítani.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="ciklus-buborekok"></details>
+    </section>
+
+    <!-- ───────────────────────── 3. Minsky ───────────────────────── -->
+    <section id="ciklus-minsky">
+      <h2>Hogyan keletkeznek a buborékok? A Minsky-modell <span class="dia-ref">124–126. dia</span></h2>
+
+      <p data-dia="124">A példák hasonló forgatókönyvet követnek. Hyman Minsky (1992), majd Charles Kindleberger és Robert Aliber (2011)
+        ezt a forgatókönyvet öntötte modellbe.</p>
+      <div class="box vita" data-dia="124">
+        <p>A modell intellektuálisan tetszetős, de empirikusan nehezen igazolható. A legnagyobb probléma: <b>a buborék csúcspontját
+          nem lehet előre jelezni</b>.</p>
+      </div>
+      <div class="box mech" data-dia="124">
+        <p><b>A buborék kialakulásának szakaszai:</b></p>
+        <ol>
+          <li><b>Elmozdulás:</b> a fundamentális érték valami miatt megnő (pl. az Apple bevezeti az iPhone-t, vagy a BMW új gyárat
+            épít Debrecenben).</li>
+          <li><b>Boom:</b> mivel nőtt a fundamentális érték, sokan akarják venni az eszközt, nő a kereslete. A hitelezés felfutása
+            miatt további beruházások történnek, amelyek tovább növelhetik a fundamentális értéket.</li>
+          <li><b>Eufória:</b> kialakul az eszközárbuborék, a piaci érték egyértelműen magasabb a fundamentális értéknél. Megjelennek
+            az új típusú befektetők, a spekulánsok, akik jellemzően <b>hitelből</b> veszik az eszközt, abban bízva, hogy az ár tovább
+            emelkedik, és drágábban el tudják adni.</li>
+          <li><b>Nyereségrealizálás:</b> a tapasztaltabb befektetők elkezdenek eladni, de a spekulánsok kereslete még tovább nő.</li>
+          <li><b>Minsky-pillanat:</b> megjelenik egy új információ, amelynek hatására a piac hirtelen áresésre kezd számítani →
+            tömeges eladás és pánik → ez még jobban rontja a várakozásokat → az eszköz a fundamentális értékéhez képest
+            <b>alulértékelt</b> lesz.</li>
+        </ol>
+        <p class="chain">elmozdulás → boom → eufória → nyereségrealizálás → Minsky-pillanat (pánik)</p>
+      </div>
+      <figure class="dia" data-dia="125">
+        <img src="img/dia-125.png" alt="A Minsky-buborék ábrája: a fundamentális érték szaggatott vonalként egyszer megemelkedik; a piaci ár az elmozdulás és a boom után az eufóriában messze fölé szalad, a Minsky-pillanatban megfordul, és a pánikban a fundamentális érték alá zuhan." loading="lazy">
+        <figcaption>A Minsky-buborék: a piaci ár (piros, folytonos) és a fundamentális érték (szürke, szaggatott) a szakaszok mentén.
+          A piros szaggatott vonal az alternatív út, ha a buborék az eufória idején fokozatosan „leereszt” – ilyenkor elmarad a pánik.
+          (Diasor, 125. dia.)</figcaption>
+      </figure>
+      <div class="box mech" data-dia="124">
+        <p><b>Mi történik a pukkanás után?</b></p>
+        <ul>
+          <li>Akik hitelből, drágán vettek, <b>fizetésképtelenné</b> válnak. Ez a fizetésképtelenség elérheti a bankokat és
+            a hitelezőket, és rajtuk keresztül az egész gazdaságot visszaveti.</li>
+          <li><b>Likviditáshiány:</b> mindenki óvatosabb lesz, nem költi a pénzét, ezért a kereslet az egész gazdaságban visszaesik.</li>
+        </ul>
+      </div>
+      <div class="box warn" data-dia="124">
+        <p>Figyelj a sorrendre! Az eufória <i>után</i> jön a nyereségrealizálás, és csak utána a Minsky-pillanat. A pánik végén pedig
+          az ár nem a fundamentális értékre áll vissza, hanem <b>alá</b> esik – a buborék „túllő” lefelé is.</p>
+      </div>
+
+      <p data-dia="126">Ugyanezt a folyamatot Jean-Paul Rodrigue (2008) részletesebben is megrajzolta. Az ő ábráján az is látszik,
+        kik és milyen érzelmekkel vesznek részt az egyes szakaszokban:</p>
+      <figure class="dia" data-dia="126">
+        <img src="img/dia-126.png" alt="Rodrigue ábrája a buborék szakaszairól: lopakodó szakasz (okos pénz), felismerés (intézményi befektetők), mánia (nagyközönség: lelkesedés, kapzsiság, téveszme, új paradigma) és a kipukkanás (tagadás, félelem, kapituláció, kétségbeesés, visszatérés az átlaghoz)." loading="lazy">
+        <figcaption>Ugyanez bonyolultabban: a buborék szakaszai és a befektetők érzelmei. (Diasor, 126. dia; forrás: Rodrigue, 2008.)</figcaption>
+      </figure>
+      <div class="table-wrap" data-dia="126">
+        <table class="data">
+          <caption>Rodrigue szakaszai magyarul, párhuzamban a Minsky-modellel</caption>
+          <thead><tr><th>Rodrigue szakasza</th><th>Ki vásárol?</th><th>Hangulat</th><th>Minsky-szakasz</th></tr></thead>
+          <tbody>
+            <tr><td>Lopakodó (stealth)</td><td>„okos pénz” – a jól informáltak</td><td>csendes vásárlás</td><td>elmozdulás</td></tr>
+            <tr><td>Felismerés (awareness)</td><td>intézményi befektetők</td><td>első eladási hullám, „medvecsapda”</td><td>boom</td></tr>
+            <tr><td>Mánia</td><td>a nagyközönség</td><td>média figyelme, lelkesedés, kapzsiság, téveszme: „új paradigma!”</td><td>eufória, nyereségrealizálás</td></tr>
+            <tr><td>Kipukkanás (blow-off)</td><td>mindenki elad</td><td>tagadás, félelem, kapituláció, kétségbeesés, visszatérés az átlaghoz</td><td>Minsky-pillanat, pánik</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A Minsky-modell</summary>
+        <ol>
+          <li>Egy városban új egyetemet nyitnak, a lakásárak emelkedni kezdenek. Írd le, hogyan alakulhat ki ebből buborék a Minsky-modell szerint!
+            <details><summary>Mintaválasz</summary><p>Elmozdulás: az egyetem valóban növeli a lakások fundamentális értékét (több bérlő).
+              Boom: sokan vesznek lakást, a bankok bővítik a hitelezést, építkezések indulnak. Eufória: spekulánsok hitelből vesznek
+              lakást, csak hogy drágábban továbbadják; az ár a bérleti hozam által indokolt érték fölé megy. Nyereségrealizálás:
+              a tapasztaltak eladnak. Minsky-pillanat: pl. kiderül, hogy kevesebb hallgató jön – pánik, tömeges eladás, az árak
+              a fundamentális érték alá esnek, a hitelből vásárlók fizetésképtelenek lesznek.</p></details></li>
+          <li>Miért terjed át egy buborék kipukkanása a bankokra és az egész gazdaságra?
+            <details><summary>Mintaválasz</summary><p>Mert a spekulánsok hitelből vásároltak: amikor az ár zuhan, nem tudják visszafizetni
+              a hitelt, és a veszteség a bankokra hárul. A bankok óvatosabbak lesznek, kevesebb hitelt adnak, mindenki tartja a pénzét –
+              likviditáshiány és keresletcsökkenés alakul ki az egész gazdaságban.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="ciklus-minsky"></details>
+    </section>
+
+    <!-- ───────────────────────── 4. Ponzi ───────────────────────── -->
+    <section id="ciklus-ponzi">
+      <h2>Buborék csalással: Ponzi és Albánia <span class="dia-ref">127–129. dia</span></h2>
+
+      <p data-dia="127">Vannak buborékok, amelyek mögött eleve nincs fundamentális érték – csak csalás.</p>
+      <div class="box eset" data-dia="127">
+        <p><b>Carlo Ponzi</b> 1903-ban érkezett az Egyesült Államokba, és 1920-ban megtalálta élete nagy üzleti lehetőségét:
+          a <b>nemzetközi postai válaszkuponokat</b>. Ezek a tértivevény egy formái voltak: a nemzetközi levél mellé egy kupont
+          lehetett tenni, amelyet a címzett a válaszlevélhez szükséges bélyegre vagy a saját országa valutájára válthatott be.
+          Egy 1906-os megállapodás rögzítette, hogy egy kupon a különböző országokban mennyi valutára váltható. 1914 után azonban
+          több országban hatalmas infláció volt, ezért a valutaárfolyamok jelentősen eltértek a kuponok rögzített árarányától.
+          Ez lehetőséget adott az <b>arbitrázsra</b>: kockázat nélküli haszonra.</p>
+      </div>
+      <div class="box def" data-dia="127">
+        <p><b>Arbitrázs:</b> egy árkülönbség kihasználása (olcsón venni az egyik piacon, drágán eladni a másikon), amely kockázat
+          nélküli hasznot hoz.</p>
+      </div>
+      <div class="box eset" data-dia="127">
+        <p><b>Kidolgozott példa – Ponzi számítása:</b></p>
+        <ul>
+          <li>Az olasz líra leértékelődött: korábban 1 líra 0,2 dollárt ért, 1920-ban már csak 0,05 dollárt.</li>
+          <li>Így 1 dollár = 20 líra, és 20 líráért Olaszországban 66 postai kupont lehetett venni.</li>
+          <li>66 kupon beváltási értéke az 1906-os egyezmény szerint az USA-ban 3,3 dollár.</li>
+          <li>Tiszta haszon: (3,3 − 1) / 1 = 2,3, vagyis <b>230%</b>!</li>
+        </ul>
+      </div>
+      <div class="box eset" data-dia="127">
+        <p><b>A piramis.</b> Ponzi létrehozta a Securities Exchange Companyt. A befektetőknek 45 nap alatt 50%, 90 nap alatt 100% kamatot
+          ígért; aki újabb befektetőt szervezett be, további 10%-ot kapott. Több mint 30 ezer befektető, és több mint 15 millió dollár
+          gyűlt össze.</p>
+        <p>A probléma: ahhoz, hogy 1 millió dollárt megforgasson, százmilliós nagyságrendű kuponra lett volna szükség – a valóságban csak
+          néhány tízezer volt forgalomban. A régi befektetők „hozamát” tehát az új befektetők pénzéből fizette. 1920 őszén Ponzit
+          5 év börtönre ítélték.</p>
+      </div>
+      <div class="box kieg">
+        <p><b>A Ponzi-séma (piramisjáték) logikája:</b></p>
+        <p class="chain">magas hozam ígérete → új befektetők → az ő pénzükből fizetik a régiek „hozamát” → a hír terjed → még több új befektető → amikor elfogynak az új belépők, összeomlik</p>
+        <p>A séma csak addig működik, amíg az új befizetések gyorsabban nőnek, mint a kifizetések – ezért szükségszerűen összeomlik.</p>
+      </div>
+
+      <h3 id="ciklus-albania">Albánia, 1996–97</h3>
+      <div class="box kieg" data-dia="128">
+        <p>A diasor egy IMF-elemzésre hivatkozik az albán piramisjátékokról. A kommunizmus bukása után Albániában nem volt működő
+          bankrendszer, így a megtakarítások magánbefektetési „alapokba” áramlottak, amelyek kezdetben havi 6–10%-os, a végén akár havi
+          50%-os kamatot ígértek. A becslések szerint a lakosság mintegy kétharmada fektetett be bennük, a sémák kötelezettségei a GDP
+          közel felét tették ki. 1997 elején a sémák összeomlottak: zavargások törtek ki, a kormány megbukott, az ország anarchiába
+          süllyedt, és a harcokban kb. kétezer ember halt meg. Az eset megmutatja, mi történik, ha egy csalásra épülő buborék
+          egy egész ország megtakarításait elnyeli.</p>
+      </div>
+
+      <blockquote data-dia="129">
+        <p>„Teljesen mindegy, milyen pénzügyi rendszert építünk, vagy milyen gazdasági rendszer van érvényben: amíg emberek léteznek,
+          a pénzügyi válságok újra és újra felbukkannak; a buborékok szükségszerűen megjelennek a pénzügyi rendszerben.”</p>
+        <p class="dia-ref">Henry Paulson – az USA pénzügyminisztere a 2008-as válság idején (vitatott állítás)</p>
+      </blockquote>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Ponzi</summary>
+        <ol>
+          <li>Miért volt eleve fenntarthatatlan Ponzi „befektetése”?
+            <details><summary>Mintaválasz</summary><p>Mert az arbitrázs valódi, de nagyon szűk lehetőség volt: a forgalomban lévő
+              kuponok töredékét sem tudta volna beváltani ahhoz, amennyi pénzt összegyűjtött. A hozamot ezért az új befektetők
+              pénzéből fizette – ez piramisjáték, amely összeomlik, amikor elfogynak az új belépők.</p></details></li>
+          <li>Miben különbözik egy Ponzi-séma a Minsky-féle buboréktól?
+            <details><summary>Mintaválasz</summary><p>A Minsky-buborék egy valódi fundamentális értékváltozással (elmozdulással) indul,
+              és a túlzott várakozások fújják fel. A Ponzi-sémában eleve nincs (vagy elenyésző) valódi érték – a „hozamot” az új
+              befizetések adják, tudatos megtévesztéssel.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="ciklus-ponzi"></details>
+    </section>
+
+    <!-- ───────────────────────── 5. Válság ───────────────────────── -->
+    <section id="ciklus-valsag">
+      <h2>A pénzügyi válság reálgazdasági válsággá válhat <span class="dia-ref">130–133. dia</span></h2>
+
+      <p data-dia="130">Hogyan hat egy buborék a mindennapokra? Nézzük meg Magyarország egy főre jutó GDP-jét a Monarchia idején:
+        1869 és 1913 között a duplájánál is többre nőtt – de nem egyenletesen. A növekedést újra és újra visszaesések szakították meg.</p>
+      <figure class="dia" data-dia="130">
+        <img src="img/dia-130.png" alt="Vonaldiagram 1869 és 1913 között: Magyarország egy lakosra jutó GDP-jének indexe 100-ról kb. 240-re nő, a növekedést kisebb visszaesések szakítják meg." loading="lazy">
+        <figcaption>Egy lakosra jutó GDP Magyarországon, 1869–1913 (index: 1869 = 100). (Diasor, 130. dia.)</figcaption>
+      </figure>
+      <div class="box kieg">
+        <p>A korszak legnagyobb pénzügyi sokkja az 1873-as bécsi tőzsdekrach volt: a kiegyezés utáni „alapítási láz” (vasút- és
+          bankalapítások hitelből) buborékja kipukkant, bankok és vállalatok tucatjai mentek csődbe, és az egész Monarchiában évekig
+          tartó pangás következett.</p>
+      </div>
+
+      <h3 id="ciklus-keresleti-sokk">Keresleti sokkok</h3>
+      <p data-dia="131">A pénzpiaci pánikot leggyakrabban azok is megérzik a saját bőrükön – a fizetésükön vagy a jövedelmükön –,
+        akiknek egyáltalán nincs megtakarításuk, tehát nem is tőzsdéznek. A pénzügyi pánik ugyanis <b>keresleti válságot</b> okoz:</p>
+      <div class="box mech" data-dia="131">
+        <ol>
+          <li>A pénzpiaci pánik miatt mindenki ragaszkodik a készpénzéhez, ezért egyes cégek fizetésképtelenné válnak.</li>
+          <li>Sokan nem kapnak fizetést, így a pánik átterjed a háztartások, fogyasztók nagy részére.</li>
+          <li>Óvatosságból mindenki készpénzt tesz félre: míg korábban 100 egység jövedelemből 90 ment fogyasztásra és 10
+            megtakarításra, ez most <b>80–20</b>-ra módosul.</li>
+          <li>Mivel kevesebbet fogyasztanak, a kereslet általánosan csökken, ezért kevesebb jövedelem keletkezik: a 100 egységnyi
+            jövedelem <b>90</b>-re esik.</li>
+          <li>A korábbi 90 egységnyi fogyasztás most 90 · 0,8 = <b>72</b> lesz. Ez <b>ördögi kört</b> indít el: egyre kevesebb
+            jövedelem keletkezik, amiből egyre kevesebb jut fogyasztásra.</li>
+        </ol>
+      </div>
+      <div class="table-wrap" data-dia="131">
+        <table class="data num">
+          <caption>A keresleti sokk számpéldája (Diasor, 131. dia)</caption>
+          <thead><tr><th></th><th>Jövedelem</th><th>Fogyasztási arány</th><th>Fogyasztás</th></tr></thead>
+          <tbody>
+            <tr><td>Pánik előtt</td><td>100</td><td>90%</td><td>90</td></tr>
+            <tr><td>Pánik után</td><td>90</td><td>80%</td><td>72</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="box warn" data-dia="131">
+        <p>A fogyasztást a <b>lecsökkent</b> jövedelemből kell számolni: 90 · 0,8 = 72. Aki a régi jövedelemmel számol (100 · 0,8 = 80),
+          vagy csak a jövedelem esését nézi (90), elrontja – a ZH-n épp ezek a rossz válaszok.</p>
+      </div>
+      <div class="box kieg">
+        <p>A jelenséget a <b>takarékossági paradoxon</b> néven is ismerik: ami egy családnak észszerű (válságban többet félretenni),
+          az mindenkinek egyszerre kárt okoz, mert az egyik ember kiadása a másik ember jövedelme. Ezt a logikát Keynes fejtette ki
+          (<a href="index.html#allam">13. fejezet</a>).</p>
+      </div>
+
+      <h3 id="ciklus-nagy-valsag">A nagy világválság az USA-ban</h3>
+      <p data-dia="132">A keresleti válság legismertebb példája az 1929-es tőzsdekrachot követő nagy világválság. Az USA reál-GDP-je
+        1929 és 1933 között kb. negyedével zuhant, és csak az 1930-as évek végére tért vissza a válság előtti szintre.</p>
+      <figure class="dia" data-dia="132">
+        <img src="img/dia-132.png" alt="Vonaldiagram 1910 és 1960 között: az USA reál-GDP-je 1929-ben kb. 1000 milliárd dollárról 1933-ra kb. 750 milliárdra esik (rózsaszín sáv: a nagy világválság), majd a második világháború alatt meredeken nő." loading="lazy">
+        <figcaption>A nagy világválság az USA-ban: reál-GDP (milliárd 2005-ös dollár), 1910–1960; a rózsaszín sáv a válság évtizede.
+          (Diasor, 132. dia; forrás: Wikipedia.)</figcaption>
+      </figure>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Reálgazdasági válság</summary>
+        <ol>
+          <li>Miért veszítheti el a munkáját egy gyári munkás, akinek soha nem volt részvénye, egy tőzsdei pánik után?
+            <details><summary>Mintaválasz</summary><p>Mert a pánik keresleti válsággá válik: a cégek nem jutnak hitelhez, egyesek
+              fizetésképtelenné válnak; az emberek óvatosságból kevesebbet költenek, ezért a gyár termékeire is kisebb a kereslet.
+              A gyár leépít – a munkás a csökkenő keresleten keresztül éri el a válságot.</p></details></li>
+          <li>Egy gazdaságban a jövedelem 100, ebből 90%-ot fogyasztanak. Pánik után a fogyasztási arány 75%-ra esik, a jövedelem 92-re.
+            Mekkora lesz a fogyasztás, és mi következik ebből?
+            <details><summary>Mintaválasz</summary><p>92 · 0,75 = 69. A fogyasztás 90-ről 69-re esik, ami a következő időszakban tovább
+              csökkenti a jövedelmet – az ördögi kör folytatódik, amíg valami (pl. állami kiadás) meg nem töri.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="ciklus-valsag"></details>
+    </section>
+
+    <!-- ───────────────────────── Összefoglalás ───────────────────────── -->
+    <section id="ciklus-osszegzes">
+      <h2>Összefoglalás <span class="dia-ref">133. dia</span></h2>
+      <ul data-dia="133">
+        <li>Fellendüléskor az <b>optimizmus, a hitel és az eszközárak</b> egymást erősíthetik.</li>
+        <li>A <b>várakozások fordulata</b> kényszereladást, likviditáshiányt és fizetésképtelenséget okozhat.</li>
+        <li>A pénzügyi sokk a <b>fogyasztás, a beruházás és a foglalkoztatás</b> visszaesésén keresztül mindenkit érinthet.</li>
+        <li>A válságok visszatérnek, de <b>gyakoriságuk és súlyosságuk</b> az intézményektől és a gazdaságpolitikától függ.</li>
+      </ul>
+      <p data-dia="133"><strong>Válasz a fejezet kérdésére:</strong> a buborékok azért ismétlődnek, mert a jövő bizonytalan,
+        a várakozások önmagukat erősítik, és a hitel felnagyítja őket (Minsky); egyesek ráadásul csalással is fújják őket (Ponzi).
+        A kipukkanás fizetésképtelenséget és likviditáshiányt okoz, az óvatossá váló háztartások és cégek kevesebbet költenek,
+        és a keresleti ördögi kör a reálgazdaságot is magával rántja. A válságokat megszüntetni nem lehet, de az intézmények
+        (jegybank, betétbiztosítás, szabályozás) és a gazdaságpolitika enyhítheti őket.</p>
+
+      <h3 id="ciklus-esszetabla">Esszéhez: ha ezt látod → ezt használd</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Ha az esetben ez áll…</th><th>…akkor ezt a fogalmat / mechanizmust használd</th></tr></thead>
+          <tbody>
+            <tr><td>Bankroham, de a bank vagyona megvan</td><td>likviditási válság; végső hitelező (<a href="#ciklus-jo-rossz">→</a>)</td></tr>
+            <tr><td>A bank rossz hitelek miatt elvesztette a vagyonát</td><td>fizetésképtelenségi válság (<a href="#ciklus-jo-rossz">→</a>)</td></tr>
+            <tr><td>Egy eszköz ára mindenki várakozása miatt meredeken nő</td><td>buborék, fundamentális érték, Minsky-szakaszok
+              (<a href="#ciklus-minsky">→</a>)</td></tr>
+            <tr><td>Hitelből vásárló spekulánsok, „új paradigma” hangulat</td><td>eufória, tőkeáttétel (<a href="#ciklus-minsky">→</a>)</td></tr>
+            <tr><td>Irreálisan magas hozam ígérete, új befektetők toborzása</td><td>Ponzi-séma, piramisjáték (<a href="#ciklus-ponzi">→</a>)</td></tr>
+            <tr><td>Tőzsdei pánik után munkanélküliség, csökkenő fogyasztás</td><td>keresleti sokk, ördögi kör (<a href="#ciklus-keresleti-sokk">→</a>)</td></tr>
+            <tr><td>Túlzott pénzkibocsátás, fedezetlen bankjegyek</td><td>Palmstruch, részleges tartalék; a központi bank szerepe
+              (<a href="#ciklus-palmstruch">→</a>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="ciklus-kapcsolodasok">Kapcsolódások</h3>
+      <ul>
+        <li><b>Részleges tartalék, jegybank, bizalom</b> (<a href="06-penz.html#penz-evolucio">6. fejezet</a>).</li>
+        <li><b>A válság nemzetközi terjedése, vámháború, aranystandard</b> (<a href="index.html#kerpol">11.</a> és
+          <a href="index.html#monet">12. fejezet</a>).</li>
+        <li><b>Keynes és a keresletélénkítés</b> (<a href="index.html#allam">13. fejezet</a>).</li>
+        <li><b>A válságok a nyitott, fejlődő országokat sújtják leginkább</b> (<a href="05-tud.html#tud-tanulsagok">5. fejezet</a>).</li>
+      </ul>
+
+      <details class="box quiz" data-topic="ciklus"></details>
+    </section>
+
+    <nav class="lesson-nav" data-chapter="ciklus"></nav>
+  </main>
+
+  <footer class="site-footer">
+    A tananyag a kurzus diasora (Fegatt.pdf) alapján készült, nem hivatalos anyag. Az eredmények csak a böngésződben tárolódnak.
+  </footer>
+
+  <script src="../data/questions.js"></script>
+  <script src="../data/sections.js"></script>
+  <script src="../assets/theme.js"></script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>

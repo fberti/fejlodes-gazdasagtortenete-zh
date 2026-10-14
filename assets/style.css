@@ -156,6 +156,14 @@ p.lead { color: var(--muted); margin-top: 0; }
 .toc-chapter h2 { margin: 0 0 .3rem; font-size: 1.15rem; border: none; padding: 0; }
 .toc-chapter ol { margin: .3rem 0 .5rem; padding-left: 1.4rem; }
 .toc-chapter .soon { color: var(--muted); font-size: .85rem; }
+
+/* Fogalomtár */
+.glossary-nav { line-height: 1.9; }
+.glossary { margin: 0 0 1rem; }
+.glossary dt { font-weight: 700; margin-top: .8rem; scroll-margin-top: 6rem; }
+.glossary dd { margin: .15rem 0 0 1.2rem; }
+.glossary dd a { font-size: .9rem; }
+.lesson h2[id^="betu-"] { scroll-margin-top: 6rem; }
 .toc-chapter .t-actions { margin-top: .4rem; }
 
 /* Ábrák és táblázatok */

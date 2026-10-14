@@ -92,9 +92,9 @@
   // „Olvasd el” link a kérdéshez tartozó tananyag-szakaszra (új lapon, hogy a ZH / gyakorlás állása megmaradjon).
   function readHtml(q) {
     const s = window.Lessons.sectionOf(q);
-    const dia = typeof q.dia === "number" ? `${q.dia}. dia` : `diák: ${q.dia}`;
+    const dia = typeof q.dia === "number" ? `${q.dia}. dia` : q.dia ? `diák: ${q.dia}` : "";
     return `<div class="src"><a href="${window.Lessons.sectionHref(s, "")}" target="_blank" rel="noopener">📖 Olvasd el: ${esc(s.title)}</a>
-      <span>(${esc(dia)})</span></div>`;
+      ${dia ? `<span>(${esc(dia)})</span>` : ""}</div>`;
   }
   function markOptions(container, item) {
     container.querySelectorAll(".option").forEach((b, i) => {

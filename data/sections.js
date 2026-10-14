@@ -97,7 +97,7 @@ window.SECTIONS = [
 
 // Megírt fejezetek: ide kerül a témakör azonosítója, amikor a leckeoldala elkészült (pl. "bev").
 // Amíg egy fejezet nincs itt, a kvízek linkje a tartalomjegyzék megfelelő fejezetére mutat.
-window.LESSONS_READY = ["bev", "ker", "nep", "int", "tud", "penz", "ciklus", "eur", "fogy", "ert", "kerpol", "monet", "allam", "jolet"];
+window.LESSONS_READY = ["bev", "ker", "nep", "int", "tud", "penz", "ciklus", "eur", "fogy", "ert", "kerpol", "monet", "allam", "jolet", "szint"];
 
 (function () {
   // A témakör leckeoldala a TOPICS sorrendje szerint: 01-bev.html, 02-ker.html, …

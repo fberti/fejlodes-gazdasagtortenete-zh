@@ -71,7 +71,8 @@ for (const t of LESSONS_READY)
   if (!files.includes(Lessons.lessonFile(t))) err(`LESSONS_READY: a(z) ${t} fejezet fájlja (${Lessons.lessonFile(t)}) nem létezik`);
 
 const idsOf = html => new Set([...html.matchAll(/\sid="([^"]+)"/g)].map(m => m[1]));
-const pages = Object.fromEntries(["index.html", ...files].map(f => [f, fs.readFileSync(path.join(LESSON_DIR, f), "utf8")]));
+const extra = ["index.html", "fogalomtar.html"].filter(f => fs.existsSync(path.join(LESSON_DIR, f))); // nem fejezet-oldalak
+const pages = Object.fromEntries([...extra, ...files].map(f => [f, fs.readFileSync(path.join(LESSON_DIR, f), "utf8")]));
 const dynamicIds = f => f === "index.html" ? new Set(TOPICS.map(t => t.id)) : new Set(); // a tartalomjegyzék JS-ből épül
 
 const coverage = {};

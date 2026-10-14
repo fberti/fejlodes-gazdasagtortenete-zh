@@ -281,7 +281,7 @@ utána M1–M8 tetszőleges sorrendben (de ajánlott sorban), M9 a végén.
   („hamarosan”). Kész, ha: `node tools/check.mjs` lefut, a lefedettség 1–213 hézagmentes, minden kérdés besorolható
   szakaszba, a meglévő oldal változatlanul működik böngészőben (világos/sötét téma).
 - [x] **M1 – 1. fejezet: Fejlődés, növekedés és a nyugati recept** (1–35; a leghosszabb, ezért önálló)
-- [ ] **M2 – 2. Kereskedelem + 3. Népesség** (36–72)
+- [x] **M2 – 2. Kereskedelem + 3. Népesség** (36–72)
 - [ ] **M3 – 4. Intézmények + 5. Tudomány és tudás** (73–104)
 - [ ] **M4 – 6. Pénz + 7. Ciklusok, buborékok, válságok** (105–133)
 - [ ] **M5 – 8. Európa felemelkedése + 9. Fogyasztói társadalom** (134–165)

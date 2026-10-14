@@ -123,7 +123,7 @@ p.lead { color: var(--muted); margin-top: 0; }
 .lesson .kicker { color: var(--muted); font-size: .9rem; margin: 0; }
 .lesson .dia-ref { color: var(--muted); font-size: .8rem; font-weight: 400; white-space: nowrap; }
 .lesson blockquote { margin: 1rem 0; padding: .4rem 1rem; border-left: 4px solid var(--line); color: var(--muted); font-style: italic; }
-.lesson blockquote .dia-ref { font-style: normal; }
+.lesson blockquote .dia-ref { font-style: normal; white-space: normal; }
 
 /* Dobozok: a diasor jelölései ([D], [M], [E], [V]) + buktató. A címke a ::before-ból jön. */
 .box::before { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .25rem; }

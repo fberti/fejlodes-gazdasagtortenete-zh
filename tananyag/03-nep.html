@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3. Népességnövekedés és hatásai – A fejlődés gazdaságtörténete</title>
+  <meta name="description" content="Malthus és bírálata, demográfiai átmenet, eltartottsági ráta, Pepys-hipotézis, teljes tényezőtermelékenység, Fogel és az élelmezés, az elöregedés.">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html#/">A fejlődés gazdaságtörténete <span>Tananyag</span></a>
+    <nav>
+      <a href="./" class="active">Tananyag</a>
+      <a href="../index.html#/zh">Gyakorló ZH</a>
+      <a href="../index.html#/temak">Témakörök</a>
+      <a href="../index.html#/minta">Mintazh</a>
+      <a href="../index.html#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
+    </nav>
+  </header>
+
+  <main class="lesson">
+    <p class="kicker">3. fejezet · diák: 52–72</p>
+    <h1>Népességnövekedés és hatásai</h1>
+    <blockquote data-dia="52">
+      <p>„Az ember sokasodik, de a föld nem.”</p>
+      <p class="dia-ref">Cecil Rhodes</p>
+    </blockquote>
+    <p class="lead" data-dia="52">Az előző fejezet végén láttuk, hogy a nagyobb piac mélyebb szakosodást tesz lehetővé –
+      és a piac egyik kulcsa a népesség. De vajon jót tesz-e a fejlődésnek, ha egyre többen vagyunk? Vagy épp felélünk
+      mindent, amit megtermelünk?</p>
+
+    <!-- ───────────────────────── 1. Nyitó eset ───────────────────────── -->
+    <section id="nep-pirula">
+      <h2>Nyitó eset: a fogamzásgátló tabletta <span class="dia-ref">52–53. dia</span></h2>
+
+      <div class="box eset" data-dia="53">
+        <p>Az első fogamzásgátló tabletták az 1960-as évek elején jelentek meg az Egyesült Államokban, és onnan terjedtek
+          el világszerte. A pirula erős bizonyosságot vitt a szex és a teherbe esés addig nehezen kontrollálható
+          kapcsolatába. Ennek óriási gazdasági és társadalmi következményei lettek:</p>
+        <ul>
+          <li>lecsökkentette a szakmai pályafutás hosszú távú befektetési költségeit – a nők tervezhették a karrierjüket;</li>
+          <li>rengeteg nőnek tette lehetővé, hogy befejezze az egyetemet;</li>
+          <li>hozzájárult a szex és a házasság szétválásához, aminek szintén számos tovagyűrűző hatása lett.</li>
+        </ul>
+        <p>Egy 2012-es tanulmány (Bailey, Hershbein és Miller) szerint a férfiak és nők keresete közötti bérszakadék
+          1990 és 2000 közötti csökkenésének <b>30%-a</b> a fogamzásgátló tablettának köszönhető.</p>
+      </div>
+      <p data-dia="53">Az eset azt mutatja, hogy a népesedési döntések – hány gyereket, mikor vállalunk – közvetlenül
+        hatnak a gazdaságra. És fordítva: egy technológiai újítás átalakítja a népesedési döntéseket. A kapcsolat tehát
+        kétirányú.</p>
+      <p><strong>A fejezet kérdése:</strong> gyorsítja vagy fékezi a népesség növekedése a fejlődést? És mi történik, ha
+        a népesség már nem nő tovább?</p>
+
+      <h3 id="nep-utiterv">Útiterv</h3>
+      <ol class="roadmap" data-roadmap="nep"></ol>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A fogamzásgátló tabletta</summary>
+        <ol>
+          <li>Miért érte meg a tabletta megjelenése után több nőnek hosszú egyetemi tanulmányokba fogni?
+            <details><summary>Mintaválasz</summary><p>Mert a gyerekvállalás időzíthetővé vált. A hosszú tanulás és karrierépítés
+              befektetés, ami csak akkor térül meg, ha nem szakítja meg váratlanul egy terhesség. A tabletta csökkentette
+              ezt a kockázatot, így a befektetés várható hozama nőtt.</p></details></li>
+          <li>Miért mondjuk, hogy a népesség és a fejlődés kapcsolata kétirányú?
+            <details><summary>Mintaválasz</summary><p>Mert a népesség hat a gazdaságra (munkaerő, piacméret, innovátorok száma),
+              a fejlődés pedig a népesedési döntésekre (pl. a tabletta, az alacsonyabb gyermekhalandóság vagy a magasabb
+              iskolázottság kevesebb, később vállalt gyereket jelent).</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="nep-pirula"></details>
+    </section>
+
+    <!-- ───────────────────────── 2. Malthus ───────────────────────── -->
+    <section id="nep-malthus">
+      <h2>Malthus elmélete és hibái <span class="dia-ref">54–56. dia</span></h2>
+
+      <p data-dia="54">A népesség és a jólét kapcsolatának leghíresebb – és mára elavult – elmélete <b>Thomas Malthus</b>
+        nevéhez fűződik. 1798-ban megjelent <i>Tanulmány a népesedés törvényéről</i> című műve volt az első közgazdasági
+        elemzés, amely a növekedés hosszú távú fenntarthatóságát a szűkös erőforrások – esetünkben a termőföld –
+        korlátaihoz kötötte. Annyira lesújtó következtetésre jutott, hogy Thomas Carlyle 1849-ben „lehangoló tudománynak”
+        (dismal science) nevezte a közgazdaságtant.</p>
+
+      <div class="box mech" data-dia="54">
+        <p><b>Malthus érvelése lépésről lépésre:</b></p>
+        <ol>
+          <li>A termőföld véges mennyiségben áll rendelkezésre.</li>
+          <li>Ahogy nő a népesség, csökken az egy főre jutó termőföld.</li>
+          <li>Ez <b>csökkenő hozadékot</b> eredményez: csökken az egy főre eső élelmiszertermelés.</li>
+          <li>A kevesebb élelem csökkenti a jólétet, ezért csökken a születések és nő a halálozások száma.</li>
+          <li>Így a népesség visszaesik.</li>
+          <li>Végül beáll a <b>malthusi egyensúly</b>: stagnáló népesség és jólét, a létminimumnak megfelelő jövedelem.
+            Ebből legfeljebb nagy katasztrófák (járvány, háború) lendíthetik ki ideiglenesen a gazdaságot.</li>
+        </ol>
+      </div>
+
+      <p data-dia="55">Az elmélet egyetlen ábrán is összefoglalható. A vízszintes tengelyen az egy főre jutó jövedelem,
+        a függőlegesen a születési ráta (SZR) és a halálozási ráta (HR) van. Ha nő a jövedelem, több gyerek születik
+        (SZR emelkedik), és kevesebben halnak meg (HR csökken).</p>
+      <figure class="dia" data-dia="55">
+        <img src="img/dia-055.png" alt="Malthus ábrája: a vízszintes tengelyen az egy főre jutó jövedelem, a függőlegesen a születési és a halálozási ráta. Az emelkedő születési és a csökkenő halálozási görbe metszéspontja a malthusi egyensúly a létminimumon; a technikai haladás jobbra tolja a jövedelmet." loading="lazy">
+        <figcaption>Malthus elmélete egy ábrán. SZR = születési ráta, HR = halálozási ráta. A két görbe metszéspontja
+          a malthusi egyensúly: SZR = HR, a jövedelem a létminimum, a népesség stagnál. (Diasor, 55. dia.)</figcaption>
+      </figure>
+      <div class="box mech" data-dia="55">
+        <p><b>Hogyan olvasd az ábrát?</b></p>
+        <ul>
+          <li><b>Az egyensúly stabil:</b> ha a jövedelem a metszéspont fölé emelkedik, több a születés, mint a halálozás →
+            nő a népesség → csökken az egy főre jutó jövedelem → visszatérünk a metszésponthoz. Lefelé ugyanez fordítva.</li>
+          <li><b>Egy technológiai javulás</b> egyszeri jövedelemnövekedést okoz (jobbra mozdulunk), de a népesség addig nő,
+            amíg el nem éli a többletet. A múltban – a történelem tanulsága szerint – ez történt.</li>
+          <li><b>Ha a technikai haladás gyorsul</b>, és gyorsabb, mint ahogy a népesség felélné, a jólét is tartósan
+            előrelép. Ez történt az ipari forradalom után.</li>
+        </ul>
+      </div>
+      <div class="box kieg">
+        <p>A malthusi világban tehát a technológiai javulás hosszú távon nem gazdagabb, hanem <b>több</b> embert eredményez,
+          ugyanazon a létminimumon. Ezért mondják, hogy az ipari forradalom előtt a technológia a népesség nagyságában,
+          nem az életszínvonalban látszott.</p>
+      </div>
+
+      <h3 id="nep-malthus-hibai">Miért hibás az elmélet?</h3>
+      <div class="box vita" data-dia="56">
+        <ol>
+          <li><b>Nem számol a folyamatos hatékonyságjavulással</b> – egységnyi földterületen egyre több élelmiszer termelhető:
+            <ul>
+              <li><b>betakarítási arány</b> (hányszor takarítanak be évente egységnyi földről): a vándorló, égetéses
+                földművelés 0,05-ös értékéről (húszévente egyszer) évi 1-re, de akár 2-re vagy 3-ra is nőhet;</li>
+              <li><b>termésátlag</b> (egységnyi területről betakarított termény mennyisége) – jobb vetőmag, trágya, eszközök.</li>
+            </ul></li>
+          <li><b>Zárt gazdaságot feltételez</b>, amely nem tud szakosodni, és nem tud a kereskedelmi kapcsolatai révén másoktól
+            jobb technológiát eltanulni (vö. <a href="02-ker.html#ker-szakosodas">2. fejezet</a>).</li>
+          <li><b>A gyerekvállalást egyoldalúan kezeli:</b> csak a gyerekek <i>mennyisége</i> számít benne, a <i>minőségük</i>
+            (egészségük, iskolázottságuk) nem.</li>
+        </ol>
+      </div>
+      <div class="box warn" data-dia="56">
+        <p>Ne keverd össze: Malthus szerint a népességnövekedés <b>visszafogja</b> a jólétet (csökkenő hozadék), a következő
+          szakaszban tárgyalt Pepys szerint <b>gyorsítja</b> a fejlődést (több innovátor). A ZH gyakran épp ezt a párt
+          cseréli fel a rossz válaszokban.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Malthus</summary>
+        <ol>
+          <li>Írd le Malthus oksági láncát öt lépésben!
+            <details><summary>Mintaválasz</summary><p>Véges föld → a népesség növekedésével csökken az egy főre jutó föld →
+              csökkenő hozadék, kevesebb élelem fejenként → kevesebb születés, több halálozás → a népesség visszaesik →
+              malthusi egyensúly a létminimumon.</p></details></li>
+          <li>Egy középkori faluban új ekét vezetnek be, és tíz évig jobban élnek. Ötven év múlva ugyanúgy a létminimumon élnek,
+            csak többen vannak. Mivel magyarázod?
+            <details><summary>Mintaválasz</summary><p>A malthusi mechanizmussal: a technológiai javulás egyszeri jövedelemtöbbletet
+              adott, ez növelte a születéseket és csökkentette a halálozást, a népesség addig nőtt, amíg az egy főre jutó jövedelem
+              vissza nem esett a létminimumra.</p></details></li>
+          <li>Melyik feltevése bizonyult a legnagyobb tévedésnek az ipari forradalom után?
+            <details><summary>Mintaválasz</summary><p>Hogy nem számolt a folyamatos hatékonyságjavulással. Az ipari forradalom
+              után a technikai haladás gyorsabb lett, mint a népesség növekedése, így a jólét tartósan nőhetett. Emellett
+              a nyitott gazdaságok kereskedhettek, a családok pedig kevesebb, de „jobb minőségű” gyereket vállaltak.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="nep-malthus"></details>
+    </section>
+
+    <!-- ───────────────────────── 3. Demográfiai átmenet ───────────────────────── -->
+    <section id="nep-atmenet">
+      <h2>Gyerekvállalási stratégiák és a demográfiai átmenet <span class="dia-ref">57–59. dia</span></h2>
+
+      <p data-dia="57">Malthus harmadik hibája – hogy a családok csak a gyerekek számára figyelnek – egy toszkániai kistelepülés
+        több száz éves anyakönyvi adataiból jól látszik:</p>
+      <div class="table-wrap" data-dia="57">
+        <table class="data num">
+          <caption>Gyerekvállalás egy toszkániai kistelepülésen. (Diasor, 57. dia; forrás: Ejrnæs–Persson, 2014.)</caption>
+          <thead><tr><th>Az anya születési éve</th><th>Feleség kora a házasságkötéskor</th><th>Szülések száma anyánként</th>
+            <th>Az első és utolsó gyerek közötti évek</th><th>10 éves korig túlélt gyerekek</th><th>Túlélés esélye 10 éves korig</th></tr></thead>
+          <tbody>
+            <tr><td>1650–1749</td><td>23,3</td><td>3,85</td><td>7,67</td><td>2,12</td><td>55%</td></tr>
+            <tr><td>1750–1849</td><td>22,1</td><td>5,04</td><td>10,82</td><td>3,30</td><td>65%</td></tr>
+            <tr><td>1850–1874</td><td>21,4</td><td>5,43</td><td>11,73</td><td>4,27</td><td>79%</td></tr>
+            <tr><td>1875–1899</td><td>24,8</td><td>3,93</td><td>9,38</td><td>3,43</td><td>87%</td></tr>
+            <tr><td>1900–1920</td><td>24,5</td><td>2,40</td><td>6,55</td><td>2,38</td><td>99%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="57">Figyeld meg a mintázatot! Ahogy javult a gyerekek túlélési esélye, eleinte több gyerek született,
+        de a 19. század második felétől a családok <b>kevesebb gyereket vállaltak</b>, később házasodtak, és rövidebb
+        időszakra sűrítették a szüléseket. 1900–1920-ban már 2,4 szülésből 2,38 gyerek élte meg a 10 éves kort.
+        A családok tehát alkalmazkodtak: ha a gyerekek nagy valószínűséggel életben maradnak, kevesebbet vállalnak,
+        de azokba többet fektetnek.</p>
+      <div class="box kieg">
+        <p>A közgazdaságtan ezt a <b>mennyiség–minőség választásnak</b> hívja (Gary Becker): a szülők kevesebb gyereket
+          vállalnak, de mindegyikre több időt, pénzt és oktatást fordítanak. Ez az emberi tőke felhalmozásának egyik alapja
+          (<a href="index.html#tud">5. fejezet</a>).</p>
+      </div>
+
+      <div class="box def" data-dia="58">
+        <p><b>Demográfiai átmenet:</b> az a folyamat, amelynek során egy társadalom a magas születési és halálozási rátájú
+          állapotból az alacsony születési és halálozási rátájú állapotba jut. A kulcs a sorrend: <b>előbb a halálozás
+          csökken, és csak késéssel a születések száma.</b></p>
+      </div>
+      <figure class="dia" data-dia="58">
+        <img src="img/dia-058.png" alt="Diagram: ezer főre jutó születés és halálozás az idő függvényében, kb. 125 év alatt. A halálozási ráta korán csökkenni kezd, a születési ráta egy ideig magas marad, majd később szintén csökken." loading="lazy">
+        <figcaption>A demográfiai átmenet: ezer főre jutó születés (SZR) és halálozás (HR) – kb. 125 év alatt.
+          (Diasor, 58. dia.)</figcaption>
+      </figure>
+      <div class="box mech" data-dia="58">
+        <p class="chain">jobb élelmezés, higiénia, orvoslás → csökken a halálozás → a születés még magas → gyors népességnövekedés
+          → a családok alkalmazkodnak, csökken a születés → lassul, majd megáll a növekedés</p>
+      </div>
+      <div class="box kieg">
+        <p>A demográfusok általában négy szakaszt különítenek el: (1) magas születés és halálozás, lassú növekedés;
+          (2) csökkenő halálozás, robbanásszerű növekedés; (3) csökkenő születés, lassuló növekedés; (4) alacsony születés
+          és halálozás, stagnáló népesség. Európa a 19–20. században, a fejlődő országok nagy része a 20. század második
+          felében haladt végig rajta.</p>
+      </div>
+
+      <h3 id="nep-eltartottsag">Az eltartottsági ráta: egyszeri esély</h3>
+      <div class="box def" data-dia="59">
+        <p><b>Eltartottsági ráta</b> = [(0–14 évesek) + (65 év felettiek)] / (15–64 évesek). Megmutatja, hány eltartottra
+          (gyerekre és idősre) jut egy munkaképes korú ember.</p>
+      </div>
+      <div class="box eset" data-dia="59">
+        <p><b>Egy kis példa:</b> ha egy 100 fős közösségben 20 gyerek, 15 idős és 65 munkaképes korú ember él, az eltartottsági
+          ráta (20 + 15) / 65 ≈ 0,54, azaz 54%: 100 dolgozó korúra 54 eltartott jut.</p>
+      </div>
+      <p data-dia="59">A demográfiai átmenet közben ez a ráta különös utat jár be. Amikor a születések száma visszaesik, egy
+        ideig <b>kevés a gyerek</b>, és <b>még kevés az idős</b> is – hiszen a népes korosztályok éppen munkaképes korban vannak.
+        Ilyenkor az eltartottsági ráta hirtelen lecsökken: sok a dolgozó, kevés az eltartott, több jut megtakarításra
+        és befektetésre. Ez a <b>„minden ország egyszeri esélye”</b>: később, ahogy a népes korosztályok megöregednek,
+        a ráta újra nő.</p>
+      <figure class="dia" data-dia="59">
+        <img src="img/dia-059.png" alt="Vonaldiagram 1976 és 2020 között: Kína eltartottsági rátája kb. 77 százalékról 2010 körül 36 százalékra csökken, utána lassan emelkedni kezd." loading="lazy">
+        <figcaption>Kína eltartottsági rátája, 1976–2020 (%). A ráta a felére esett – ez egybeesik Kína leggyorsabb
+          növekedésének időszakával –, 2010 óta pedig újra emelkedik. (Diasor, 59. dia; forrás: Világbank.)</figcaption>
+      </figure>
+      <div class="box warn" data-dia="59">
+        <p>Az „egyszeri esély” nem automatikus növekedés: csak akkor válik növekedéssé, ha a sok munkaképes korú ember
+          munkát talál, és a megtakarítás befektetéssé válik. A ZH-n a helyes válasz az, hogy a demográfiai átmenet
+          <i>ideiglenesen</i> növelheti a munkaképes korúak arányát.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Demográfiai átmenet</summary>
+        <ol>
+          <li>Miért nő gyorsan a népesség a demográfiai átmenet közepén?
+            <details><summary>Mintaválasz</summary><p>Mert a halálozás már csökkent (jobb élelmezés, higiénia, orvoslás), de
+              a születések száma még magas: a családok csak késéssel igazítják a gyerekvállalást az új helyzethez.
+              A kettő különbsége a népesség gyors növekedése.</p></details></li>
+          <li>Mit mutatnak a toszkániai adatok a családok döntéseiről?
+            <details><summary>Mintaválasz</summary><p>Hogy a családok racionálisan alkalmazkodtak: amikor a gyerekek túlélési esélye
+              55%-ról 99%-ra nőtt, végül kevesebb gyereket vállaltak (5,43 helyett 2,4 szülés). A gyerekek „minősége” is számított,
+              nem csak a számuk – ez Malthus egyik hibáját mutatja.</p></details></li>
+          <li>Miért mondják, hogy az eltartottsági ráta csökkenése „minden ország egyszeri esélye”?
+            <details><summary>Mintaválasz</summary><p>Mert a születések visszaesése után egy ideig kevés a gyerek és kevés az idős,
+              így sok a dolgozó egy eltartottra – ez megtakarítást, befektetést és növekedést tesz lehetővé. De csak egyszer:
+              a népes korosztályok megöregednek, és a ráta újra emelkedik (Kínában 2010 óta).</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="nep-atmenet"></details>
+    </section>
+
+    <!-- ───────────────────────── 4. Pepys ───────────────────────── -->
+    <section id="nep-pepys">
+      <h2>Egy valószerűbb elmélet: Pepys hipotézise <span class="dia-ref">60–62. dia</span></h2>
+
+      <p data-dia="60">Ha Malthus tévedett, mi a jobb magyarázat? A diasor egy 17. századi angol szerzőhöz,
+        <b>Samuel Pepyshez</b> (1633–1703) köti az ellenkező gondolatot.</p>
+      <div class="box vita" data-dia="60">
+        <p><b>Pepys hipotézise:</b></p>
+        <ul>
+          <li>a technológiai fejlődés mértéke összefügg a népesség nagyságával;</li>
+          <li>a kapcsolat <b>pozitív</b>: a növekvő népesség gyorsuló technikai haladással jár együtt;</li>
+          <li>Pepys szavaival: egy 4 milliós közösségből nagyobb eséllyel kerül ki egy zseni, mint egy 400 ezresből.</li>
+        </ul>
+      </div>
+      <div class="box mech" data-dia="60">
+        <p><b>A gondolat a modern fejlődéselméletben:</b></p>
+        <ul>
+          <li><b>Kremer (1993):</b> nagyobb népesség → több innovátor.</li>
+          <li><b>Galor–Weil (2000):</b> jobb technológia → nagyobb eltartóképesség → növekvő emberi tőke → gyorsabb növekedés.</li>
+          <li><b>Smith/Ricardo:</b> a szakosodás törvénye – a nagyobb népesség nagyobb piacot és mélyebb munkamegosztást jelent
+            (<a href="02-ker.html#ker-hatarok">2. fejezet</a>).</li>
+        </ul>
+      </div>
+      <div class="box kieg">
+        <p>Samuel Pepys elsősorban híres naplójáról ismert: tengerészeti tisztviselőként, a Royal Society elnökeként közelről
+          látta korának tudományos és technikai pezsgését. A róla elnevezett hipotézis a diasor szóhasználata; a modern
+          irodalom a gondolatot főleg Kremer és Simon nevéhez köti.</p>
+      </div>
+
+      <h3 id="nep-modell">Az ipari forradalom előtti növekedés modellje</h3>
+      <p data-dia="61">Malthus és Pepys nem zárja ki egymást: a valóságban mindkét erő hat. A népességnövekedés három
+        csatornán befolyásolja az egy főre eső jövedelmet – kettő növeli, egy csökkenti:</p>
+      <div class="box mech" data-dia="61">
+        <ul>
+          <li>népességnövekedés <b>→ (+)</b> szakosodás (Smith/Ricardo) <b>→ (+)</b> egy főre eső jövedelem;</li>
+          <li>szakosodás <b>→ (+)</b> gyakorlatból fakadó technikai haladás (Pepys) <b>→ (+)</b> egy főre eső jövedelem;</li>
+          <li>népességnövekedés <b>→ (+)</b> csökkenő hozadék (Malthus) <b>→ (−)</b> egy főre eső jövedelem.</li>
+        </ul>
+        <p>Hogy a jövedelem nő-e, az az erők egyenlegén múlik. Az ipari forradalom előtt a két pozitív hatás lassú volt,
+          ezért a malthusi fék sokszor erősebbnek bizonyult.</p>
+      </div>
+
+      <p data-dia="62">A modell erői két nagy korszakban másképp működtek:</p>
+      <div class="table-wrap" data-dia="62">
+        <table class="data">
+          <caption>A modell erői két korszakban. (Diasor, 62. dia)</caption>
+          <thead><tr><th>Korszak</th><th>Időszak</th><th>A technológia fejlődése</th><th>A hatékonyságjavulás következménye</th><th>A Föld népessége</th></tr></thead>
+          <tbody>
+            <tr><td>Vadászó-gyűjtögető életmód</td><td>kb. i. e. 10 000-ig</td>
+              <td>Nagyon lassú; személyes tanulás, minimális transzfer</td>
+              <td>A terület eltartóképessége nem változik → több szabadidő, állandó népesség és jövedelem</td>
+              <td>kb. 6–8 millió</td></tr>
+            <tr><td>Neolitikus forradalom – agrártársadalmak</td><td>i. e. 10 000 – i. sz. 1800</td>
+              <td>Lassú; személyes tanulás, szakosodás és transzfer</td>
+              <td>A terület eltartóképessége nő → növekvő kibocsátás, növekvő népesség</td>
+              <td>i. sz. 1: kb. 250 millió; 1800: kb. 1 milliárd</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="62">A vadászó-gyűjtögetők a jobb technikát szabadidőre „váltották”, az agrártársadalmak népességre.
+        Egyik korszakban sem nőtt tartósan az egy főre jutó jövedelem – ez csak az ipari forradalom után változott meg.</p>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Pepys és a modell</summary>
+        <ol>
+          <li>Miért gyorsíthatja a nagyobb népesség a technikai haladást?
+            <details><summary>Mintaválasz</summary><p>Mert több emberből több feltaláló, „zseni” kerül ki (Pepys, Kremer), a nagyobb
+              piac mélyebb szakosodást tesz lehetővé (Smith/Ricardo), a szakosodás pedig gyorsítja a gyakorlati tanulást.
+              Egy új ötlet ráadásul sok emberhez eljut, tehát nagyobb a haszna.</p></details></li>
+          <li>Az ipari forradalom előtti modellben mitől függ, hogy nő-e az egy főre jutó jövedelem?
+            <details><summary>Mintaválasz</summary><p>A pozitív erők (szakosodás, gyakorlati technikai haladás) és a negatív erő
+              (malthusi csökkenő hozadék) egyenlegétől. Ha a technológia lassabban javul, mint ahogy a népesség felélné, a jövedelem
+              stagnál.</p></details></li>
+          <li>Mi a különbség a vadászó-gyűjtögetők és az agrártársadalmak között a hatékonyságjavulás felhasználásában?
+            <details><summary>Mintaválasz</summary><p>A vadászó-gyűjtögetőknél a terület eltartóképessége nem változott, így
+              a hatékonyabb technika szabadidőt hozott, a népesség és a jövedelem állandó maradt. Az agrártársadalmakban nőtt
+              az eltartóképesség, ezért a javulás növekvő népességben csapódott le (i. sz. 1: 250 millió → 1800: 1 milliárd).</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="nep-pepys"></details>
+    </section>
+
+    <!-- ───────────────────────── 5. TFP ───────────────────────── -->
+    <section id="nep-tfp">
+      <h2>Mennyivel javult a technológia? A teljes tényezőtermelékenység <span class="dia-ref">63–65. dia</span></h2>
+
+      <p data-dia="63">Eddig azt mondtuk, a technológia „lassan” javult. De hogyan lehet ezt megmérni? A technológiát
+        nem látjuk közvetlenül – csak azt, hogy mennyi bemenetből (föld, munka, tőke) mennyi kibocsátás lesz.
+        Ha a kibocsátás gyorsabban nő, mint a bemenetek, a különbség a hatékonyság javulása.</p>
+      <div class="box def" data-dia="63">
+        <p><b>Teljes tényezőtermelékenység (TFP, Total Factor Productivity):</b> a TFP-növekedés a kibocsátás növekedésének
+          az a része, amelyet a mért bemenetek súlyozott növekedése <b>nem magyaráz meg</b>.</p>
+        <p class="chain">TFP-növekedés = a kibocsátás növekedése − a bemenetek súlyozott növekedése</p>
+        <p>Képlettel: g<sub>TFP</sub> = g<sub>Y</sub> − (s<sub>T</sub>·g<sub>T</sub> + s<sub>L</sub>·g<sub>L</sub> + s<sub>K</sub>·g<sub>K</sub>),
+          ahol g<sub>Y</sub> a gazdasági növekedés; g<sub>T</sub>, g<sub>L</sub> és g<sub>K</sub> a termőföld, a munkaerő és
+          a tőke növekedési üteme; s<sub>T</sub>, s<sub>L</sub> és s<sub>K</sub> a tényezők jövedelmi részesedése (összegük 1).</p>
+      </div>
+      <div class="box eset" data-dia="63">
+        <p><b>Kidolgozott példa:</b></p>
+        <div class="table-wrap">
+          <table class="data num">
+            <thead><tr><th>Változó</th><th>Növekedési ütem</th><th>Jövedelmi részesedés</th></tr></thead>
+            <tbody>
+              <tr><td>Reálkibocsátás (g<sub>Y</sub>)</td><td>1%</td><td>–</td></tr>
+              <tr><td>Termőföld (g<sub>T</sub>)</td><td>0%</td><td>50%</td></tr>
+              <tr><td>Munkaerő (g<sub>L</sub>)</td><td>2%</td><td>30%</td></tr>
+              <tr><td>Tőke (g<sub>K</sub>)</td><td>1%</td><td>20%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A bemenetek súlyozott növekedése: 0,5 · 0% + 0,3 · 2% + 0,2 · 1% = <b>0,8%</b>.<br>
+          TFP-növekedés: 1% − 0,8% = <b>0,2%</b>.</p>
+      </div>
+      <div class="box warn" data-dia="63">
+        <p>A bemeneteket <b>súlyozva</b> kell kivonni! Aki egyszerűen kivonja a növekedési ütemeket (1 − 0 − 2 − 1),
+          −2%-ot kap – ennek nincs értelme. És a 0,8% nem a TFP, hanem a bemenetek hozzájárulása.</p>
+      </div>
+      <p data-dia="63">A probléma, hogy ilyen statisztikák csak az utolsó kb. 100–150 évre érhetők el. Korábbra alternatív
+        módszerekkel becsülnek – például a városi lakosság arányából, vagy a bérek és az árak változásából.</p>
+
+      <p data-dia="64">Mennyi volt hát a TFP-növekedés az agrártársadalmakban? A francia régiók becslései szerint
+        nagyon kevés:</p>
+      <div class="table-wrap" data-dia="64">
+        <table class="data num">
+          <caption>A TFP éves változása (%) francia régiókban. (Diasor, 64. dia)</caption>
+          <thead><tr><th>Régió</th><th>Időszak</th><th>Teljes időszakban</th><th>Az időszak végén</th></tr></thead>
+          <tbody>
+            <tr><td>Párizs környéke</td><td>1520–1789</td><td>0,13</td><td>0,31</td></tr>
+            <tr><td>Északkelet-Franciaország</td><td>1550–1789</td><td>0,13</td><td>0,13</td></tr>
+            <tr><td>Normandia</td><td>1520–1785</td><td>0,01</td><td>0,01</td></tr>
+            <tr><td>Nyugat-Franciaország</td><td>1611–1790</td><td>−0,16</td><td>−0,16</td></tr>
+            <tr><td>Délkelet-Franciaország</td><td>1580–1790</td><td>0,21</td><td>0,21</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="64">Az évi 0,15–0,2% igen lassú, de nem nulla. Mennyi idő alatt duplázódik meg ilyen tempóval
+        a termelékenység – vagyis mikor hoz ugyanakkora föld kétszer akkora termést?</p>
+      <div class="box eset" data-dia="64">
+        <p>Pontosan: ln 2 / ln 1,002 ≈ <b>347 év</b>. Közelítéssel (a „72-es szabály”): 72 / 0,2 = <b>360 év</b>.
+          Összehasonlításul: évi 2%-os növekedésnél 72 / 2 = 36 év alatt duplázódna.</p>
+      </div>
+      <div class="box tip"><strong>Hüvelykujjszabály – a 72-es szabály:</strong> ha valami évi <i>g</i> százalékkal nő,
+        nagyjából 72 / <i>g</i> év alatt duplázódik meg.</div>
+      <p data-dia="64">A kevésbé fejlett vidékeken a TFP-növekedés valószínűleg nulla közeli volt, vagy akár negatív is.</p>
+
+      <p data-dia="65">Mire volt elég ez a lassú javulás? Folyamatos népességnövekedésre – és a 18. században már a várható
+        élettartam is emelkedni kezdett:</p>
+      <div class="table-wrap" data-dia="65">
+        <table class="data num">
+          <caption>Születéskor várható élettartam, év. (Diasor, 65. dia; forrás: Fogel, 2004.)</caption>
+          <thead><tr><th>Év</th><th>Anglia</th><th>USA</th></tr></thead>
+          <tbody>
+            <tr><td>1725</td><td>32</td><td>50</td></tr>
+            <tr><td>1750</td><td>37</td><td>51</td></tr>
+            <tr><td>1800</td><td>36</td><td>56</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – TFP</summary>
+        <ol>
+          <li>Miért nevezik a TFP-t a „tudatlanságunk mértékének” is? (Kiegészítés)
+            <details><summary>Mintaválasz</summary><p>Mert maradékként számoljuk: az a növekedés, amit a mért bemenetek nem
+              magyaráznak. Ebbe minden belekerül, amit nem mérünk külön – technológia, szervezés, intézmények, de mérési
+              hibák is.</p></details></li>
+          <li>Egy gazdaságban a kibocsátás 3%-kal nő, a munkaerő 1%-kal, a tőke 4%-kal, a föld nem változik. A részesedések:
+            munka 60%, tőke 30%, föld 10%. Mekkora a TFP-növekedés?
+            <details><summary>Mintaválasz</summary><p>Bemenetek: 0,6 · 1% + 0,3 · 4% + 0,1 · 0% = 0,6% + 1,2% = 1,8%.
+              TFP: 3% − 1,8% = 1,2%.</p></details></li>
+          <li>Miért fontos, hogy az agrártársadalmak TFP-növekedése „lassú, de nem nulla” volt?
+            <details><summary>Mintaválasz</summary><p>Mert ez magyarázza, hogy a népesség az ipari forradalom előtt is lassan nőhetett,
+              és az élettartam is elkezdett emelkedni – a technológia nem állt, csak évszázadok kellettek a duplázódáshoz
+              (kb. 350 év). Az ipari forradalom ezt a tempót gyorsította fel.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="nep-tfp"></details>
+    </section>
+
+    <!-- ───────────────────────── 6. Életszínvonal ───────────────────────── -->
+    <section id="nep-eletszinvonal">
+      <h2>Élelmezés, élettartam és munkaidő <span class="dia-ref">66–69. dia</span></h2>
+
+      <blockquote data-dia="66">
+        <p>„Ha feltalálnánk egy wellsi időgépet, és visszamennénk a 18. századi Angliába, ez körülbelül annyira tenne jót
+          az egészségünknek, mint egy űrruha nélküli holdutazás. A testünk egyszerűen túl nagy ahhoz, hogy túléljen azokon
+          az ételadagokon, amelyek akkoriban elérhetők voltak.”</p>
+        <p class="dia-ref">Angus Deaton</p>
+      </blockquote>
+      <p data-dia="66">A Nobel-díjas gazdaságtörténész, <b>Robert Fogel</b> az élelmezés és a növekedés kapcsolatát vizsgálta.
+        1790 és 1980 közötti angol adatokat elemezve (2004) arra jutott, hogy:</p>
+      <div class="box eset" data-dia="66">
+        <ul>
+          <li>Nagy-Britanniában az egy főre jutó reáljövedelem évente átlagosan kb. <b>1,1–1,15%-kal</b> nőtt;</li>
+          <li>a jobb táplálkozás <b>közvetlen munkaképességi hatásai</b> e növekedés kb. <b>30%-át</b>,</li>
+          <li>a tágabban értelmezett táplálkozási és fiziológiai javulások akár kb. <b>50%-át</b> magyarázhatják.</li>
+        </ul>
+      </div>
+      <div class="box mech" data-dia="66">
+        <p><b>Miért nő a jövedelem, ha javul az emberek egészsége?</b></p>
+        <p class="chain">jobb táplálkozás → erősebb, egészségesebb test → több és hatékonyabb munka, kevesebb betegség → nagyobb kibocsátás → még jobb táplálkozás</p>
+        <p>Ez is pozitív visszacsatolás: a jobban táplált ember többet termel, a nagyobb termelés pedig jobb táplálkozást tesz
+          lehetővé.</p>
+      </div>
+
+      <p data-dia="67">A várható élettartam a 19–20. században mindenhol emelkedett, de eltérő időpontban és ütemben. A felzárkózók
+        (Spanyolország, Kína) később indultak, de gyorsabban zárkóztak fel:</p>
+      <div class="table-wrap" data-dia="67">
+        <table class="data num">
+          <caption>Születéskor várható élettartam, év. (Diasor, 67. dia; forrás: Riley: Estimates of Regional and Global Life Expectancy, 1800–2001.)</caption>
+          <thead><tr><th>Év</th><th>Kína</th><th>Franciaország</th><th>Németország</th><th>Magyarország</th><th>Spanyolország</th><th>Nagy-Britannia</th><th>USA</th></tr></thead>
+          <tbody>
+            <tr><td>1820</td><td></td><td>39</td><td></td><td></td><td></td><td>40,5</td><td></td></tr>
+            <tr><td>1850</td><td></td><td>43</td><td></td><td></td><td></td><td>42</td><td>43</td></tr>
+            <tr><td>1875</td><td></td><td>43</td><td>38</td><td></td><td></td><td>41</td><td></td></tr>
+            <tr><td>1890</td><td></td><td>43</td><td>40</td><td></td><td></td><td>44</td><td>45</td></tr>
+            <tr><td>1900</td><td>27</td><td>45</td><td>43</td><td>37</td><td>35</td><td>46</td><td>48</td></tr>
+            <tr><td>1910</td><td></td><td>51</td><td>49</td><td>40</td><td>41</td><td>53</td><td>52</td></tr>
+            <tr><td>1930</td><td>32</td><td>57</td><td>57</td><td>50</td><td>49</td><td>61</td><td>60</td></tr>
+            <tr><td>1950</td><td>45</td><td>66</td><td>67</td><td>62</td><td>62</td><td>69</td><td>68</td></tr>
+            <tr><td>1970</td><td>65</td><td>72</td><td>71</td><td>69</td><td>72</td><td>72</td><td>71</td></tr>
+            <tr><td>1990</td><td>70</td><td>77</td><td>75</td><td>69</td><td>78</td><td>76</td><td>75</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="67">Figyeld meg Magyarországot: 1970 és 1990 között a várható élettartam nem nőtt (69 év maradt), miközben
+        Nyugat-Európában még 4–6 évet javult.</p>
+
+      <p data-dia="68">A jólét növekedése nemcsak hosszabb életben, hanem <b>kevesebb munkában</b> is megmutatkozott.
+        Az alkalmazottak éves átlagos munkaideje a 19. század közepén a világ minden régiójában 3000–3500 óra körül volt –
+        ez heti 60–70 óra. Ma a legtöbb régióban 1600–2200 óra.</p>
+      <figure class="dia" data-dia="68">
+        <img src="img/dia-068.png" alt="Vonaldiagram 1800 és 2025 között: az alkalmazottak éves munkaideje régiónként; 1870 körül 3000–3500 óra, 1920 után meredeken csökken, ma 1600–2300 óra." loading="lazy">
+        <figcaption>Alkalmazottak átlagos éves munkaideje világrégiónként, 1800–2025. (Diasor, 68. dia; forrás:
+          Andreescu–Loubes–Piketty–Robilliard, WIL Working Paper 2025/08.)</figcaption>
+      </figure>
+      <p data-dia="69">Ugyanez a tendencia látszik a nem fizetett munkánál: a kényszermunka (rabszolgaság, jobbágyság) és a fizetés
+        nélküli családi munka aránya 1800-ban az összes gazdasági munkaóra kb. 34%-a volt, 2025-re kb. 9%-ra esett.</p>
+      <figure class="dia" data-dia="69">
+        <img src="img/dia-069.png" alt="Halmozott területdiagram 1800 és 2025 között: a nem fizetett munka aránya az összes munkaórában – kényszermunka, férfiak és nők nem fizetett családi munkája; összesen 34 százalékról 9 százalékra csökken." loading="lazy">
+        <figcaption>A nem fizetett munka aránya a gazdasági munkaórákban, 1800–2025: kényszermunka, illetve férfiak és nők
+          nem fizetett családi munkája. (Diasor, 69. dia; forrás: Andreescu–Loubes–Piketty–Robilliard, 2025.)</figcaption>
+      </figure>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Élelmezés, élettartam, munkaidő</summary>
+        <ol>
+          <li>Hogyan magyarázza Fogel, hogy a jobb táplálkozás növeli a jövedelmet?
+            <details><summary>Mintaválasz</summary><p>A jobban táplált ember egészségesebb és erősebb, ezért többet és hatékonyabban
+              dolgozik, ritkábban beteg. Fogel szerint az angol jövedelemnövekedés kb. 30%-át a táplálkozás közvetlen
+              munkaképességi hatása, tágabban akár 50%-át magyarázhatják a fiziológiai javulások.</p></details></li>
+          <li>Miért számít a fejlődés jelének, hogy csökkent a munkaidő?
+            <details><summary>Mintaválasz</summary><p>Mert a fejlődés Sen értelmében a választás szabadsága: a hatékonyabb termelés
+              lehetővé tette, hogy kevesebb munkával is többet fogyasszunk, és több idő jusson tanulásra, pihenésre, családra.
+              A jólét egy részét szabadidőben „vettük ki”.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="nep-eletszinvonal"></details>
+    </section>
+
+    <!-- ───────────────────────── 7. Csökkenő népesség ───────────────────────── -->
+    <section id="nep-jovo">
+      <h2>Ha már nem nő a népesség: fordított Pepys? <span class="dia-ref">70–72. dia</span></h2>
+
+      <p data-dia="70">A demográfiai átmenet végén a születések száma tovább csökkenhet. 2023-ban a világ nagy részén –
+        Európában, Kelet-Ázsiában, Észak- és Dél-Amerikában – a teljes termékenységi ráta már 2 alatt volt; csak
+        a szubszaharai Afrikában és néhány más régióban maradt magas.</p>
+      <figure class="dia" data-dia="70">
+        <img src="img/dia-070.png" alt="Világtérkép: teljes termékenységi ráta 2023-ban; a legtöbb ország narancs színű, azaz kettő alatti, a szubszaharai Afrika kék, azaz magas termékenységű." loading="lazy">
+        <figcaption>„Hová lettek a babák?” Teljes termékenységi ráta (élveszületés nőnként), 2023. (Diasor, 70. dia;
+          forrás: The Economist, ENSZ.)</figcaption>
+      </figure>
+      <div class="box kieg">
+        <p>A <b>teljes termékenységi ráta</b> azt mutatja, hány gyereket szülne egy nő élete során a mostani korspecifikus
+          arányok mellett. A népesség hosszú távú szinten tartásához kb. 2,1 kellene (<b>reprodukciós szint</b>).
+          Ennél alacsonyabb érték mellett – bevándorlás nélkül – a népesség előbb-utóbb fogyni kezd.</p>
+      </div>
+
+      <p data-dia="71">Ha Pepysnek igaza van, és a nagyobb népesség gyorsítja a technikai haladást, akkor a fogyó és elöregedő
+        népesség lassíthatja. Erre utal Japán példája: a 65 év felettiek aránya ott 1950 óta 4,9%-ról 29,8%-ra nőtt,
+        és 2050-re 37,5%-ra nőhet. Közben Japán részesedése a kínai, európai, japán és amerikai szabadalmakból
+        a legújabb technológiákban (hidrogéntárolás, gépi látás, önvezető autók) meredeken csökkent.</p>
+      <figure class="dia" data-dia="71">
+        <img src="img/dia-071.png" alt="Két ábra: balra a 65 év felettiek aránya 1950 és 2050 között, Japán emelkedése a legmeredekebb; jobbra Japán részesedése az új technológiák szabadalmaiban 1990 és 2019 között, meredeken csökkenve." loading="lazy">
+        <figcaption>Fordított Pepys? Balra: a 65 év felettiek aránya (Japán kiemelve); jobbra: Japán részesedése
+          az új technológiák szabadalmaiban. (Diasor, 71. dia; forrás: The Economist, 2023.)</figcaption>
+      </figure>
+      <div class="box vita" data-dia="71">
+        <p>A kérdés nyitott: <b>csökkenő népesség esetén megfordulnak-e a múltban tapasztalt folyamatok?</b> Kevesebb fiatal
+          innovátor és kisebb piac lassíthatja az innovációt – de a magasabb iskolázottság, az automatizálás és a nemzetközi
+          tudásáramlás ellensúlyozhatja.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Fogyó népesség</summary>
+        <ol>
+          <li>Mit jelent a „fordított Pepys” kifejezés?
+            <details><summary>Mintaválasz</summary><p>Hogy ha a népesség nagysága gyorsítja a technikai haladást, akkor a fogyó,
+              elöregedő népesség lassíthatja: kevesebb a fiatal innovátor, kisebb a piac. Japán csökkenő szabadalmi részesedése
+              erre utalhat.</p></details></li>
+          <li>Milyen tényezők ellensúlyozhatják a fogyó népesség innovációs hátrányát?
+            <details><summary>Mintaválasz</summary><p>A magasabb iskolázottság (kevesebb, de képzettebb ember), a nemzetközi
+              tudásáramlás és együttműködés, a bevándorlás, valamint az automatizálás, amely kiváltja a hiányzó munkaerőt.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="nep-jovo"></details>
+    </section>
+
+    <!-- ───────────────────────── Összefoglalás ───────────────────────── -->
+    <section id="nep-osszegzes">
+      <h2>Összefoglalás <span class="dia-ref">72. dia</span></h2>
+      <ul data-dia="72">
+        <li>A növekvő népesség inkább <b>gyorsítja</b> (Pepys), mint visszafogja (Malthus) a fejlődést.</li>
+        <li>Az elmúlt 200 évben drasztikusan nőtt a Föld népessége, és ezzel párhuzamosan javult a hatékonyság is
+          (<b>teljes tényezőtermelékenység</b>).</li>
+        <li><b>Demográfiai átmenet:</b> a modernizáció elején hirtelen lecsökkent az eltartottsági ráta, ami
+          <b>egyszeri növekedési ablakot</b> nyithat.</li>
+        <li>A kapcsolat <b>kétirányú:</b> a népesség hat a fejlődésre, a fejlődés pedig a népesedési döntésekre.</li>
+        <li>Nyitott kérdés: csökkenő népesség esetén megfordulnak-e a múltban tapasztalt folyamatok?</li>
+      </ul>
+      <p data-dia="72"><strong>Válasz a fejezet kérdésére:</strong> a népesség növekedése önmagában nem fék. Malthus csökkenő
+        hozadéka az ipari forradalom előtt valóban visszahúzta a jólétet, de a nagyobb népesség nagyobb piacot, mélyebb szakosodást
+        és több innovátort is jelent – és amióta a technológia gyorsabban javul, mint ahogy a népesség felélné, ez az erősebb hatás.
+        Hogy a fogyó népesség megfordítja-e ezt, ma még nyitott kérdés.</p>
+
+      <h3 id="nep-esszetabla">Esszéhez: ha ezt látod → ezt használd</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Ha az esetben ez áll…</th><th>…akkor ezt a fogalmat / mechanizmust használd</th></tr></thead>
+          <tbody>
+            <tr><td>Egy újítás után a népesség nő, de az életszínvonal nem</td><td>malthusi csapda, csökkenő hozadék
+              (<a href="#nep-malthus">→</a>)</td></tr>
+            <tr><td>Népes ország, sok feltaláló, nagy belső piac</td><td>Pepys-hipotézis, Kremer, szakosodás
+              (<a href="#nep-pepys">→</a>)</td></tr>
+            <tr><td>Csökken a gyermekhalandóság, utána a születésszám is</td><td>demográfiai átmenet; mennyiség–minőség választás
+              (<a href="#nep-atmenet">→</a>)</td></tr>
+            <tr><td>Gyors növekedés sok fiatal munkavállalóval, kevés eltartottal</td><td>eltartottsági ráta, „egyszeri esély”
+              (<a href="#nep-eltartottsag">→</a>)</td></tr>
+            <tr><td>A növekedés nem magyarázható több munkával, tőkével</td><td>TFP, hatékonyságjavulás (<a href="#nep-tfp">→</a>)</td></tr>
+            <tr><td>Jobb élelmezés, egészségügyi javulás</td><td>Fogel: táplálkozás → munkaképesség → jövedelem
+              (<a href="#nep-eletszinvonal">→</a>)</td></tr>
+            <tr><td>Elöregedő, fogyó társadalom</td><td>„fordított Pepys”, az eltartottsági ráta újra nő
+              (<a href="#nep-jovo">→</a>)</td></tr>
+            <tr><td>Egy technológia átalakítja a családi döntéseket (pl. tabletta)</td><td>a kapcsolat kétirányú
+              (<a href="#nep-pirula">→</a>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="nep-kapcsolodasok">Kapcsolódások</h3>
+      <ul>
+        <li><b>Piacméret és szakosodás</b> (<a href="02-ker.html#ker-hatarok">2. fejezet</a>): a népesség a piac mérete
+          révén hat a szakosodásra.</li>
+        <li><b>Hatékonyság, Solow</b> (<a href="01-bev.html#bev-eroforras">1. fejezet</a>): a TFP a hatékonyság mérőszáma.</li>
+        <li><b>Emberi tőke</b> (<a href="index.html#tud">5. fejezet</a>): a gyerekek „minősége”, az oktatásban töltött évek.</li>
+        <li><b>Javuló életkörülmények mint a Nyugat sikerének magyarázata</b> (<a href="01-bev.html#bev-magyarazatok">1. fejezet</a>).</li>
+        <li><b>Jóléti állam</b> (<a href="index.html#jolet">14. fejezet</a>): az elöregedés a nyugdíjrendszerek terhét is növeli.</li>
+      </ul>
+
+      <details class="box quiz" data-topic="nep"></details>
+    </section>
+
+    <nav class="lesson-nav" data-chapter="nep"></nav>
+  </main>
+
+  <footer class="site-footer">
+    A tananyag a kurzus diasora (Fegatt.pdf) alapján készült, nem hivatalos anyag. Az eredmények csak a böngésződben tárolódnak.
+  </footer>
+
+  <script src="../data/questions.js"></script>
+  <script src="../data/sections.js"></script>
+  <script src="../assets/theme.js"></script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>

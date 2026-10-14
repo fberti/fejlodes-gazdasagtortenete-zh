@@ -16,6 +16,14 @@
   --bad-soft: #fbe3e0;
   --tip: #6a5300;
   --tip-soft: #fff4cc;
+  --def: #1f4e8c;
+  --def-soft: #e4edf9;
+  --mech: #5b3a8e;
+  --mech-soft: #efe8f8;
+  --eset: #1d6b3a;
+  --eset-soft: #e6f3ea;
+  --vita: #8a5a00;
+  --vita-soft: #fbefd9;
   --radius: 10px;
 }
 :root[data-theme="dark"] {
@@ -34,6 +42,14 @@
   --bad-soft: #3b2220;
   --tip: #f0d36a;
   --tip-soft: #36301a;
+  --def: #8db8f0;
+  --def-soft: #1c2738;
+  --mech: #c3a6ef;
+  --mech-soft: #2a2236;
+  --eset: #7fd39c;
+  --eset-soft: #1c2d22;
+  --vita: #f0b860;
+  --vita-soft: #33291a;
 }
 
 * { box-sizing: border-box; }
@@ -99,6 +115,63 @@ p.lead { color: var(--muted); margin-top: 0; }
 .box { border-radius: var(--radius); padding: .8rem 1rem; margin: 1rem 0; border: 1px solid var(--line); background: var(--card); }
 .box.tip { background: var(--tip-soft); border-color: transparent; }
 .box.tip strong { color: var(--tip); }
+
+/* ── Tananyag ── */
+.lesson h2 { font-size: 1.4rem; margin-top: 2.6rem; padding-top: .4rem; border-top: 1px solid var(--line); scroll-margin-top: 4rem; }
+.lesson h3 { font-size: 1.1rem; margin: 1.6rem 0 .5rem; scroll-margin-top: 4rem; }
+.lesson [id] { scroll-margin-top: 4rem; }
+.lesson .kicker { color: var(--muted); font-size: .9rem; margin: 0; }
+.lesson .dia-ref { color: var(--muted); font-size: .8rem; font-weight: 400; white-space: nowrap; }
+
+/* Dobozok: a diasor jelölései ([D], [M], [E], [V]) + buktató. A címke a ::before-ból jön. */
+.box::before { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .25rem; }
+.box > :first-child { margin-top: 0; }
+.box > :last-child { margin-bottom: 0; }
+.box.def  { background: var(--def-soft);  border-color: transparent; border-left: 4px solid var(--def); }
+.box.mech { background: var(--mech-soft); border-color: transparent; border-left: 4px solid var(--mech); }
+.box.eset { background: var(--eset-soft); border-color: transparent; border-left: 4px solid var(--eset); }
+.box.vita { background: var(--vita-soft); border-color: transparent; border-left: 4px solid var(--vita); }
+.box.warn { background: var(--bad-soft);  border-color: transparent; border-left: 4px solid var(--bad); }
+.box.def::before  { content: "[D] Fogalom";      color: var(--def); }
+.box.mech::before { content: "[M] Mechanizmus";  color: var(--mech); }
+.box.eset::before { content: "[E] Eset";         color: var(--eset); }
+.box.vita::before { content: "[V] Vitatott";     color: var(--vita); }
+.box.warn::before { content: "⚠️ Buktató";       color: var(--bad); }
+.box.kieg { border-style: dashed; }
+.box.kieg::before { content: "Kiegészítés – nem a diasorból"; color: var(--muted); }
+.box .chain { font-weight: 600; }
+
+/* Útiterv és tartalomjegyzék */
+.roadmap { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem 1rem .8rem 2.4rem; }
+.roadmap li { margin: .2rem 0; }
+.toc-chapter { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem 1rem; margin: 1rem 0; scroll-margin-top: 4rem; }
+.toc-chapter:target { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.toc-chapter h2 { margin: 0 0 .3rem; font-size: 1.15rem; border: none; padding: 0; }
+.toc-chapter ol { margin: .3rem 0 .5rem; padding-left: 1.4rem; }
+.toc-chapter .soon { color: var(--muted); font-size: .85rem; }
+.toc-chapter .t-actions { margin-top: .4rem; }
+
+/* Ábrák és táblázatok */
+figure.dia { margin: 1.2rem 0; text-align: center; }
+figure.dia img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); background: #fff; padding: .3rem; }
+figure.dia figcaption { color: var(--muted); font-size: .85rem; margin-top: .3rem; }
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+table.data { border-collapse: collapse; font-size: .92rem; font-variant-numeric: tabular-nums; }
+table.data th, table.data td { border: 1px solid var(--line); padding: .3rem .6rem; text-align: right; }
+table.data th:first-child, table.data td:first-child { text-align: left; }
+table.data thead th { background: var(--accent-soft); }
+table.data caption { caption-side: bottom; color: var(--muted); font-size: .85rem; padding-top: .3rem; text-align: left; }
+
+/* Lenyílók: gyakorlás és kvíz – betöltéskor mindig csukva */
+details.box > summary { cursor: pointer; font-weight: 600; }
+details.box[open] > summary { margin-bottom: .5rem; }
+details.box.practice { background: var(--tip-soft); border-color: transparent; }
+details.box.quiz { background: var(--accent-soft); border-color: transparent; }
+details.box.practice ol > li { margin: .6rem 0; }
+details.box.practice li details { margin-top: .3rem; padding: .4rem .7rem; border-radius: 8px; background: var(--card); }
+details.box.practice li details > summary { cursor: pointer; color: var(--muted); }
+details.box.quiz .question { margin: .7rem 0; }
+.lesson-nav { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin: 2.5rem 0 1rem; }
 
 /* Kérdések */
 .question {
@@ -171,6 +244,8 @@ p.lead { color: var(--muted); margin-top: 0; }
 }
 .topic-list .t-title { font-weight: 600; }
 .topic-list .t-meta { color: var(--muted); font-size: .85rem; }
+.t-actions { display: flex; flex-wrap: wrap; gap: .4rem; justify-content: flex-end; }
+.t-actions .btn + .btn { margin-left: 0; }
 .progress { height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; margin-top: .35rem; width: 160px; max-width: 40vw; }
 .progress > i { display: block; height: 100%; background: var(--ok); }
 
@@ -197,4 +272,6 @@ p.lead { color: var(--muted); margin-top: 0; }
   .question { break-inside: avoid; border: none; padding: .2rem 0; margin: .4rem 0; }
   .option { border: none; padding: .05rem 0; }
   .q-meta { display: none; }
+  details.box.quiz { display: none; }
+  .box { break-inside: avoid; }
 }

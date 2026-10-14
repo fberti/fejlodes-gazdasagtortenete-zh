@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tananyag – A fejlődés gazdaságtörténete</title>
+  <meta name="description" content="A fejlődés gazdaságtörténete (GTGVÖ120BL) diasorának teljes, olvasmányos feldolgozása, kvízkérdésekkel.">
+  <script>
+    // Villanásmentes témaválasztás: mentett érték, különben a rendszer beállítása.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html#/">A fejlődés gazdaságtörténete <span>Tananyag</span></a>
+    <nav>
+      <a href="./" class="active">Tananyag</a>
+      <a href="../index.html#/zh">Gyakorló ZH</a>
+      <a href="../index.html#/temak">Témakörök</a>
+      <a href="../index.html#/minta">Mintazh</a>
+      <a href="../index.html#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
+    </nav>
+  </header>
+
+  <main class="lesson">
+    <h1>Tananyag</h1>
+    <p class="lead">A kurzus diasorának (213 dia) teljes feldolgozása 15 fejezetben, a gyakorló oldal témaköreivel
+      egyező sorrendben. Minden szakasz végén csukott lenyílóban ott vannak a hozzá tartozó kvízkérdések.</p>
+
+    <div class="box tip"><strong>Hogyan olvasd?</strong>
+      A diasor jelöléseit dobozok emelik ki: <b>[D]</b> fogalom, <b>[M]</b> mechanizmus (ok-okozati lánc),
+      <b>[E]</b> történeti eset, <b>[V]</b> vitatott állítás. A ZH ezekre kérdez, a vizsgaesszében pedig ezeket kell egy új
+      esetre alkalmaznod. A számadatok csak illusztrálnak – nem kell megtanulni őket. Ami nem a diasorból származik,
+      azt „Kiegészítés” jelöli.</div>
+
+    <div id="toc"><noscript>A tartalomjegyzékhez engedélyezd a JavaScriptet.</noscript></div>
+  </main>
+
+  <footer class="site-footer">
+    A tananyag a kurzus diasora (Fegatt.pdf) alapján készült, nem hivatalos anyag. Az eredmények csak a böngésződben tárolódnak.
+  </footer>
+
+  <script src="../data/questions.js"></script>
+  <script src="../data/sections.js"></script>
+  <script src="../assets/theme.js"></script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>

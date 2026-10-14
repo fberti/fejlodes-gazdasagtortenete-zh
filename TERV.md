@@ -47,8 +47,9 @@ window.SECTIONS = [
 
 - A szakaszok diatartományai **hézag és átfedés nélkül** lefedik az 1–213. diát (ezt a `check.mjs` ellenőrzi) –
   így a diasor teljes lefedettsége gépileg igazolható.
-- Kérdés → szakasz: ha a kérdésnek van `sec` mezője, az dönt; különben a `dia` szám alapján (a tartományba eső
-  szakasz). A témakör-szintű `dia: "1–35"` alakú kérdések a fejezet összefoglalójára (`#<t>-osszegzes`) mutatnak.
+- Kérdés → szakasz (`Lessons.sectionOf`): ha a kérdésnek van `sec` mezője, az dönt; különben a `dia` szám alapján
+  (a tartományba eső szakasz – elsősorban a saját témakörben, ha ott nincs, akkor bármelyikben; így a szintézis-kérdések
+  oda visznek, ahol a dia tartalma van). A témakör-szintű `dia: "1–35"` alakú kérdések a fejezet összefoglalójára (`#<t>-osszegzes`) mutatnak.
   → A meglévő 194 kérdést **nem kell kézzel átírni**, csak ahol a dia-alapú besorolás félrevisz.
 - `app.js` `explainHtml`: a „Diasor: N. dia körül” sor helyett
   `📖 Olvasd el: <szakaszcím> (N. dia)` → `tananyag/01-bev.html#bev-fejlodes`.
@@ -252,9 +253,9 @@ A tartományok együtt hézagmentesen lefedik az 1–213. diát.
 |---|---|---|---|
 | szint-forrasok | 210–211 | A hosszú távú fejlődés alapforrásai | – |
 | szint-csapda | 212–213 | A fejlettség csapdája; a fejlődés nem végállapot | – |
-| szint-esszé | – | **Kiegészítés:** esszéírás lépésről lépésre a tantárgyi program Korea-példáján (fogalomválasztás → oksági lánc → szintézis), értékelési szempontokkal | – |
+| szint-essze | – | **Kiegészítés:** esszéírás lépésről lépésre a tantárgyi program Korea-példáján (fogalomválasztás → oksági lánc → szintézis), értékelési szempontokkal | – |
 
-(A `szint-esszé` szakasznak nincs diatartománya; a `check.mjs` ezt külön engedi.)
+(A `szint-essze` szakasznak nincs diatartománya; a `check.mjs` ezt külön engedi.)
 
 ---
 
@@ -272,7 +273,7 @@ A parancs (`.claude/commands/tananyag-lepes.md`) beolvassa ezt a tervet, végreh
 lefuttatja az ellenőrzést, kipipálja az alábbi listában, és külön commitot készít. Sorrend: M0 kötelezően első,
 utána M1–M8 tetszőleges sorrendben (de ajánlott sorban), M9 a végén.
 
-- [ ] **M0 – Infrastruktúra és mintalecke váza**
+- [x] **M0 – Infrastruktúra és mintalecke váza**
   `data/sections.js` (a 3. fejezet összes szakasza), `assets/theme.js` kiemelése, `assets/lesson.js`,
   új CSS-dobozok (`def`, `mech`, `eset`, `vita`, `warn`, `practice`, `quiz`, `figure.dia`), `tananyag/index.html`
   tartalomjegyzék, leckesablon (`tananyag/_sablon.html`), `tools/dia-kep.sh`, `tools/check.mjs`;
@@ -287,7 +288,7 @@ utána M1–M8 tetszőleges sorrendben (de ajánlott sorban), M9 a végén.
 - [ ] **M6 – 10. Értékrend + 11. Kereskedelempolitika** (166–185)
 - [ ] **M7 – 12. Monetáris rend + 13. Állam + 14. Jóléti állam** (186–209)
 - [ ] **M8 – 15. Szintézis + esszéfelkészítő + kapcsolódások**
-  15. fejezet és `szint-esszé`; minden fejezet „Kapcsolódások” részének összefésülése (kölcsönös linkek);
+  15. fejezet és `szint-essze`; minden fejezet „Kapcsolódások” részének összefésülése (kölcsönös linkek);
   `tananyag/fogalomtar.html`: az összes [D] fogalom ábécérendben, linkkel a szakaszra.
 - [ ] **M9 – Végső ellenőrzés és simítás**
   Teljes `check.mjs`; böngészős bejárás (agent-browser, friss munkamenet): minden fejezet, világos/sötét téma, mobil szélesség,
@@ -304,7 +305,18 @@ utána M1–M8 tetszőleges sorrendben (de ajánlott sorban), M9 a végén.
    vagy `data-dia` attribútumban jelölve, a `check.mjs` ezt is számolja).
 5. Új kérdések, amíg minden szakasznak legalább 2 kérdése van; ahol a dia-alapú besorolás rossz, `sec` mező.
 6. `node --check data/*.js assets/*.js`, `node tools/check.mjs`, böngészős szemle (agent-browser).
-7. A terv mérföldkő-sorának kipipálása, commit: „Tananyag: <fejezetcím(ek)>”.
+7. A témakör felvétele a `data/sections.js` `LESSONS_READY` listájába (ettől kezdve a kvízek „📖 Olvasd el” linkje
+   és a tartalomjegyzék a fejezetre mutat).
+8. A terv mérföldkő-sorának kipipálása, commit: „Tananyag: <fejezetcím(ek)>”.
+
+**Gyakorlati tudnivalók (M0 után):**
+- Új fejezet: `cp tananyag/_sablon.html tananyag/NN-<t>.html`; a sablon fejkommentje összefoglalja a szabályokat.
+- A lefedettséget a tartalmi elemek `data-dia="8"` / `data-dia="7-10"` attribútuma jelöli (a `<section>` sajátja nem számít).
+- Az útiterv (`ol.roadmap[data-roadmap]`), a lapozó (`nav.lesson-nav[data-chapter]`) és a kvízek
+  (`details.quiz[data-section]`, `details.quiz[data-topic]`) összefoglaló sora üresen hagyva automatikusan töltődik.
+- Ábra: `tools/dia-kep.sh 55` (teljes dia) vagy `tools/dia-kep.sh 55 x y w h -n utotag` (kivágás, 150 dpi-s képpontban;
+  egy dia 2000×1125 px).
+- Böngészős szemléhez: `python3 -m http.server` a projekt gyökerében (a leckeoldalak `file://`-ról is működnek).
 
 ### Ellenőrzés (`tools/check.mjs`) – mit néz?
 

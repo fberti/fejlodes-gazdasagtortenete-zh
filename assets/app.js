@@ -87,7 +87,14 @@
     return `<div class="explain ${ok ? "ok" : "bad"}">
       <div class="verdict">${verdict}</div>
       <div>${esc(item.q.ex)}</div>
-      <div class="src">Diasor: ${esc(item.q.dia)}. dia körül</div></div>`;
+      ${readHtml(item.q)}</div>`;
+  }
+  // „Olvasd el” link a kérdéshez tartozó tananyag-szakaszra (új lapon, hogy a ZH / gyakorlás állása megmaradjon).
+  function readHtml(q) {
+    const s = window.Lessons.sectionOf(q);
+    const dia = typeof q.dia === "number" ? `${q.dia}. dia` : `diák: ${q.dia}`;
+    return `<div class="src"><a href="${window.Lessons.sectionHref(s, "")}" target="_blank" rel="noopener">📖 Olvasd el: ${esc(s.title)}</a>
+      <span>(${esc(dia)})</span></div>`;
   }
   function markOptions(container, item) {
     container.querySelectorAll(".option").forEach((b, i) => {
@@ -114,6 +121,9 @@
       <p class="lead">${QUESTIONS.length} feleletválasztós kérdés a teljes diasor anyagából, a mintazárthelyi stílusában:
         „Miért…?”, „Hogyan…?” típusú, mechanizmusokra kérdező feladatok, négy válaszlehetőséggel.</p>
       <div class="cards">
+        <div class="card"><h3>📖 Tananyag</h3>
+          <p>A teljes diasor feldolgozva, olvasmányosan, ábrákkal. Minden szakasz végén a hozzá tartozó kvízkérdések.</p>
+          <a class="btn" href="tananyag/">Olvasás</a></div>
         <div class="card"><h3>📝 Gyakorló ZH</h3>
           <p>15 kérdés, témakörönként egy – mint az igazi ZH-n. 30 perces időzítő, beadás után kiértékelés.</p>
           <a class="btn" href="#/zh">Indítás</a></div>
@@ -282,7 +292,9 @@
         <div><div class="t-title">${i + 1}. ${esc(t.title)}</div>
           <div class="t-meta">${qs.length} kérdés · diák: ${esc(t.dia)} · legutóbb jó: ${known}</div>
           <div class="progress"><i style="width:${Math.round(100 * known / qs.length)}%"></i></div></div>
-        <a class="btn" href="#/tema/${t.id}">Gyakorlás</a></li>`;
+        <div class="t-actions">
+          <a class="btn secondary" href="${window.Lessons.chapterHref(t.id, "")}">📖 Tananyag</a>
+          <a class="btn" href="#/tema/${t.id}">Gyakorlás</a></div></li>`;
     }).join("");
     app.innerHTML = `
       <h1>Gyakorlás témakörönként</h1>
@@ -408,30 +420,6 @@
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
-
-  // ── Világos / sötét téma ──
-  const THEME_KEY = "fegatt-theme";
-  const themeBtn = document.getElementById("theme-toggle");
-  const systemDark = matchMedia("(prefers-color-scheme: dark)");
-  function applyTheme(t) {
-    document.documentElement.dataset.theme = t;
-    const dark = t === "dark";
-    themeBtn.textContent = dark ? "☀️ Világos" : "🌙 Sötét";
-    themeBtn.setAttribute("aria-label", dark ? "Váltás világos témára" : "Váltás sötét témára");
-    themeBtn.title = themeBtn.getAttribute("aria-label");
-  }
-  applyTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
-  themeBtn.onclick = () => {
-    const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    try { localStorage.setItem(THEME_KEY, t); } catch (e) { /* privát mód */ }
-    applyTheme(t);
-  };
-  // Amíg nincs kézi választás, kövesse a rendszer beállítását.
-  systemDark.addEventListener("change", e => {
-    let saved = null;
-    try { saved = localStorage.getItem(THEME_KEY); } catch (err) { /* privát mód */ }
-    if (!saved) applyTheme(e.matches ? "dark" : "light");
-  });
 
   window.addEventListener("hashchange", () => route(false));
   // Ugyanarra az oldalra mutató link (pl. „Új feladatsor”) újragenerálja a nézetet.

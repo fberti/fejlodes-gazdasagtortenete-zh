@@ -1,0 +1,131 @@
+<!doctype html>
+<!--
+  LECKESABLON – másold le NN-<témakör>.html néven (pl. 01-bev.html), és cseréld ki a «…» részeket.
+  Szabályok (TERV.md 1.2):
+  • Minden szakasz egy <section id="<SECTIONS-id>">; az id-k és sorrendjük egyezzen a data/sections.js-sel.
+  • Minden diának nyoma legyen: a tartalmi elemek (bekezdés, doboz, ábra, táblázat) data-dia attribútuma
+    jelöli, melyik diá(k)ból készültek: data-dia="8" vagy data-dia="7-10". A tools/check.mjs ezekből számolja
+    a lefedettséget (a <section> saját data-dia-ja nem számít).
+  • Dobozok: box def [D] · box mech [M] · box eset [E] · box vita [V] · box warn (buktató) · box tip · box kieg (nem a diasorból).
+  • Gyakorlás és kvíz MINDIG csukott lenyílóban (<details> open nélkül).
+  • A fejezet megírása után vedd fel a témakört a data/sections.js LESSONS_READY listájába.
+-->
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>«N». «Fejezetcím» – A fejlődés gazdaságtörténete</title>
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html#/">A fejlődés gazdaságtörténete <span>Tananyag</span></a>
+    <nav>
+      <a href="./" class="active">Tananyag</a>
+      <a href="../index.html#/zh">Gyakorló ZH</a>
+      <a href="../index.html#/temak">Témakörök</a>
+      <a href="../index.html#/minta">Mintazh</a>
+      <a href="../index.html#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
+    </nav>
+  </header>
+
+  <main class="lesson">
+    <p class="kicker">«N». fejezet · diák: «A–B»</p>
+    <h1>«Fejezetcím»</h1>
+
+    <!-- 1. Nyitó eset (motiváció): a diasor fejezetnyitó [E] diája, és egy kérdés, amire a fejezet végén válaszolunk. -->
+    <div class="box eset" data-dia="«nyitódia»">
+      <p>«A nyitó eset elmesélve, néhány mondatban.»</p>
+    </div>
+    <p data-dia="«nyitódia»"><strong>A fejezet kérdése:</strong> «Miért…?»</p>
+
+    <!-- 2. Útiterv: üresen hagyva a data/sections.js-ből töltődik. -->
+    <h2 id="«t»-utiterv">Útiterv</h2>
+    <ol class="roadmap" data-roadmap="«t»"></ol>
+
+    <!-- 3. Szakaszok – a sections.js sorrendjében. -->
+    <section id="«szakasz-id»">
+      <h2>«Szakaszcím» <span class="dia-ref">«A–B». dia</span></h2>
+
+      <p data-dia="«N»">«Folyó, kerek szöveg: egy konkrét kérdésből vagy esetből indulva vezeti be a fogalmat.»</p>
+
+      <div class="box def" data-dia="«N»"><p><b>«Fogalom»:</b> «pontos, rövid definíció.»</p>
+        <p>«Mit jelent ez a gyakorlatban? – egy mondat.»</p></div>
+
+      <div class="box mech" data-dia="«N»"><p class="chain">«A» → «B» → «C»</p>
+        <p>«A lánc lépései röviden magyarázva.»</p></div>
+
+      <div class="box eset" data-dia="«N»"><p>«Történeti eset, és hogy miért példa a fenti mechanizmusra.»</p></div>
+
+      <div class="box vita" data-dia="«N»"><p>«Az állítás – és az ellenérv / alternatív magyarázat.»</p></div>
+
+      <div class="box warn"><p>«Tipikus félreértés, ZH-csapda.»</p></div>
+
+      <div class="box kieg"><p>«Magyarázat, ami nem szerepel a diákon.»</p></div>
+
+      <figure class="dia" data-dia="«N»">
+        <img src="img/dia-«NNN».png" alt="«Az ábra tartalma szavakkal.»" loading="lazy">
+        <figcaption>«Mit mutat az ábra, és mi belőle a tanulság.» (Diasor, «N». dia; forrás: «eredeti forrás».)</figcaption>
+      </figure>
+
+      <div class="table-wrap" data-dia="«N»">
+        <table class="data">
+          <caption>«Mit mutat a táblázat.» (Diasor, «N». dia)</caption>
+          <thead><tr><th>«Év»</th><th>«Érték»</th></tr></thead>
+          <tbody><tr><td>«…»</td><td>«…»</td></tr></tbody>
+        </table>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – «szakaszcím»</summary>
+        <ol>
+          <li>«Esszé-stílusú kérdés: Miért…? Hogyan magyarázná X-szel az Y esetet?»
+            <details><summary>Mintaválasz</summary><p>«Rövid, oksági mintaválasz.»</p></details></li>
+        </ol>
+      </details>
+
+      <details class="box quiz" data-section="«szakasz-id»"></details>
+    </section>
+
+    <!-- 4. Összefoglalás + esszétáblázat -->
+    <section id="«t»-osszegzes">
+      <h2>Összefoglalás <span class="dia-ref">«záródia». dia</span></h2>
+      <ul data-dia="«záródia»"><li>«A fejezet 5–8 legfontosabb állítása.»</li></ul>
+      <p><strong>Válasz a fejezet kérdésére:</strong> «…»</p>
+
+      <h3 id="«t»-esszetabla">Esszéhez: ha ezt látod → ezt használd</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Ha az esetben ez áll…</th><th>…akkor ezt a fogalmat / mechanizmust használd</th></tr></thead>
+          <tbody><tr><td>«…»</td><td>«…» (<a href="#«szakasz-id»">→</a>)</td></tr></tbody>
+        </table>
+      </div>
+
+      <h3 id="«t»-kapcsolodasok">Kapcsolódások</h3>
+      <ul><li>«Fogalom» → «másik fejezet» (<a href="«NN-x».html#«szakasz-id»">→</a>): «hogyan kapcsolódik».</li></ul>
+
+      <details class="box quiz" data-topic="«t»"></details>
+    </section>
+
+    <nav class="lesson-nav" data-chapter="«t»"></nav>
+  </main>
+
+  <footer class="site-footer">
+    A tananyag a kurzus diasora (Fegatt.pdf) alapján készült, nem hivatalos anyag. Az eredmények csak a böngésződben tárolódnak.
+  </footer>
+
+  <script src="../data/questions.js"></script>
+  <script src="../data/sections.js"></script>
+  <script src="../assets/theme.js"></script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>

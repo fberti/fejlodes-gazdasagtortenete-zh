@@ -175,4 +175,16 @@
   const toc = document.getElementById("toc");
   if (toc) fillToc(toc);
   updateBadge();
+
+  // ── „Extra” gombok: a hozzájuk tartozó <dialog> modál megnyitása ──
+  document.querySelectorAll("button.extra-btn[data-extra]").forEach(btn => {
+    const dlg = document.getElementById(btn.dataset.extra);
+    if (!dlg || typeof dlg.showModal !== "function") return;
+    btn.setAttribute("aria-haspopup", "dialog");
+    btn.addEventListener("click", () => dlg.showModal());
+  });
+  document.querySelectorAll("dialog.extra-modal").forEach(dlg => {
+    dlg.querySelector(".extra-close")?.addEventListener("click", () => dlg.close());
+    dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); }); // kattintás a háttérre
+  });
 })();

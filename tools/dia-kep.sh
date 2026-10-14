@@ -18,4 +18,8 @@ if [ "${1:-}" = "-n" ]; then suffix="-$2"; fi
 name="$(printf 'dia-%03d%s' "$page" "$suffix")"
 mkdir -p "$OUT"
 pdftoppm -f "$page" -l "$page" -r 150 -png -singlefile "${crop[@]}" "$PDF" "$OUT/$name"
+# Méretcsökkentés 256 színű palettára (diagramokon, térképeken nem látható), ha a Pillow elérhető.
+python3 -I -c 'import sys; from PIL import Image
+im = Image.open(sys.argv[1]).convert("RGB")
+im.quantize(256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).save(sys.argv[1], optimize=True)' "$OUT/$name.png" 2>/dev/null || true
 echo "$OUT/$name.png"

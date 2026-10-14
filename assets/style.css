@@ -122,6 +122,8 @@ p.lead { color: var(--muted); margin-top: 0; }
 .lesson [id] { scroll-margin-top: 4rem; }
 .lesson .kicker { color: var(--muted); font-size: .9rem; margin: 0; }
 .lesson .dia-ref { color: var(--muted); font-size: .8rem; font-weight: 400; white-space: nowrap; }
+.lesson blockquote { margin: 1rem 0; padding: .4rem 1rem; border-left: 4px solid var(--line); color: var(--muted); font-style: italic; }
+.lesson blockquote .dia-ref { font-style: normal; }
 
 /* Dobozok: a diasor jelölései ([D], [M], [E], [V]) + buktató. A címke a ::before-ból jön. */
 .box::before { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .25rem; }
@@ -157,8 +159,9 @@ figure.dia img { max-width: 100%; height: auto; border-radius: 6px; border: 1px 
 figure.dia figcaption { color: var(--muted); font-size: .85rem; margin-top: .3rem; }
 .table-wrap { overflow-x: auto; margin: 1rem 0; }
 table.data { border-collapse: collapse; font-size: .92rem; font-variant-numeric: tabular-nums; }
-table.data th, table.data td { border: 1px solid var(--line); padding: .3rem .6rem; text-align: right; }
-table.data th:first-child, table.data td:first-child { text-align: left; }
+table.data th, table.data td { border: 1px solid var(--line); padding: .3rem .6rem; text-align: left; vertical-align: top; }
+table.data.num th, table.data.num td { text-align: right; }  /* számtáblázat: jobbra zárt értékek */
+table.data.num th:first-child, table.data.num td:first-child { text-align: left; }
 table.data thead th { background: var(--accent-soft); }
 table.data caption { caption-side: bottom; color: var(--muted); font-size: .85rem; padding-top: .3rem; text-align: left; }
 

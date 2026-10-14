@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12. Nemzetközi monetáris rend – A fejlődés gazdaságtörténete</title>
+  <meta name="description" content="A világpénz előnyei, az aranystandard és Hume aranypont-mechanizmusa, a trilemma, Bretton Woods és bukása, lebegő árfolyamok és az euró, monetáris rezsimek.">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html#/">A fejlődés gazdaságtörténete <span>Tananyag</span></a>
+    <nav>
+      <a href="./" class="active">Tananyag</a>
+      <a href="../index.html#/zh">Gyakorló ZH</a>
+      <a href="../index.html#/temak">Témakörök</a>
+      <a href="../index.html#/minta">Mintazh</a>
+      <a href="../index.html#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
+    </nav>
+  </header>
+
+  <main class="lesson">
+    <p class="kicker">12. fejezet · diák: 186–196</p>
+    <h1>Nemzetközi monetáris rend</h1>
+    <p class="lead" data-dia="186">A nemzetközi gazdasági rend másik pillére a pénz (<a href="11-kerpol.html#kerpol-vedelem">11. fejezet</a>).
+      Ha egy magyar cég külföldön vásárol, fizetnie kell valamivel – de mivel, és milyen árfolyamon? Erre a kérdésre a történelem
+      során többféle választ adtak, és mindegyiknek megvolt az ára.</p>
+
+    <!-- ───────────────────────── 1. Világpénz ───────────────────────── -->
+    <section id="monet-vilagpenz">
+      <h2>A világpénz előnyei <span class="dia-ref">186–187. dia</span></h2>
+
+      <div class="box eset" data-dia="187">
+        <p>Ha egy magyar vállalat szaúd-arábiai olajat vásárol, nem kell külön forint–riál piacot létrehozni. Mindkét fél
+          <b>dollárban</b> állapodik meg, mert a dollárt könnyű venni, eladni, megtakarítani és más ügyletekben felhasználni.</p>
+      </div>
+      <div class="box def" data-dia="187">
+        <p><b>Világpénz:</b> olyan fizetőeszköz, amelyet a különböző országok szereplői széles körben elfogadnak a kereskedelmi
+          ügyletekben, a hitelezésben és a tartalékképzésben.</p>
+      </div>
+      <div class="box mech" data-dia="187">
+        <p><b>A világpénz gazdasági előnyei:</b></p>
+        <ol>
+          <li>csökkenti a pénzváltás és a nemzetközi fizetések költségét;</li>
+          <li>mérsékli az árfolyamkockázatot;</li>
+          <li>közvetlenül összehasonlíthatóvá teszi az árakat;</li>
+          <li>megkönnyíti a kereskedelmet és a nemzetközi hitelezést;</li>
+          <li>nagy, likvid pénzügyi piac kialakulását segíti;</li>
+          <li>az elfogadottsága <b>önmagát erősíti</b>: mindenki azért használja, mert mások is használják.</li>
+        </ol>
+      </div>
+      <div class="box kieg">
+        <p>Ez ugyanaz a logika, mint a búzából lett pénz a <a href="06-penz.html#penz-buza">6. fejezetben</a>, csak nemzetközi szinten:
+          a világpénz a nemzetközi csere tranzakciós költségét csökkenti. Az önerősítő elfogadottság miatt nehéz leváltani – a dollár
+          ezért maradt világpénz az aranyalap 1971-es vége után is.</p>
+      </div>
+      <p><strong>A fejezet kérdése:</strong> milyen nemzetközi pénzrendszer segíti a kereskedelmet és a fejlődést – és miért nem
+        lehet egyszerre stabil árfolyamot, szabad tőkeáramlást és önálló gazdaságpolitikát kapni?</p>
+
+      <h3 id="monet-utiterv">Útiterv</h3>
+      <ol class="roadmap" data-roadmap="monet"></ol>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Világpénz</summary>
+        <ol>
+          <li>Miért nehéz leváltani egy világpénzt, ha már egyszer elterjedt?
+            <details><summary>Mintaválasz</summary><p>Mert az elfogadottsága önmagát erősíti: mindenki azért használja, mert mások is
+              használják, és ezért a piaca nagy és likvid. Egy új pénznek először el kellene érnie ezt az elfogadottságot – addig
+              viszont senkinek sem éri meg átállni.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="monet-vilagpenz"></details>
+    </section>
+
+    <!-- ───────────────────────── 2. Aranystandard ───────────────────────── -->
+    <section id="monet-arany">
+      <h2>Az aranystandard <span class="dia-ref">188–189. dia</span></h2>
+
+      <p data-dia="188">Az első modern világpénzrendszer az arany volt. 1819-ben Nagy-Britannia visszatért az aranyalapra, és a 19. század
+        végére a fejlett világ nagy része követte.</p>
+      <div class="box def" data-dia="188">
+        <p><b>Az aranystandard három fő sajátossága:</b></p>
+        <ol>
+          <li>szabad átváltás aranyra rögzített árfolyamon – <b>aranyparitás</b>;</li>
+          <li>nincs tőkeáramlási (arany-) korlát – <b>az arany a világpénz</b>;</li>
+          <li>a pénz értékét az <b>aranytartalék</b> (aranytartalom) adja.</li>
+        </ol>
+      </div>
+      <div class="box eset" data-dia="188">
+        <p><b>Kidolgozott példa:</b> ha 1 korona aranytartalma 0,3 gramm arany (1892-től), 1 fonté pedig 7 gramm, akkor
+          1 font = 7 / 0,3 ≈ <b>23 korona</b>. Az árfolyamot tehát az aranytartalmak aránya rögzíti.</p>
+      </div>
+
+      <h3 id="monet-hume">Hume aranypont-mechanizmusa</h3>
+      <p data-dia="188">A kortársak mélyen hittek abban, hogy az aranystandard a tökéletes rendszer, mert magától egyensúlyba hozza
+        a nemzetközi fizetéseket. A mechanizmust David Hume írta le:</p>
+      <div class="box mech" data-dia="188">
+        <ol>
+          <li>Ha Magyarországnak kereskedelmi többlete van, a magyar cégek külföldi valutához jutnak.</li>
+          <li>Ezeket külföldön aranyra váltják, és behozzák Magyarországra. (Közvetlenül is átválthatnák forintra – a példa a mai pénznemet
+            használja –, de akkor a forint felértékelődne, így inkább aranyat vesznek, és azt hozzák be.)</li>
+          <li>Az aranytöbblet Magyarországon növeli a pénz mennyiségét – nő a pénzkínálat.</li>
+          <li>A növekvő pénzkínálat hatására emelkednek a magyar árak.</li>
+          <li>A drágább hazai áruk miatt a kereslet a külföldi termékek felé fordul – a fizetési mérleg kiegyensúlyozódik.</li>
+        </ol>
+        <p class="chain">kereskedelmi többlet → aranybeáramlás → több pénz → magasabb hazai árak → több import, kevesebb export → egyensúly</p>
+        <p>Az aranystandard így egyszerre biztosította (1) a <b>stabil árfolyamot</b>, (2) az árváltozáson keresztül <b>automatikusan
+          kiegyensúlyozódó fizetési mérleget</b> és (3) a <b>szabad aranyáramlást</b>.</p>
+      </div>
+      <div class="box warn" data-dia="188">
+        <p>A mechanizmus kulcsa, hogy az <b>árak rugalmasan alkalmazkodnak</b>. Ha a deficites országban az áraknak és a béreknek
+          csökkenniük kellene, de nem csökkennek, akkor nem egyensúly jön, hanem munkanélküliség és aranykiáramlás – ez lesz
+          a 20. század tanulsága.</p>
+      </div>
+
+      <h3 id="monet-bukas">Bukás – feltámadás – bukás</h3>
+      <div class="box eset" data-dia="189">
+        <ul>
+          <li>Az <b>első világháborúban</b> minden ország felfüggesztette az aranykonverziót, és pénznyomtatással fedezte a háborús
+            kiadásokat → erőteljes infláció.</li>
+          <li><b>1919-ben</b> az USA visszatért az aranyalapra, idővel a többi ország is követte. A kérdés: <b>milyen paritáson?</b>
+            <ul>
+              <li>Ha a háború előttin, akkor a magas infláció miatt a belső árak lényegesen magasabbak lesznek, mint másutt →
+                erős ár- és bércsökkenésnek kell bekövetkeznie.</li>
+              <li>Ha a háború előttinél alacsonyabb aranytartalmon (leértékelve), az egyeseknek veszteséget okoz, pl. mert a hazai vagyon
+                és jövedelem vásárlóértéke csökken.</li>
+            </ul></li>
+          <li><b>Nagy-Britannia</b> 1925-ben az eredeti paritáson tért vissza, <b>Franciaország</b> leértékelten.</li>
+          <li><b>Tanulság:</b> az árak nem alkalmazkodnak azonnal → az eredeti paritáson visszatérő országok drágák maradnak, sokat
+            importálnak, és kiáramlik az arany.</li>
+          <li>A <b>világválság</b> idején sorra kiléptek az országok: Nagy-Britannia 1931, USA 1933 (belső aranytilalom), Franciaország 1936.</li>
+        </ul>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Aranystandard</summary>
+        <ol>
+          <li>Írd le Hume aranypont-mechanizmusát egy kereskedelmi hiányos ország szemszögéből!
+            <details><summary>Mintaválasz</summary><p>A hiányos ország többet importál, mint amennyit exportál, ezért aranyat kell fizetnie →
+              kiáramlik az arany → csökken a pénzmennyiség → csökkennek a hazai árak → a hazai áruk olcsóbbak lesznek, nő az export,
+              csökken az import → a fizetési mérleg kiegyensúlyozódik. Feltétel: az áraknak és béreknek csökkenniük kell.</p></details></li>
+          <li>Miért volt hiba Nagy-Britannia 1925-ös visszatérése az eredeti paritásra?
+            <details><summary>Mintaválasz</summary><p>A háborús infláció után a brit árak magasabbak voltak a háború előttinél, ezért az eredeti
+              paritáson a font túlértékelt lett: a brit áruk drágák maradtak, sokat importáltak, kiáramlott az arany. Az áraknak és
+              béreknek csökkenniük kellett volna, de nem csökkentek gyorsan – munkanélküliség és pangás lett a következmény.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="monet-arany"></details>
+    </section>
+
+    <!-- ───────────────────────── 3. Trilemma ───────────────────────── -->
+    <section id="monet-trilemma">
+      <h2>A válság tanulsága: a trilemma <span class="dia-ref">190–191. dia</span></h2>
+
+      <p data-dia="190">A két világháború közötti válság legfontosabb elméleti tanulsága a <b>monetáris trilemma</b> (lehetetlen hármasság):
+        három kívánatos cél közül egyszerre csak kettő érhető el.</p>
+      <div class="box def" data-dia="190">
+        <p><b>Trilemma:</b> a <b>rögzített árfolyam</b>, a <b>szabad tőkeáramlás</b> és az <b>önálló monetáris (kamat)politika</b>
+          egyszerre nem tartható fenn – egyiket fel kell adni.</p>
+      </div>
+      <div class="table-wrap" data-dia="190">
+        <table class="data">
+          <caption>A trilemma három lehetséges „kettese”. (Diasor, 190–191. dia)</caption>
+          <thead><tr><th>Mit választ az ország?</th><th>Mit kell feladnia?</th><th>Rendszer</th></tr></thead>
+          <tbody>
+            <tr><td>rögzített árfolyam + szabad tőkeáramlás</td><td>az önálló monetáris politikát</td><td>aranystandard</td></tr>
+            <tr><td>rögzített árfolyam + önálló monetáris politika</td><td>a szabad tőkeáramlást</td><td>aranydeviza-rendszer (Bretton Woods)</td></tr>
+            <tr><td>önálló monetáris politika + szabad tőkeáramlás</td><td>a rögzített árfolyamot</td><td>lebegő árfolyamok</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="dia" data-dia="191">
+        <img src="img/dia-191.png" alt="A trilemma ábrája: három egymást metsző ellipszis – szabad tőkeáramlás, rögzített árfolyam, önálló monetáris politika; a metszetekhez nyilak mutatják az aranystandardot, a Bretton Woods-i aranydeviza-rendszert és a Bretton Woods utáni lebegő árfolyamokat." loading="lazy">
+        <figcaption>A trilemma: a három cél közül bármely kettő együtt elérhető, de mindhárom nem. (Diasor, 191. dia.)</figcaption>
+      </figure>
+      <div class="box mech" data-dia="190">
+        <p><b>Miért nem megy mindhárom? Két példa:</b></p>
+        <ul>
+          <li><b>Aranystandard (fix árfolyam + szabad tőkeáramlás):</b> ha pang a gazdaság, és alacsony kamattal akarok beruházást élénkíteni,
+            mindenki külföldre viszi a pénzét, ahol magasabb a kamat (aranykiáramlás) – így még kevesebb pénz marad a beruházásokra.
+            Önálló kamatpolitika tehát nem lehetséges.</li>
+          <li><b>Lebegő árfolyam (önálló monetáris politika + szabad tőkeáramlás):</b> ha kamatcsökkentéssel élénkítek, a befektetők
+            külföldre viszik a pénzüket, és ezért <b>leértékelődik a valutám</b>. A kamatpolitika működik, de az árfolyam nem lehet fix.</li>
+        </ul>
+      </div>
+      <div class="box warn" data-dia="190">
+        <p>A mintazh 12. kérdése: az aranystandard azért korlátozta a nemzeti gazdaságpolitika mozgásterét, mert a rögzített paritás és
+          a szabad tőkeáramlás mellett <b>nem lehetett önálló kamatpolitikát</b> folytatni.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A trilemma</summary>
+        <ol>
+          <li>Egy ország rögzíteni akarja az árfolyamát, és közben válság idején csökkenteni akarja a kamatot. Mit kell feladnia, és miért?
+            <details><summary>Mintaválasz</summary><p>A szabad tőkeáramlást. Ha a tőke szabadon mozoghatna, az alacsony kamat miatt a befektetők
+              kivinnék a pénzüket, és ez nyomás alá helyezné a rögzített árfolyamot. Tőkekorlátozással (mint Bretton Woodsban) viszont
+              a fix árfolyam és az önálló kamatpolitika együtt fenntartható.</p></details></li>
+          <li>Melyik trilemma-csúcsot választja Magyarország a forinttal, és melyiket egy euróövezeti ország?
+            <details><summary>Mintaválasz</summary><p>A forint lebegő árfolyamú: Magyarország az önálló monetáris politikát és a szabad
+              tőkeáramlást választja, a fix árfolyamot feladja. Egy euróövezeti ország az övezeten belül fix árfolyamot és szabad tőkeáramlást
+              választ, és feladja az önálló monetáris politikát (azt az Európai Központi Bank végzi).</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="monet-trilemma"></details>
+    </section>
+
+    <!-- ───────────────────────── 4. Bretton Woods ───────────────────────── -->
+    <section id="monet-bretton">
+      <h2>Bretton Woods és bukása <span class="dia-ref">192–193. dia</span></h2>
+
+      <p data-dia="192">1944. július 1–22. között, még a háború alatt, a szövetséges országok az amerikai Bretton Woodsban megtervezték
+        a háború utáni pénzügyi rendet. A szakértők nem tudtak szabadulni attól a gondolattól, hogy az akadálytalan nemzetközi
+        kereskedelemhez elengedhetetlen a rögzített árfolyam.</p>
+      <div class="box def" data-dia="192">
+        <p><b>Aranydeviza-rendszer (Bretton Woods):</b></p>
+        <ul>
+          <li><b>1 uncia arany = 35 dollár</b>; minden más valuta értéke a <b>dollárhoz</b> rögzített. Ezt valutapiaci beavatkozással
+            vagy monetáris politikával stabilizálják.</li>
+          <li>A nemzeti bankok aranyban és dollárban tartalékolnak, hogy a dollár/valuta árfolyamot stabilan tarthassák. A dollárt
+            a központi bankok a Fednél aranyra válthatták.</li>
+          <li>Létrehozták az <b>IMF</b>-et (Nemzetközi Valutaalap), amely segít, ha egy ország tartalékai kimerülnek.</li>
+          <li><b>A tőkeáramlás korlátozott:</b> a valuták konvertibilitása csak a folyó fizetési mérleg tételeire (áruk, szolgáltatások)
+            volt biztosított, a pénzügyi mérlegre (pénzügyi eszközök) nem.</li>
+          <li>Az árfolyamokat felül lehetett vizsgálni (leértékelés lehetősége) – ezzel például a britek és a franciák többször is éltek.</li>
+        </ul>
+      </div>
+
+      <h3 id="monet-bretton-bukasa">Bretton Woods bukása</h3>
+      <div class="box mech" data-dia="193">
+        <p><b>A legnagyobb probléma:</b> ha az USA gazdasága nem stabil (nincs árstabilitás), az a többi gazdaságot is destabilizálja.</p>
+        <ul>
+          <li>1965-től a vietnámi háború kiadásai és Lyndon B. Johnson jóléti programja növekvő költségvetési hiányhoz és növekvő
+            pénzmennyiséghez vezetett → magas amerikai infláció (2–6%).</li>
+          <li>A növekvő amerikai árak miatt az amerikai export csökkent, az import nőtt.</li>
+          <li>A fizetési mérleg hiánya aranykiáramláshoz vezetett.</li>
+          <li>A többi ország vagy <b>importálta az inflációt</b> (destabilizáló), vagy <b>felértékelte a valutáját</b> (lassította a növekedést).</li>
+        </ul>
+        <p class="chain">amerikai költségvetési hiány → infláció → romló amerikai fizetési mérleg → aranykiáramlás → a dollár aranyfedezete elfogy → a rendszer összeomlik</p>
+      </div>
+      <div class="box eset" data-dia="193">
+        <p><b>1971:</b> megszűnt a dollár aranyra való átválthatósága – az aranyalap vége. <b>1973:</b> a nagyobb valuták árfolyama
+          lebegő rendszerben alakul.</p>
+      </div>
+      <div class="box kieg">
+        <p>Az 1971-es döntést Nixon elnök jelentette be („Nixon-sokk”). A probléma szerkezeti volt (Triffin-dilemma): a világnak egyre több
+          dollárra volt szüksége tartalékként, de minél több dollár volt kint, annál kevésbé lehetett hihető, hogy az USA mindet
+          aranyra tudja váltani.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Bretton Woods</summary>
+        <ol>
+          <li>A trilemma három céljából melyiket adta fel a Bretton Woods-i rendszer, és miért?
+            <details><summary>Mintaválasz</summary><p>A szabad tőkeáramlást: a valuták csak a folyó fizetési mérleg tételeire voltak
+              konvertibilisek. Így a rögzített árfolyam mellett az országok önálló monetáris politikát folytathattak – a két világháború
+              közötti tapasztalat után ez volt a fontosabb.</p></details></li>
+          <li>Miért omlott össze a Bretton Woods-i rendszer?
+            <details><summary>Mintaválasz</summary><p>Mert a rendszer kulcsa az amerikai stabilitás volt. Az 1960-as évek közepétől a vietnámi
+              háború és a jóléti programok miatt nőtt az amerikai infláció, romlott a fizetési mérleg, kiáramlott az arany, és a többi ország
+              vagy importálta az inflációt, vagy felértékelt. 1971-ben megszűnt a dollár aranyra válthatósága, 1973-tól lebegtek
+              a valuták.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="monet-bretton"></details>
+    </section>
+
+    <!-- ───────────────────────── 5. Lebegő árfolyamok ───────────────────────── -->
+    <section id="monet-lebego">
+      <h2>Lebegő árfolyamok, az euró és a monetáris rezsimek <span class="dia-ref">194–196. dia</span></h2>
+
+      <p data-dia="194">Az 1970-es évektől két fő folyamat zajlik:</p>
+      <div class="two-col" data-dia="194">
+        <div class="box vita">
+          <p><b>1. Globális szinten: lebegő árfolyamok</b> – és a világkereskedelem <b>nem omlik össze</b>.</p>
+          <p>Bebizonyosodott, hogy nem kell rögzített árfolyam a sikeres nemzetközi kereskedelemhez. Közben egyre fontosabb lett
+            az önálló monetáris politika iránti igény.</p>
+        </div>
+        <div class="box mech">
+          <p><b>2. Regionális szinten: monetáris uniók – az euróövezet</b></p>
+          <ul>
+            <li>a zónán belül rögzített árfolyam és szabad tőkeáramlás – <b>nincs önálló monetáris politika</b>;</li>
+            <li>nincs aranyalap;</li>
+            <li>míg a Bretton Woods-i rendszer kulcsa az amerikai stabilitás volt, az euróövezeté a <b>német gazdaság</b>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 id="monet-rezsimek">Monetáris rezsimek</h3>
+      <div class="table-wrap" data-dia="195">
+        <table class="data">
+          <caption>Monetáris rezsimek, 1870–napjainkig. (Diasor, 195. dia)</caption>
+          <thead><tr><th>Időszak</th><th>1870–1913</th><th>1919–30</th><th>1931–39</th><th>1950–73</th><th>1975–2000</th><th>2001–</th></tr></thead>
+          <tbody>
+            <tr><td>Árfolyamrendszer</td><td>rögzített</td><td>lebegő, majd rögzített</td><td>menedzselt lebegtetés</td><td>kiigazíthatóan rögzített</td>
+              <td>lebegő, vagy német márkához rögzített</td><td>lebegő vagy valutaunió</td></tr>
+            <tr><td>Nemzetközi tőkeáramlás</td><td>magas</td><td>magas</td><td>alacsony</td><td>alacsony</td><td>növekvő, majd magas</td><td>magas</td></tr>
+            <tr><td>Kamatkülönbségek</td><td>alacsony</td><td>magas, de csökkenő</td><td>magas</td><td>magas</td><td>csökkenő, majd alacsony</td><td>alacsony</td></tr>
+            <tr><td>Nominális árfolyam-ingadozás</td><td>nincs</td><td>vegyes</td><td>van</td><td>van</td><td>van</td><td>valutaunión belül nincs</td></tr>
+            <tr><td>A valuták konvertibilitása</td><td>igen</td><td>igen</td><td>korlátozások</td><td>csak a folyó fizetési mérleg tételeire</td><td>igen</td><td>igen</td></tr>
+            <tr><td>Inflációs ráták</td><td>egyformák</td><td>nagy különbségek</td><td>nagy különbségek</td><td>jelentős különbségek</td><td>jelentős különbségek</td><td>az 1990-es évektől hasonló</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-dia="195">Olvasd a táblázatot a trilemmával! 1870–1913 (aranystandard): fix árfolyam és magas tőkeáramlás – egyforma
+        infláció, mert nincs önálló monetáris politika. 1950–73 (Bretton Woods): kiigazítható fix árfolyam, alacsony tőkeáramlás – eltérő
+        inflációs ráták, mert a monetáris politika önálló. 2001-től: lebegés vagy valutaunió és magas tőkeáramlás.</p>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Lebegő árfolyamok</summary>
+        <ol>
+          <li>Mit cáfolt a lebegő árfolyamok korszaka?
+            <details><summary>Mintaválasz</summary><p>Azt a Bretton Woodsban még uralkodó meggyőződést, hogy a nemzetközi kereskedelemhez
+              rögzített árfolyam kell. 1973 után a valuták lebegtek, a világkereskedelem mégsem omlott össze, sőt bővült.</p></details></li>
+          <li>Miért mondjuk, hogy az euróövezet kulcsa a német gazdaság?
+            <details><summary>Mintaválasz</summary><p>Mert az övezet tagjai közös monetáris politikát kapnak, amely a legnagyobb, legstabilabb
+              gazdaság (Németország) helyzetéhez igazodik leginkább – ahogy Bretton Woods az amerikai gazdaság stabilitásán állt. Ha
+              a kulcsgazdaság és a többiek helyzete eltér, a közös kamat egyeseknek túl szigorú, másoknak túl laza lehet.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="monet-lebego"></details>
+    </section>
+
+    <!-- ───────────────────────── Összefoglalás ───────────────────────── -->
+    <section id="monet-osszegzes">
+      <h2>Összefoglalás: a nemzetközi gazdasági rend mérlege <span class="dia-ref">196. dia</span></h2>
+      <ul data-dia="196">
+        <li>A közös szabályok <b>csökkentik a határokon átnyúló tranzakciós költségeket</b>.</li>
+        <li>A nyitottság haszna és alkalmazkodási terhe országok és csoportok között <b>egyenlőtlenül</b> oszlik meg.</li>
+        <li><b>Árfolyam-stabilitás, szabad tőkeáramlás és önálló monetáris politika</b> egyszerre nem tartható fenn.</li>
+        <li>A nemzetközi rezsimek <b>válságok, hatalmi átrendeződések és új alkuk</b> nyomán változnak.</li>
+      </ul>
+      <p data-dia="196"><strong>Válasz a fejezet kérdésére:</strong> a világpénz és a közös szabályok csökkentik a nemzetközi csere költségét,
+        ezért segítik a kereskedelmet. De a trilemma miatt minden rendszer választ: az aranystandard az önálló monetáris politikát, Bretton
+        Woods a szabad tőkeáramlást, a lebegő rendszer a fix árfolyamot adta fel. A rendszerek válságokban dőltek meg (világválság, amerikai
+        infláció), és a hatalmi viszonyok változásával alakultak át.</p>
+
+      <h3 id="monet-esszetabla">Esszéhez: ha ezt látod → ezt használd</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Ha az esetben ez áll…</th><th>…akkor ezt a fogalmat / mechanizmust használd</th></tr></thead>
+          <tbody>
+            <tr><td>Egy ország fix árfolyamot tart, de nem tud kamatot csökkenteni</td><td>trilemma (<a href="#monet-trilemma">→</a>)</td></tr>
+            <tr><td>Tőkekorlátozás + rögzített árfolyam</td><td>Bretton Woods, aranydeviza-rendszer (<a href="#monet-bretton">→</a>)</td></tr>
+            <tr><td>Kereskedelmi többlet → pénzbőség → infláció</td><td>Hume aranypont-mechanizmusa (<a href="#monet-hume">→</a>)</td></tr>
+            <tr><td>Túlértékelt valuta, kiáramló tartalékok, munkanélküliség</td><td>visszatérés a háború előtti paritásra (Nagy-Britannia, 1925)
+              (<a href="#monet-bukas">→</a>)</td></tr>
+            <tr><td>A vezető gazdaság inflációja más országokba „exportálódik”</td><td>Bretton Woods bukása (<a href="#monet-bretton-bukasa">→</a>)</td></tr>
+            <tr><td>Közös valuta, közös kamat</td><td>monetáris unió, euróövezet (<a href="#monet-lebego">→</a>)</td></tr>
+            <tr><td>Egy valutát mindenki használ nemzetközi ügyletekben</td><td>világpénz, önerősítő elfogadottság (<a href="#monet-vilagpenz">→</a>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="monet-kapcsolodasok">Kapcsolódások</h3>
+      <ul>
+        <li><b>Világrend és hegemónia</b> (<a href="01-bev.html#bev-vilagrend">1. fejezet</a>): Bretton Woods az amerikai hegemónián állt.</li>
+        <li><b>A pénz funkciói, a jegybank</b> (<a href="06-penz.html#penz-evolucio">6. fejezet</a>).</li>
+        <li><b>A nagy válság és a keresleti sokk</b> (<a href="07-ciklus.html#ciklus-valsag">7. fejezet</a>).</li>
+        <li><b>Kereskedelempolitika, vámháború 1930-ban</b> (<a href="11-kerpol.html#kerpol-valsag">11. fejezet</a>).</li>
+        <li><b>Keynes, a konjunktúrapolitika és a stagfláció</b> (<a href="13-allam.html">13. fejezet</a>).</li>
+      </ul>
+
+      <details class="box quiz" data-topic="monet"></details>
+    </section>
+
+    <nav class="lesson-nav" data-chapter="monet"></nav>
+  </main>
+
+  <footer class="site-footer">
+    A tananyag a kurzus diasora (Fegatt.pdf) alapján készült, nem hivatalos anyag. Az eredmények csak a böngésződben tárolódnak.
+  </footer>
+
+  <script src="../data/questions.js"></script>
+  <script src="../data/sections.js"></script>
+  <script src="../assets/theme.js"></script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>

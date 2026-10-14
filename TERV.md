@@ -286,7 +286,7 @@ utána M1–M8 tetszőleges sorrendben (de ajánlott sorban), M9 a végén.
 - [x] **M4 – 6. Pénz + 7. Ciklusok, buborékok, válságok** (105–133)
 - [x] **M5 – 8. Európa felemelkedése + 9. Fogyasztói társadalom** (134–165)
 - [x] **M6 – 10. Értékrend + 11. Kereskedelempolitika** (166–185)
-- [ ] **M7 – 12. Monetáris rend + 13. Állam + 14. Jóléti állam** (186–209)
+- [x] **M7 – 12. Monetáris rend + 13. Állam + 14. Jóléti állam** (186–209)
 - [ ] **M8 – 15. Szintézis + esszéfelkészítő + kapcsolódások**
   15. fejezet és `szint-essze`; minden fejezet „Kapcsolódások” részének összefésülése (kölcsönös linkek);
   `tananyag/fogalomtar.html`: az összes [D] fogalom ábécérendben, linkkel a szakaszra.

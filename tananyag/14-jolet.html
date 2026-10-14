@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>14. A jóléti állam – A fejlődés gazdaságtörténete</title>
+  <meta name="description" content="A jóléti állam felfutása és értelmezései, intertemporális jövedelemátcsoportosítás, piaci kudarcok, a Ruggie–Rodrik hipotézis, a jóléti állam kompromisszuma.">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("fegatt-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html#/">A fejlődés gazdaságtörténete <span>Tananyag</span></a>
+    <nav>
+      <a href="./" class="active">Tananyag</a>
+      <a href="../index.html#/zh">Gyakorló ZH</a>
+      <a href="../index.html#/temak">Témakörök</a>
+      <a href="../index.html#/minta">Mintazh</a>
+      <a href="../index.html#/hibak">Hibáim <span id="wrong-count" class="badge"></span></a>
+      <button type="button" class="theme-toggle" id="theme-toggle"></button>
+    </nav>
+  </header>
+
+  <main class="lesson">
+    <p class="kicker">14. fejezet · diák: 206–209</p>
+    <h1>A jóléti állam</h1>
+    <p class="lead">Az előző fejezetben az állam válságkezelő szerepéről volt szó. A 20. század másik nagy újítása az, hogy az állam
+      a születéstől a halálig végigkíséri az ember életét: oktatja, gyógyítja, segíti, ha munkanélküli, és nyugdíjat fizet neki.
+      Miért vállalta ezt magára – és miért nem bízzuk mindezt a piacra?</p>
+
+    <!-- ───────────────────────── 1. Felfutás ───────────────────────── -->
+    <section id="jolet-felfutas">
+      <h2>A jóléti állam felfutása; intertemporális átcsoportosítás <span class="dia-ref">206–207. dia</span></h2>
+
+      <div class="box eset" data-dia="206">
+        <p>A jóléti állam területei: <b>támogatott oktatás és egészségügy, lakhatás, gyerekgondozás, nyugdíj</b>. Napjainkban ezek együtt
+          a költségvetési kiadások majdnem <b>háromnegyedét</b> teszik ki, a <b>GDP 30–40%-át</b>. A fordulat előtt (a 20. század elején)
+          ez a GDP <b>5–10%-át</b> sem érte el.</p>
+      </div>
+      <p><strong>A fejezet kérdése:</strong> mire való a jóléti állam, miért az állam végzi, és mi az ára?</p>
+
+      <h3 id="jolet-utiterv">Útiterv</h3>
+      <ol class="roadmap" data-roadmap="jolet"></ol>
+
+      <h3 id="jolet-ertelmezesek">Mi a jóléti állam? Három értelmezés</h3>
+      <div class="box def" data-dia="206">
+        <p><b>A jóléti állam</b></p>
+        <ul>
+          <li>egyes értelmezések szerint a társadalmon belüli <b>jövedelem-átcsoportosítás (redisztribúció)</b> modern intézményi megvalósítója –
+            a gazdagoktól a szegényekhez;</li>
+          <li>más értelmezés szerint az emberek, háztartások <b>életciklusán belüli</b>, ún. <b>intertemporális átcsoportosítás</b> megvalósítója –
+            önmagunktól önmagunkhoz, az aktív évekből a gyerek- és időskorba;</li>
+          <li>de mindenképpen: <b>közel egyenlő hozzáférést</b> biztosít az emberi tőke képződése szempontjából fontos szolgáltatásokhoz
+            (oktatás, egészségügy, kultúra).</li>
+        </ul>
+      </div>
+
+      <h3 id="jolet-eletciklus">Ugyanez a háztartások szemszögéből</h3>
+      <div class="box def" data-dia="207">
+        <p><b>A jóléti nettó egyenleg</b> = a háztartás hozzájárulása a jóléti állam bevételeihez (adók és más hozzájárulások formájában)
+          − a háztartás részesedésének pénzbeli értéke az állam jóléti szolgáltatásaiból és transzfereiből.</p>
+      </div>
+      <figure class="dia" data-dia="207">
+        <img src="img/dia-207.png" alt="Életciklus-görbe: a vízszintes tengelyen a háztartás kora, a függőlegesen a jóléti nettó egyenleg. Fiatal korban nettó kedvezményezett (támogatott oktatás, családtámogatás), aktív korban nettó hozzájáruló (munkanélküli-segélyek, táppénz kivételével), idős korban újra nettó kedvezményezett (nyugdíj, magas egészségügyi költségek)." loading="lazy">
+        <figcaption>Intertemporális átcsoportosítás: a jóléti nettó egyenleg a háztartás kora szerint. (Diasor, 207. dia.)</figcaption>
+      </figure>
+      <div class="box mech" data-dia="207">
+        <p><b>Hogyan olvasd a görbét?</b></p>
+        <ul>
+          <li><b>Fiatalon</b> nettó kedvezményezettek vagyunk: támogatott oktatás, családtámogatás, gyereknevelési támogatás.</li>
+          <li><b>Aktív korban</b> nettó hozzájárulók: adót és járulékot fizetünk; ebből a szakaszból kapunk vissza kisebb összegeket
+            (munkanélküli-segély, táppénz, egészségbiztosítás).</li>
+          <li><b>Idősen</b> újra nettó kedvezményezettek: nyugdíj, magas egészségügyi költségek.</li>
+        </ul>
+        <p class="chain">aktív kori befizetések → finanszírozzák a gyermek- és időskori ellátást → életünk során „magunknak” csoportosítunk át</p>
+      </div>
+      <div class="box warn" data-dia="207">
+        <p>A mintazh 14. kérdése: a jóléti állam azért vállal szerepet az életciklusok közötti átcsoportosításban, mert <b>az aktív kori
+          befizetések finanszírozzák a gyermek- és időskori ellátásokat</b>. Nem (csak) a gazdagoktól a szegényekhez csoportosít át.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – A jóléti állam felfutása</summary>
+        <ol>
+          <li>Miben különbözik a redisztributív és az intertemporális értelmezés?
+            <details><summary>Mintaválasz</summary><p>A redisztributív értelmezés szerint a jóléti állam emberek <i>között</i> csoportosít át (gazdagoktól
+              a szegényekhez). Az intertemporális szerint egy ember <i>életén belül</i>: az aktív években befizetett adóból finanszírozza a saját
+              gyermek- és időskori ellátását. A valóságban mindkettő egyszerre zajlik, és mindkettő mellett közel egyenlő hozzáférést biztosít
+              az emberi tőke képződéséhez.</p></details></li>
+          <li>Miért függ össze a jóléti állam és az emberi tőke?
+            <details><summary>Mintaválasz</summary><p>Mert a jóléti állam közel egyenlő hozzáférést biztosít az oktatáshoz, egészségügyhöz és kultúrához.
+              Így a szegényebb családok gyerekei is felhalmozhatnak emberi tőkét, ami az endogén növekedéselmélet szerint a tartós
+              növekedés fő forrása (5. fejezet).</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="jolet-felfutas"></details>
+    </section>
+
+    <!-- ───────────────────────── 2. Miért az állam? ───────────────────────── -->
+    <section id="jolet-miert">
+      <h2>Miért az állam? A jóléti állam kompromisszuma <span class="dia-ref">208–209. dia</span></h2>
+
+      <p data-dia="208">Az életcikluson belüli átcsoportosításra a <b>piac is képes</b>: fiatalon hitelt veszünk fel, aktív korban
+        megtakarítunk, idős korban felhasználjuk a megtakarítást. Miért kell mégis az állam?</p>
+      <div class="box def" data-dia="208">
+        <p><b>Piaci kudarc:</b> olyan helyzet, amelyben a piaci megoldás gyengébb, mint ami elérhető lenne. A jóléti szolgáltatásoknál több is van:</p>
+        <ul>
+          <li><b>a legszegényebbeknél a piac nem működik</b> – akinek nincs jövedelme, az nem tud megtakarítani vagy hitelt felvenni; itt a
+            <b>szolidaritás</b> a válasz;</li>
+          <li><b>pozitív externális hatások</b> (oktatás, egészségügy): a haszon másoknak is jut (egy oltás a környezetet is védi, egy iskolázott
+            ember a munkatársait is termelékenyebbé teszi) – ez koordinációs probléma, amelyet az állami szabály könnyebben megold;</li>
+          <li><b>negatív diszkrimináció</b> a rosszabb egészségi állapotúakkal szemben: piaci biztosításban aránytalanul nagy terhet kellene vállalniuk;</li>
+          <li><b>nem időkonzisztens preferenciák:</b> a rövid távú előnyöket előnyben részesítjük a hosszú távúakkal szemben – nem takarékoskodunk
+            kellő mértékben (ezért kötelező a nyugdíjjárulék).</li>
+        </ul>
+      </div>
+      <div class="box kieg">
+        <p><b>Externália:</b> egy tevékenység olyan hatása másokra, amelyet a piaci ár nem tartalmaz. Pozitív externáliánál
+          (oktatás, oltás) a piac <i>kevesebbet</i> állít elő a társadalmilag kívánatosnál, mert az egyén csak a saját hasznát mérlegeli.</p>
+      </div>
+
+      <h3 id="jolet-ruggie-rodrik">Miért kell egyáltalán jóléti kiadás?</h3>
+      <div class="box vita" data-dia="208">
+        <p><b>A Ruggie (1982) – Rodrik (1998) hipotézis:</b></p>
+        <ul>
+          <li>a nyitottá váló világgazdaságban a ciklikus ingadozások elkerülhetetlenek;</li>
+          <li>az ingadozások az alacsonyabb jövedelműeket súlyosabban érintik;</li>
+          <li>a jóléti kiadások ezt ellensúlyozzák – így lehet a veszteseket is <b>megtartani a szabadkereskedelem hívei között</b>.</li>
+        </ul>
+        <p class="chain">nyitottság → ingadozás, vesztesek → jóléti kompenzáció → a nyitottság politikailag fenntartható marad</p>
+      </div>
+      <div class="box kieg">
+        <p>Rodrik empirikusan is kimutatta, hogy a nyitottabb gazdaságoknak nagyobb az állami szektora. A hipotézis összeköti a jóléti államot
+          a <a href="11-kerpol.html">kereskedelempolitikával</a>: a kereskedelem haszna egyenlőtlenül oszlik meg (<a href="02-ker.html#ker-kontener">2. fejezet</a>),
+          és ha a vesztesek nem kapnak kompenzációt, a protekcionizmust fogják támogatni.</p>
+      </div>
+
+      <h3 id="jolet-kompromisszum">A jóléti állam kompromisszuma</h3>
+      <div class="box tip" data-dia="209">
+        <ul>
+          <li>A jóléti állam egyfajta <b>kötelező biztosítás</b> bizonyos élethelyzetekre és életkorokra.</li>
+          <li>Kezelhet <b>piaci kudarcokat, externáliákat és szolidaritási célokat</b>.</li>
+          <li>A <b>hozzáférés, az ösztönzők, a finanszírozhatóság és a politikai legitimitás</b> között kompromisszumok vannak.</li>
+          <li>A kérdés nem egyszerűen „állam vagy piac?”, hanem az <b>intézményi feladatmegosztás minősége</b>.</li>
+        </ul>
+      </div>
+      <div class="box kieg">
+        <p>Néhány példa a kompromisszumokra: a bőkezű munkanélküli-segély védi a vesztest, de csökkentheti a munkakeresés ösztönzőjét;
+          az elöregedés (<a href="03-nep.html#nep-jovo">3. fejezet</a>) a nyugdíjrendszer finanszírozhatóságát fenyegeti; és ha a középosztály
+          nem érzi, hogy kap is valamit, a jóléti állam elveszíti politikai legitimitását.</p>
+      </div>
+
+      <details class="box practice">
+        <summary>✏️ Gondold végig – Miért az állam?</summary>
+        <ol>
+          <li>A piac is képes az életcikluson belüli átcsoportosításra (hitel, megtakarítás). Miért vállalja mégis az állam?
+            <details><summary>Mintaválasz</summary><p>Piaci kudarcok miatt: a legszegényebbek nem tudnak hitelt felvenni vagy megtakarítani (szolidaritás
+              kell); az oktatás és az egészségügy pozitív externáliái miatt a piac kevesebbet nyújtana a kívánatosnál; a piaci biztosítás
+              diszkriminálná a betegeket; és a rövidlátás (nem időkonzisztens preferenciák) miatt kevesebbet takarékoskodnánk.</p></details></li>
+          <li>Hogyan kapcsolódik a jóléti állam a szabadkereskedelemhez a Ruggie–Rodrik hipotézis szerint?
+            <details><summary>Mintaválasz</summary><p>A nyitott gazdaságban elkerülhetetlenek az ingadozások, és ezek az alacsony jövedelműeket sújtják
+              leginkább. A jóléti kiadások kompenzálják a veszteseket, így ők sem fordulnak a szabadkereskedelem ellen – a nyitottság
+              politikailag fenntartható marad.</p></details></li>
+          <li>Milyen kompromisszumokkal jár a jóléti állam?
+            <details><summary>Mintaválasz</summary><p>A hozzáférés (mindenki kapjon ellátást), az ösztönzők (ne csökkenjen a munkára való hajlandóság),
+              a finanszírozhatóság (az elöregedés és a költségek miatt) és a politikai legitimitás (a befizetők támogassák) között. Ezért
+              nem az a kérdés, hogy állam vagy piac, hanem hogy milyen jó a feladatmegosztás közöttük.</p></details></li>
+        </ol>
+      </details>
+      <details class="box quiz" data-section="jolet-miert"></details>
+    </section>
+
+    <!-- ───────────────────────── Összefoglalás ───────────────────────── -->
+    <section id="jolet-osszegzes">
+      <h2>Összefoglalás</h2>
+      <ul data-dia="209">
+        <li>A jóléti kiadások (oktatás, egészségügy, lakhatás, gyerekgondozás, nyugdíj) a GDP 5–10%-áról <b>30–40%-ára</b> nőttek.</li>
+        <li>A jóléti állam értelmezhető <b>redisztribúcióként</b> és <b>intertemporális átcsoportosításként</b> is; mindenképpen közel egyenlő
+          hozzáférést ad az emberi tőke képzéséhez.</li>
+        <li>Az életciklus során fiatalon és idősen nettó kedvezményezettek, aktív korban nettó hozzájárulók vagyunk.</li>
+        <li>Az állami szerepet <b>piaci kudarcok</b> indokolják: szegénység, externáliák, diszkrimináció, rövidlátás.</li>
+        <li><b>Ruggie–Rodrik:</b> a jóléti kiadások teszik politikailag fenntarthatóvá a nyitottságot.</li>
+        <li>A jóléti állam <b>kompromisszum</b> – a kérdés az intézményi feladatmegosztás minősége.</li>
+      </ul>
+      <p><strong>Válasz a fejezet kérdésére:</strong> a jóléti állam kötelező biztosítás az élet kockázatos szakaszaira, és egyenlő esélyt ad
+        az emberi tőke felhalmozására. Azért az állam végzi, mert a piac ezen a területen több ponton is kudarcot vall, és mert a nyitott
+        gazdaság veszteseit kompenzálni kell. Az ára a magas adóteher, a gyengülő ösztönzők és a finanszírozhatóság kérdése – ezért
+        folyamatos kompromisszum.</p>
+
+      <h3 id="jolet-esszetabla">Esszéhez: ha ezt látod → ezt használd</h3>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Ha az esetben ez áll…</th><th>…akkor ezt a fogalmat / mechanizmust használd</th></tr></thead>
+          <tbody>
+            <tr><td>Ingyenes oktatás, egészségügy, családtámogatás</td><td>egyenlő hozzáférés az emberi tőkéhez; pozitív externália
+              (<a href="#jolet-ertelmezesek">→</a>, <a href="#jolet-miert">→</a>)</td></tr>
+            <tr><td>Kötelező nyugdíjjárulék</td><td>intertemporális átcsoportosítás; nem időkonzisztens preferenciák (<a href="#jolet-eletciklus">→</a>)</td></tr>
+            <tr><td>Nyitott ország nagy állami szektorral</td><td>Ruggie–Rodrik hipotézis (<a href="#jolet-ruggie-rodrik">→</a>)</td></tr>
+            <tr><td>A piac nem biztosítja a betegeket, szegényeket</td><td>piaci kudarc, szolidaritás (<a href="#jolet-miert">→</a>)</td></tr>
+            <tr><td>Elöregedő társadalom, fenntarthatatlan nyugdíjrendszer</td><td>a jóléti állam kompromisszuma: finanszírozhatóság (<a href="#jolet-kompromisszum">→</a>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="jolet-kapcsolodasok">Kapcsolódások</h3>
+      <ul>
+        <li><b>A kereskedelem haszna egyenlőtlenül oszlik meg</b> (<a href="02-ker.html#ker-kontener">2. fejezet</a>).</li>
+        <li><b>Elöregedés</b> (<a href="03-nep.html#nep-jovo">3. fejezet</a>).</li>
+        <li><b>Emberi tőke, endogén növekedés</b> (<a href="05-tud.html#tud-humantoke">5. fejezet</a>).</li>
+        <li><b>Jogkiterjesztés, GI Bill</b> (<a href="09-fogy.html#fogy-jogkiterjesztes">9. fejezet</a>).</li>
+        <li><b>Kereskedelempolitika</b> (<a href="11-kerpol.html">11. fejezet</a>); <b>Keynes és a porosz iskola</b> (<a href="13-allam.html">13. fejezet</a>).</li>
+      </ul>
+
+      <details class="box quiz" data-topic="jolet"></details>
+    </section>
+
+    <nav class="lesson-nav" data-chapter="jolet"></nav>
+  </main>
+
+  <footer class="site-footer">
+    A tananyag a kurzus diasora (Fegatt.pdf) alapján készült, nem hivatalos anyag. Az eredmények csak a böngésződben tárolódnak.
+  </footer>
+
+  <script src="../data/questions.js"></script>
+  <script src="../data/sections.js"></script>
+  <script src="../assets/theme.js"></script>
+  <script src="../assets/lesson.js"></script>
+</body>
+</html>

@@ -1632,6 +1632,14 @@ window.QUESTIONS = [
         "Változásuk semmilyen hatással nincs a kereskedelemre."],
     hint: "Aranystandard → összeomlás → Bretton Woods → lebegő árfolyamok.",
     ex: "A közös szabályok csökkentik a határokon átnyúló tranzakciós költségeket, de a nyitottság haszna és alkalmazkodási terhe egyenlőtlenül oszlik meg – ezért a rezsimeket újra és újra újratárgyalják." },
+  { t: "monet", dia: 195,
+    q: "Mit mutat a monetáris rezsimek táblázata az aranystandard (1870–1913) és Bretton Woods (1950–73) inflációs rátáiról?",
+    a: "Az aranystandard alatt egyformák voltak, Bretton Woods alatt jelentősen eltértek – mert ott volt önálló monetáris politika.",
+    w: ["Mindkét rendszerben egyformák voltak, mert mindkettőben szabad volt a tőkeáramlás.",
+        "Az aranystandard alatt tértek el jelentősen, mert az árfolyamok szabadon lebegtek.",
+        "Bretton Woods alatt egyformák voltak, mert a dollár aranyra nem volt váltható."],
+    hint: "Olvasd a táblázatot a trilemmával: melyik rendszerben volt önálló monetáris politika?",
+    ex: "[M] Aranystandard: fix árfolyam + magas tőkeáramlás → nincs önálló monetáris politika → egyforma infláció. Bretton Woods: kiigazítható fix árfolyam + alacsony tőkeáramlás (konvertibilitás csak a folyó fizetési mérlegre) → önálló monetáris politika → eltérő infláció." },
 
   // ───────────────────────────── 13. Állam, Keynes ─────────────────────────────
   { t: "allam", minta: 13, dia: 205,
@@ -1738,6 +1746,14 @@ window.QUESTIONS = [
         "Az árakat és a béreket az állami tervhivatal rögzíti."],
     hint: "[D] A várakozások szerepe.",
     ex: "Az ár-bér spirál a stagfláció egyik mechanizmusa. A tartós béralkuk egyes országokban mérsékelték, és hatékonyabbá tették a keynesi politikát." },
+  { t: "allam", dia: 198,
+    q: "Mit írt elő Nagy Frigyes 1763-as porosz rendelete és az 1794-es porosz polgári törvénykönyv az oktatásról?",
+    a: "Minden 5–13 éves fiúnak és lánynak kötelező iskolába járnia, adóból finanszírozott rendszerben.",
+    w: ["Csak a nemesi fiúk számára tette kötelezővé a gimnáziumot, tandíj fejében.",
+        "Megtiltotta, hogy az állam beavatkozzon az egyházi iskolák működésébe.",
+        "Az egyetemi oktatást tette ingyenessé, az elemi iskolát a családokra bízta."],
+    hint: "A világon először itt lett kötelező az általános iskola – kinek és miből fizetve?",
+    ex: "[E] Poroszországban tették először kötelezővé az általános iskolát: minden 5 és 13 év közötti fiúnak és lánynak. 1794-ben kimondták az általános, adóból finanszírozott oktatási rendszert. Az állami beavatkozás adót igényelt, de gyorsította a fejlődést (emberi tőke)." },
 
   // ───────────────────────────── 14. Jóléti állam ─────────────────────────────
   { t: "jolet", minta: 14, dia: 207,
